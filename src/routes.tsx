@@ -1,9 +1,9 @@
 import React from "react";
 import {
   RouterProvider,
-  Route,
-  RootRoute,
   createRouter,
+  createRoute,
+  createRootRoute,
 } from "@tanstack/react-router";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -11,28 +11,28 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
 // Create the root route
-const rootRoute = new RootRoute();
+const rootRoute = createRootRoute();
 
 // Create the individual routes
-const homeRoute = new Route({
+const homeRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
   component: Home,
 });
 
-const aboutRoute = new Route({
+const aboutRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/about",
   component: About,
 });
 
-const projectsRoute = new Route({
+const projectsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/projects",
   component: Projects,
 });
 
-const contactRoute = new Route({
+const contactRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/contact",
   component: Contact,
