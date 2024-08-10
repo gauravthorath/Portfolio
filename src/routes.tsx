@@ -1,9 +1,14 @@
-import React from 'react';
-import { RouterProvider, Route, RootRoute, createRouter } from '@tanstack/react-router';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import React from "react";
+import {
+  RouterProvider,
+  Route,
+  RootRoute,
+  createRouter,
+} from "@tanstack/react-router";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 
 // Create the root route
 const rootRoute = new RootRoute();
@@ -11,25 +16,25 @@ const rootRoute = new RootRoute();
 // Create the individual routes
 const homeRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: '/',
+  path: "/",
   component: Home,
 });
 
 const aboutRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: '/about',
+  path: "/about",
   component: About,
 });
 
 const projectsRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: '/projects',
+  path: "/projects",
   component: Projects,
 });
 
 const contactRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: '/contact',
+  path: "/contact",
   component: Contact,
 });
 
@@ -43,8 +48,6 @@ const router = createRouter({
   ]),
 });
 
-const Routes: React.FC = () => (
-  <RouterProvider router={router} />
-);
+const Routes: React.FC = () => <RouterProvider router={router} />;
 
 export default Routes;
