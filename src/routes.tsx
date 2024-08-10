@@ -22,7 +22,7 @@ const homeRoute = createRoute({
 
 const aboutRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "about",
+  path: "/about", // Added leading slash
   component: About,
 });
 
