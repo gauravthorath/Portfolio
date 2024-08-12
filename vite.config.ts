@@ -1,8 +1,12 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import viteReact from "@vitejs/plugin-react";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: "/Portfolio/",
+  plugins: [TanStackRouterVite(), viteReact()],
+  base: "/Portfolio/", // Base for local dev, overridden by `base` in production
+  server: {
+    open: true, // Automatically open browser
+    // historyApiFallback: true, // Serve index.html for any 404s
+  },
 });

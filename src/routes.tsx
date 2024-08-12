@@ -5,47 +5,51 @@ import {
   createRoute,
   createRootRoute,
 } from "@tanstack/react-router";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 // Create the root route
-const rootRoute = createRootRoute();
+const rootRoute = createRootRoute({
+  notFoundComponent: NotFound,
+});
 
 // Create the individual routes
-const homeRoute = createRoute({
+const routes = [
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "Portfolio/",
+    component: Home,
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "Portfolio/About",
+    component: About,
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "Portfolio/Projects",
+    component: Projects,
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "Portfolio/Contact",
+    component: Contact,
+  }),
+];
+
+// Create the router with the route tree - used to show not url found page
+const catchAllRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/",
-  component: Home,
+  path: "*", // Catch-all route
+  component: NotFound,
 });
 
-const aboutRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/about", // Added leading slash
-  component: About,
-});
-
-const projectsRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/projects",
-  component: Projects,
-});
-
-const contactRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/contact",
-  component: Contact,
-});
-
-// Create the router with the route tree
 const router = createRouter({
-  routeTree: rootRoute.addChildren([
-    homeRoute,
-    aboutRoute,
-    projectsRoute,
-    contactRoute,
-  ]),
+  routeTree: rootRoute.addChildren([...routes, catchAllRoute]),
 });
 
 const Routes: React.FC = () => <RouterProvider router={router} />;
