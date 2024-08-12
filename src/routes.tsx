@@ -21,7 +21,7 @@ const rootRoute = createRootRoute({
 const routes = [
   createRoute({
     getParentRoute: () => rootRoute,
-    path: "import.meta.env.BASE_URL", // Using the base URL from Vite config
+    path: import.meta.env.BASE_URL, // Using the base URL from Vite config
     component: Home,
   }),
   createRoute({
