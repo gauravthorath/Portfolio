@@ -21,22 +21,22 @@ const rootRoute = createRootRoute({
 const routes = [
   createRoute({
     getParentRoute: () => rootRoute,
-    path: "/",
+    path: "import.meta.env.BASE_URL", // Using the base URL from Vite config
     component: Home,
   }),
   createRoute({
     getParentRoute: () => rootRoute,
-    path: "About",
+    path: `${import.meta.env.BASE_URL}about`,
     component: About,
   }),
   createRoute({
     getParentRoute: () => rootRoute,
-    path: "Projects",
+    path: `${import.meta.env.BASE_URL}projects`,
     component: Projects,
   }),
   createRoute({
     getParentRoute: () => rootRoute,
-    path: "Contact",
+    path: `${import.meta.env.BASE_URL}contact`,
     component: Contact,
   }),
 ];
