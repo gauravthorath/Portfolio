@@ -21,22 +21,22 @@ const rootRoute = createRootRoute({
 const routes = [
   createRoute({
     getParentRoute: () => rootRoute,
-    path: "Portfolio/",
+    path: "/",
     component: Home,
   }),
   createRoute({
     getParentRoute: () => rootRoute,
-    path: "Portfolio/About",
+    path: "About",
     component: About,
   }),
   createRoute({
     getParentRoute: () => rootRoute,
-    path: "Portfolio/Projects",
+    path: "Projects",
     component: Projects,
   }),
   createRoute({
     getParentRoute: () => rootRoute,
-    path: "Portfolio/Contact",
+    path: "Contact",
     component: Contact,
   }),
 ];
