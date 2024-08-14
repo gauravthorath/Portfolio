@@ -14,8 +14,8 @@ const About: React.FC = () => {
       <div className="mt-8">
         <h2 className="text-2xl font-semibold mb-2">My Skills:</h2>
         <div className="flex space-x-2">
-          <span className="bg-blue-500 px-2 py-1 rounded">HTML</span>
-          <span className="bg-yellow-500 px-2 py-1 rounded">CSS</span>
+          <span className="bg-blue-500 px-2 py-1 rounded">Theia</span>
+          <span className="bg-yellow-500 px-2 py-1 rounded">TypeSCript</span>
           <span className="bg-green-500 px-2 py-1 rounded">JavaScript</span>
           <span className="bg-red-500 px-2 py-1 rounded">React</span>
         </div>
