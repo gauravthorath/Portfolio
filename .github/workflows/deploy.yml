@@ -27,6 +27,9 @@ jobs:
       - name: Build
         run: yarn build
 
+      - name: Debug Artifacts
+        run: echo "Checking the contents of the dist directory"
+
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
