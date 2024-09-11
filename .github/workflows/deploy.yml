@@ -2,13 +2,12 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main # Set a branch name to trigger deployment
+    branches: [main]
 
 permissions:
+  contents: read
   pages: write
   id-token: write
-  contents: read
 
 jobs:
   deploy:
@@ -39,4 +38,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           artifact_name: "github-pages"
