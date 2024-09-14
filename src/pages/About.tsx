@@ -4,7 +4,10 @@ const About: React.FC = () => {
   return (
     <div className="p-4 bg-gradient-to-r from-purple-400 to-pink-500 min-h-screen text-white">
       <h1 className="text-4xl font-bold mb-4 animate-bounce">Hi there! 👋</h1>
-      <p className="text-xl mb-4">I'm a 14-year-old Frontend Developer!</p>
+      <p className="text-xl mb-4">
+        I have 14 years experience in Software Development, focused on frontend
+        development since 8 years!
+      </p>
       <div className="space-y-2">
         <p>🚀 Learning React and TypeScript</p>
         <p>💻 Coding cool websites</p>

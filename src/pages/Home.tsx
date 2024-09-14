@@ -12,6 +12,7 @@ const Home: React.FC = () => {
       <p>I am a coder</p>
       <p>I am a web developer</p>
       <p>I am a web designer</p>
+      <p>I am a Team Leader</p>
     </div>
   );
 };
