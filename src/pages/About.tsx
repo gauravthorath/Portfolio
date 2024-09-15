@@ -21,6 +21,7 @@ const About: React.FC = () => {
           <span className="bg-yellow-500 px-2 py-1 rounded">TypeSCript</span>
           <span className="bg-green-500 px-2 py-1 rounded">JavaScript</span>
           <span className="bg-red-500 px-2 py-1 rounded">React</span>
+          <span className="bg-red-500 px-2 py-1 rounded">Tailwind CSS</span>
         </div>
       </div>
     </div>
