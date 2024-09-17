@@ -2,11 +2,11 @@ import { defineConfig } from "vite";
 import viteReact from "@vitejs/plugin-react";
 import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [TanStackRouterVite(), viteReact()],
-  base: "/Portfolio/", // Base for local dev, overridden by `base` in production
+  base: mode === "production" ? "/Portfolio/" : "/", // Ensure correct base path
   server: {
-    open: true, // Automatically open browser
-    // historyApiFallback: true, // Serve index.html for any 404s
+    open: true,
+    historyApiFallback: true, // Important for SPA
   },
-});
+}));

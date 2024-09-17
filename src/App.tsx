@@ -1,12 +1,10 @@
 import React from "react";
-import Routes from "./routes";
-import NavBar from "./components/NavBar";
-
+import { RouterProvider } from "@tanstack/react-router";
+import router from "./router";
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <NavBar />
-      <Routes />
+    <div>
+      <RouterProvider router={router} />
     </div>
   );
 };

@@ -1,52 +1,117 @@
-import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import { Button } from "@mui/material";
-import { useRouter } from "@tanstack/react-router"; // Correct hook
+import React, { useState } from "react";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Button,
+  Container,
+  Tooltip,
+} from "@mui/material";
+import {
+  Menu as MenuIcon,
+  Brightness4,
+  Brightness7,
+  LinkedIn as LinkedInIcon,
+  GitHub as GitHubIcon,
+} from "@mui/icons-material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Avatar from "@mui/material/Avatar";
+import { Link, Outlet } from "@tanstack/react-router";
+import GauravImage from "../assets/Gaurav.jpg";
 
 const NavBar: React.FC = () => {
-  const router = useRouter(); // Get the router object
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
-  // Navigation functions
-  const goToAbout = () => {
-    router.navigate({ to: "/about" });
-  };
+  const darkTheme = createTheme({
+    palette: {
+      mode: isDarkTheme ? "dark" : "light",
+    },
+  });
 
-  const goToProjects = () => {
-    router.navigate({ to: "/projects" });
-  };
-
-  const goToContact = () => {
-    router.navigate({ to: "/contact" });
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
   };
 
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: "#0d47a1" }}>
-      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" sx={{ ml: 2 }}>
-            Gaurav Thorat
-          </Typography>
-        </div>
-        <div>
-          <Button color="inherit" onClick={goToAbout}>
-            About
-          </Button>
-          <Button color="inherit" onClick={goToProjects}>
-            Projects
-          </Button>
-          <Button color="inherit" onClick={goToContact}>
-            Contact
-          </Button>
-        </div>
-      </Toolbar>
-    </AppBar>
+    <ThemeProvider theme={darkTheme}>
+      <AppBar
+        position="sticky"
+        sx={{ backgroundColor: isDarkTheme ? "#333" : "#1976d2" }}
+      >
+        <Container maxWidth="xl" sx={{ padding: "0 !important" }}>
+          <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+            {/* Left side: Menu Icon and Name */}
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <IconButton edge="start" color="inherit" aria-label="menu">
+                <MenuIcon />
+              </IconButton>
+              <Typography variant="h6" sx={{ ml: 2 }}>
+                Gaurav Thorat
+              </Typography>
+            </div>
+
+            {/* Center: Navigation Links */}
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <Button color="inherit" component={Link} to="/about">
+                About
+              </Button>
+              <Button color="inherit" component={Link} to="/projects">
+                Projects
+              </Button>
+              <Button color="inherit" component={Link} to="/contact">
+                Contact
+              </Button>
+              <Button color="inherit" component={Link} to="/cv">
+                CV
+              </Button>
+            </div>
+
+            {/* Right side: LinkedIn, GitHub, Theme Toggle, and Profile Avatar */}
+            <div style={{ display: "flex", alignItems: "center" }}>
+              {/* LinkedIn Icon */}
+              <Tooltip title="LinkedIn">
+                <IconButton
+                  color="inherit"
+                  component="a"
+                  href="https://www.linkedin.com/in/gauravthorath/"
+                  target="_blank"
+                >
+                  <LinkedInIcon />
+                </IconButton>
+              </Tooltip>
+
+              {/* GitHub Icon */}
+              <Tooltip title="GitHub">
+                <IconButton
+                  color="inherit"
+                  component="a"
+                  href="https://github.com/gauravthorath"
+                  target="_blank"
+                >
+                  <GitHubIcon />
+                </IconButton>
+              </Tooltip>
+
+              {/* Light/Dark Mode Switch */}
+              <IconButton color="inherit" onClick={toggleTheme}>
+                {isDarkTheme ? <Brightness7 /> : <Brightness4 />}
+              </IconButton>
+
+              {/* Profile Avatar */}
+              <IconButton color="inherit">
+                <Avatar alt="Gaurav Thorat" src={GauravImage} />
+              </IconButton>
+            </div>
+          </Toolbar>
+        </Container>
+      </AppBar>
+
+      {/* Here is where the nested routes will render */}
+      <Container maxWidth="xl" sx={{ padding: "0 !important" }}>
+        <Outlet />
+      </Container>
+    </ThemeProvider>
   );
 };
 

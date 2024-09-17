@@ -3,8 +3,8 @@ import React from "react";
 const Projects: React.FC = () => {
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold">Projects</h1>
-      <p>Here are some projects I've worked on.</p>
+      <h1 className="text-2xl font-bold">CV</h1>
+      <p>CV</p>
     </div>
   );
 };

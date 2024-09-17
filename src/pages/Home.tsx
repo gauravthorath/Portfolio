@@ -7,12 +7,6 @@ const Home: React.FC = () => {
       <p>Welcome to my portfolio!</p>
       <p>My name is Gaurav Thorat</p>
       <p>I am a Frontend Developer</p>
-      <p>I am a learner</p>
-      <p>I am a programmer</p>
-      <p>I am a coder</p>
-      <p>I am a web developer</p>
-      <p>I am a web designer</p>
-      <p>I am a Team Leader</p>
     </div>
   );
 };
