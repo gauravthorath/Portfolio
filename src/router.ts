@@ -4,7 +4,6 @@ import {
   createRouter,
 } from "@tanstack/react-router";
 import NavBar from "./components/NavBar";
-import { Home } from "@mui/icons-material";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
@@ -12,14 +11,14 @@ import CV from "./pages/CV";
 
 // Define the root route using NavBar as the layout
 const rootRoute = createRootRoute({
-  component: NavBar, // NavBar as the root layout component
+  component: NavBar,
 });
 
 // Define child routes
 const homeRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
-  component: Home, // Home page component
+  component: About, // Home page component
 });
 
 const aboutRoute = createRoute({
