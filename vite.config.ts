@@ -8,5 +8,8 @@ export default defineConfig(({ mode }) => ({
   server: {
     open: true,
     historyApiFallback: true, // Important for SPA
+    mimeTypes: {
+      "application/javascript": ["js", "mjs"],
+    },
   },
 }));

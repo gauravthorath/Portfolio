@@ -7,7 +7,7 @@ import NavBar from "./components/NavBar";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
-import CV from "./pages/CV";
+import CVPage from "./pages/CV";
 
 // Define the root route using NavBar as the layout
 const rootRoute = createRootRoute({
@@ -42,7 +42,7 @@ const contactRoute = createRoute({
 const cvRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/cv",
-  component: CV, // About page component
+  component: CVPage, // About page component
 });
 
 // Create the router
