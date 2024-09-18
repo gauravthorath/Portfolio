@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "@mui/material";
 import {
-  Menu as MenuIcon,
+  // Menu as MenuIcon,
   Brightness4,
   Brightness7,
   LinkedIn as LinkedInIcon,
@@ -18,7 +18,7 @@ import {
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Avatar from "@mui/material/Avatar";
 import { Link, Outlet } from "@tanstack/react-router";
-import GauravImage from "../assets/Gaurav.jpg";
+import GauravImage from "../assets/Gaurav.png";
 
 const NavBar: React.FC = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -43,10 +43,10 @@ const NavBar: React.FC = () => {
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
             {/* Left side: Menu Icon and Name */}
             <div style={{ display: "flex", alignItems: "center" }}>
-              <IconButton edge="start" color="inherit" aria-label="menu">
+              {/* <IconButton edge="start" color="inherit" aria-label="menu">
                 <MenuIcon />
-              </IconButton>
-              <Typography variant="h6" sx={{ ml: 2 }}>
+              </IconButton> */}
+              <Typography variant="h6" sx={{ ml: 0 }}>
                 Gaurav Thorat
               </Typography>
             </div>
