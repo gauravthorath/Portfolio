@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
                   title="View Linked Profile"
                   size="small"
                 >
-                  Email: gauravjobs25@gmail.com
+                  gauravjobs25@gmail.com
                 </IconButton>
               </Box>
             </Grid>
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
                   title="View Linked Profile"
                   size="small"
                 >
-                  Mobile: +49-15216127113
+                  +49-15216127113
                 </IconButton>
               </Box>
             </Grid>
