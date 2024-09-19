@@ -9,11 +9,11 @@ import {
   Tooltip,
 } from "@mui/material";
 import {
-  // Menu as MenuIcon,
   Brightness4,
   Brightness7,
   LinkedIn as LinkedInIcon,
   GitHub as GitHubIcon,
+  Info as InfoIcon, // Import the InfoIcon
 } from "@mui/icons-material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Avatar from "@mui/material/Avatar";
@@ -41,14 +41,34 @@ const NavBar: React.FC = () => {
       >
         <Container maxWidth="xl" sx={{ padding: "0 !important" }}>
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-            {/* Left side: Menu Icon and Name */}
+            {/* Left side: Name and Info Icon */}
             <div style={{ display: "flex", alignItems: "center" }}>
-              {/* <IconButton edge="start" color="inherit" aria-label="menu">
-                <MenuIcon />
-              </IconButton> */}
               <Typography variant="h5" sx={{ ml: 0 }}>
                 Gaurav Thorat
               </Typography>
+
+              {/* Tooltip with Info Icon */}
+              <Tooltip
+                title={
+                  <React.Fragment>
+                    <div>
+                      <strong>Under Development:</strong>
+                    </div>
+                    <div>
+                      Some features and sections of this portfolio are still in
+                      progress.
+                    </div>
+                    <div>
+                      Check back later for more updates and completed sections.
+                    </div>
+                  </React.Fragment>
+                }
+                placement="bottom"
+              >
+                <IconButton color="inherit" sx={{ ml: 1 }}>
+                  <InfoIcon />
+                </IconButton>
+              </Tooltip>
             </div>
 
             {/* Center: Navigation Links */}
