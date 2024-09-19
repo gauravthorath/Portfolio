@@ -60,17 +60,17 @@ const About: React.FC = () => {
           <div className={styles.about_content}>
             <h1 className={styles.big_title}>About Me</h1>
             <p className={styles.about_description}>
-              I am a seasoned Technical Lead with over 13 years of experience in
-              software development, specializing in cutting-edge frontend
-              development with ReactJS. I have a proven track record of
-              successfully leading teams, managing complex projects, and
-              ensuring timely, within-budget delivery. My expertise spans Agile
-              methodologies, backend API integration, and the implementation of
+              I am a highly skilled Technical Lead with over 13 years of
+              expertise in software development, specializing in advanced
+              frontend technologies with ReactJS. I have a proven track record
+              of leading teams, managing complex projects, and delivering
+              solutions on time and within budget. My expertise encompasses
+              Agile methodologies, backend API integration, and implementing
               robust quality assurance processes. With a strong focus on
-              transforming UI designs into high-performance web applications, I
-              continuously optimize for both usability and speed. As an
+              translating UI designs into high-performance web applications, I
+              am committed to optimizing both usability and speed. As an
               effective communicator, I excel in enhancing code quality through
-              comprehensive peer reviews and meticulous documentation.
+              thorough peer reviews and meticulous documentation.
             </p>
             <div className={styles.personal_info}>
               <p>
