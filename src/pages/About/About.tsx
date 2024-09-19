@@ -45,7 +45,7 @@ const About: React.FC = () => {
               </h3>
             </div>
             <div className={styles.typing_effect}>
-              <span className={styles.constant_text}>Senior </span>
+              <span className={styles.constant_text}> </span>
               <ReactTypingEffect
                 text={["Frontend Developer", "FullStack Developer"]}
                 speed={100}
@@ -77,7 +77,8 @@ const About: React.FC = () => {
                 <strong>Name:</strong> Gaurav Thorat
               </p>
               <p>
-                <strong>Job Role:</strong> Senior Frontend Developer
+                <strong>Role:</strong> Frontend Developer | Project Lead | Scrum
+                Master | Project Manager | Solution Architect
               </p>
               <p>
                 <strong>Experience:</strong> 14 Years 1 Month
@@ -108,19 +109,20 @@ const About: React.FC = () => {
             <div className={styles.extra_info}>
               <h2>Certifications</h2>
               <p>
-                <strong>70-486 </strong> (Developing ASP.NET MVC Web
+                <strong>Microsoft : 70-486 </strong> (Developing ASP.NET MVC Web
                 Applications MCPD Certification)
               </p>
               <p>
-                <strong>70-564 </strong> (Designing and Developing Applications)
+                <strong>Microsoft : 70-564 </strong> (Designing and Developing
+                Applications)
               </p>
               <p>
-                <strong>70-562 </strong> (Microsoft Certified Technology
-                Specialist: ASP.NET Application Development)
+                <strong>Microsoft : 70-562 </strong> (Microsoft Certified
+                Technology Specialist: ASP.NET Application Development)
               </p>
               <p>
-                <strong>70-536 </strong> (Microsoft NET Framework, Application
-                Development Foundation)
+                <strong>Microsoft : 70-536 </strong> (Microsoft NET Framework,
+                Application Development Foundation)
               </p>
             </div>
 
@@ -176,7 +178,7 @@ const About: React.FC = () => {
               <div className={styles.social_links}>
                 <IconButton
                   component="a"
-                  href="#linkedin"
+                  href="https://www.linkedin.com/in/gauravthorath/"
                   target="_blank"
                   aria-label="LinkedIn"
                 >
@@ -184,7 +186,7 @@ const About: React.FC = () => {
                 </IconButton>
                 <IconButton
                   component="a"
-                  href="#github"
+                  href="https://github.com/gauravthorath"
                   target="_blank"
                   aria-label="GitHub"
                 >
@@ -192,15 +194,14 @@ const About: React.FC = () => {
                 </IconButton>
                 <IconButton
                   component="a"
-                  href="#gmail"
-                  target="_blank"
+                  href="mailto:gauravjobs25@gmail.com"
                   aria-label="Gmail"
                 >
                   <Email />
                 </IconButton>
                 <IconButton
                   component="a"
-                  href="#skype"
+                  href="tel:+49-15216127113"
                   target="_blank"
                   aria-label="Skype"
                 >

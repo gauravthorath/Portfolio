@@ -1,14 +1,22 @@
 import React, { useEffect } from "react";
-import { Container, Typography, Paper, Box, Grid } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Paper,
+  Box,
+  Grid,
+  IconButton,
+} from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIcon from "@mui/icons-material/Phone";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { LinkedIn, GitHub } from "@mui/icons-material";
 
 // Custom icon for the map marker
 const customIcon = new L.Icon({
-  iconUrl: "https://cdn-icons-png.flaticon.com/512/854/854878.png", // Example custom icon
+  iconUrl: "https://cdn-icons-png.flaticon.com/512/854/854878.png", // custom icon
   iconSize: [32, 32],
   iconAnchor: [16, 32],
   popupAnchor: [0, -32],
@@ -35,20 +43,63 @@ const Contact: React.FC = () => {
             <Grid item xs={12} sm={6}>
               <Box display="flex" alignItems="center">
                 <MailOutlineIcon color="primary" sx={{ marginRight: 1 }} />
-                <Typography variant="body1">
-                  Email:{" "}
-                  <a href="mailto:gauravjobs25@gmail.com">
-                    gauravjobs25@gmail.com
-                  </a>
-                </Typography>
+                <IconButton
+                  component="a"
+                  href="mailto:gauravjobs25@gmail.com"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                  title="View Linked Profile"
+                  size="small"
+                >
+                  Email: gauravjobs25@gmail.com
+                </IconButton>
               </Box>
             </Grid>
             <Grid item xs={12} sm={6}>
               <Box display="flex" alignItems="center">
                 <PhoneIcon color="primary" sx={{ marginRight: 1 }} />
-                <Typography variant="body1">
-                  Phone: <a href="tel:+49-15216127113">+49-15216127113</a>
-                </Typography>
+                <IconButton
+                  component="a"
+                  href="tel:+49-15216127113"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                  title="View Linked Profile"
+                  size="small"
+                >
+                  Mobile: +49-15216127113
+                </IconButton>
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+              <Box display="flex" alignItems="center">
+                <LinkedIn color="primary" sx={{ marginRight: 1 }} />
+                <IconButton
+                  component="a"
+                  href="https://www.linkedin.com/in/gauravthorath/"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                  title="View Linked Profile"
+                  size="small"
+                >
+                  LinkedIn Profile
+                </IconButton>
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+              <Box display="flex" alignItems="center">
+                <GitHub color="primary" sx={{ marginRight: 1 }} />
+                <IconButton
+                  component="a"
+                  href="https://github.com/gauravthorath"
+                  target="_blank"
+                  aria-label="GitHub"
+                  title="View Linked Profile"
+                  size="small"
+                >
+                  Github Profile
+                </IconButton>
               </Box>
             </Grid>
           </Grid>
