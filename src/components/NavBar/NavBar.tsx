@@ -7,13 +7,20 @@ import {
   Button,
   Container,
   Tooltip,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import {
   Brightness4,
   Brightness7,
   LinkedIn as LinkedInIcon,
   GitHub as GitHubIcon,
-  Info as InfoIcon, // Import the InfoIcon
+  Info as InfoIcon,
+  Menu as MenuIcon,
 } from "@mui/icons-material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Avatar from "@mui/material/Avatar";
@@ -22,6 +29,10 @@ import GauravImage from "../../assets/gaurav_avatar.png";
 
 const NavBar: React.FC = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const darkTheme = createTheme({
     palette: {
@@ -33,6 +44,29 @@ const NavBar: React.FC = () => {
     setIsDarkTheme(!isDarkTheme);
   };
 
+  const toggleDrawer = (open: boolean) => () => {
+    setDrawerOpen(open);
+  };
+
+  const drawer = (
+    <div>
+      <List>
+        <ListItem button component={Link} to="/Portfolio/about">
+          <ListItemText primary="About" />
+        </ListItem>
+        <ListItem button component={Link} to="/Portfolio/projects">
+          <ListItemText primary="Projects" />
+        </ListItem>
+        <ListItem button component={Link} to="/Portfolio/contact">
+          <ListItemText primary="Contact" />
+        </ListItem>
+        <ListItem button component={Link} to="/Portfolio/cv">
+          <ListItemText primary="CV" />
+        </ListItem>
+      </List>
+    </div>
+  );
+
   return (
     <ThemeProvider theme={darkTheme}>
       <AppBar
@@ -41,6 +75,18 @@ const NavBar: React.FC = () => {
       >
         <Container maxWidth="xl" sx={{ padding: "0 !important" }}>
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+            {/* Mobile Menu Button */}
+            {isMobile && (
+              <IconButton
+                color="inherit"
+                edge="start"
+                onClick={toggleDrawer(true)}
+                sx={{ mr: 2 }}
+              >
+                <MenuIcon />
+              </IconButton>
+            )}
+
             {/* Left side: Name and Info Icon */}
             <div style={{ display: "flex", alignItems: "center" }}>
               <Typography variant="h5" sx={{ ml: 0 }}>
@@ -71,21 +117,31 @@ const NavBar: React.FC = () => {
               </Tooltip>
             </div>
 
-            {/* Center: Navigation Links */}
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <Button color="inherit" component={Link} to="/Portfolio/about">
-                About
-              </Button>
-              <Button color="inherit" component={Link} to="/Portfolio/projects">
-                Projects
-              </Button>
-              <Button color="inherit" component={Link} to="/Portfolio/contact">
-                Contact
-              </Button>
-              <Button color="inherit" component={Link} to="/Portfolio/cv">
-                CV
-              </Button>
-            </div>
+            {/* Center: Navigation Links (for desktop) */}
+            {!isMobile && (
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <Button color="inherit" component={Link} to="/Portfolio/about">
+                  About
+                </Button>
+                <Button
+                  color="inherit"
+                  component={Link}
+                  to="/Portfolio/projects"
+                >
+                  Projects
+                </Button>
+                <Button
+                  color="inherit"
+                  component={Link}
+                  to="/Portfolio/contact"
+                >
+                  Contact
+                </Button>
+                <Button color="inherit" component={Link} to="/Portfolio/cv">
+                  CV
+                </Button>
+              </div>
+            )}
 
             {/* Right side: LinkedIn, GitHub, Theme Toggle, and Profile Avatar */}
             <div style={{ display: "flex", alignItems: "center" }}>
@@ -126,6 +182,11 @@ const NavBar: React.FC = () => {
           </Toolbar>
         </Container>
       </AppBar>
+
+      {/* Drawer for mobile menu */}
+      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+        {drawer}
+      </Drawer>
 
       {/* Here is where the nested routes will render */}
       <Container maxWidth="xl" sx={{ padding: "0 !important" }}>
