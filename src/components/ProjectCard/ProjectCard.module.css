@@ -1,0 +1,63 @@
+/* Container for the cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive columns */
+  gap: 16px; /* Adjust gap between cards */
+  padding: 16px; /* Optional padding */
+}
+
+/* Individual card style */
+.card {
+  border: 1px solid #ddd; /* Border for the card */
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px; /* Padding inside the card */
+  background-color: #fff; /* Card background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-8px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Show more button style */
+.show-more-btn {
+  margin-top: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff; /* Primary button color */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background-color: #0056b3; /* Darker button color on hover */
+}
+
+/* Responsive grid layout for different screen sizes */
+@media (min-width: 600px) {
+  .card-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 cards per row for medium screens */
+  }
+}
+
+@media (min-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* 3 cards per row for larger screens */
+  }
+}

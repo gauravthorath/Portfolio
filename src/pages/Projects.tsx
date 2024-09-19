@@ -1,16 +1,7 @@
 // Import necessary modules
 import React from "react";
-import { Card, CardContent, Typography, Button, Divider } from "@mui/material";
-
-interface Project {
-  name: string;
-  description?: string;
-  scope: string;
-  processesProducts: string[];
-  technologies: string[];
-  responsibilities: string[];
-}
-
+import ProjectCard, { Project } from "../components/ProjectCard/ProjectCard";
+import styles from "../components/ProjectCard/ProjectCard.module.css";
 const projects: Project[] = [
   {
     name: "CSOX",
@@ -713,37 +704,9 @@ const projects: Project[] = [
 
 const ProjectsComponent: React.FC = () => {
   return (
-    <div className="p-6">
+    <div className={styles.cardContainer}>
       {projects.map((project, index) => (
-        <Card key={index} className="mb-4">
-          <CardContent>
-            <Typography variant="h6" component="h2" gutterBottom>
-              {project.name}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" paragraph>
-              <strong>Scope:</strong> {project.scope}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" paragraph>
-              <strong>Processes/Products:</strong>{" "}
-              {project.processesProducts.join(", ")}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" paragraph>
-              <strong>Technologies:</strong> {project.technologies.join(", ")}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" paragraph>
-              <strong>Responsibilities:</strong>
-              <ul>
-                {project.responsibilities.map((resp, idx) => (
-                  <li key={idx}>{resp}</li>
-                ))}
-              </ul>
-            </Typography>
-            <Divider />
-            <Button variant="text" color="primary" className="pt-5">
-              View More
-            </Button>
-          </CardContent>
-        </Card>
+        <ProjectCard key={index} project={project} />
       ))}
     </div>
   );
