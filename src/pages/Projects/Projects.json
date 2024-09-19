@@ -1,86 +1,79 @@
-// Import necessary modules
-import React from "react";
-import ProjectCard, { Project } from "../components/ProjectCard/ProjectCard";
-import styles from "../components/ProjectCard/ProjectCard.module.css";
-const projects: Project[] = [
+[
   {
-    name: "CSOX",
-    description:
-      "Led development and optimization of a ReactJS application with Theia and Material UI.",
-    scope: "Lead development and optimization",
-    processesProducts: [
+    "name": "CSOX",
+    "description": "Led development and optimization of a ReactJS application with Theia and Material UI.",
+    "scope": "Lead development and optimization",
+    "processesProducts": [
       "Led the development of a ReactJS application with Theia and Material UI.",
       "Enhanced functionality with AGGrid and Testing.",
       "Optimized performance by improving HARA (Hazard Analysis and Risk Assessment), TARA (Threat and Risk Assessment), and ATA (Attack Tree Analysis) within the SOX application.",
-      "Automated deployment processes with CI/CD pipelines on GitLab, resulting in efficient and error-free releases.",
+      "Automated deployment processes with CI/CD pipelines on GitLab, resulting in efficient and error-free releases."
     ],
-    technologies: [
+    "technologies": [
       "ReactJS",
       "Theia",
       "Material UI",
       "AGGrid",
       "React Testing Library",
       "GitLab CI/CD",
-      "AWS",
+      "AWS"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Developed and enhanced various modules within the application.",
       "Implemented robust quality assurance measures.",
-      "Optimized performance and automated deployment processes.",
-    ],
+      "Optimized performance and automated deployment processes."
+    ]
   },
 
   {
-    name: "Justtrack Application",
-    description:
-      "Implemented features and enhanced product reliability using various technologies.",
-    scope: "Feature implementation and reliability enhancement",
-    processesProducts: [
+    "name": "Justtrack Application",
+    "description": "Implemented features and enhanced product reliability using various technologies.",
+    "scope": "Feature implementation and reliability enhancement",
+    "processesProducts": [
       "Implemented numerous features using ReactJS, React Table, Tanstack Query, Redux, and Material UI, enhancing overall functionality and UI.",
-      "Played a pivotal role in ensuring product reliability and stability by contributing to E2E testing efforts using Cypress.",
+      "Played a pivotal role in ensuring product reliability and stability by contributing to E2E testing efforts using Cypress."
     ],
-    technologies: [
+    "technologies": [
       "ReactJS",
       "React Table",
       "Tanstack Query",
       "Redux",
       "Material UI",
       "Rechart",
-      "Cypress",
+      "Cypress"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Developed new features and improved UI.",
-      "Contributed to E2E testing, improving software quality and user satisfaction.",
-    ],
+      "Contributed to E2E testing, improving software quality and user satisfaction."
+    ]
   },
   {
-    name: "Finacle",
-    scope:
-      "Worked on integrating Finacle with React and Polymer for a comprehensive banking solution. Leveraged React for dynamic and responsive user interfaces and Polymer for web component development, enhancing modularity and reusability.",
-    processesProducts: [
+    "name": "Finacle",
+    "scope": "Worked on integrating Finacle with React and Polymer for a comprehensive banking solution. Leveraged React for dynamic and responsive user interfaces and Polymer for web component development, enhancing modularity and reusability.",
+    "processesProducts": [
       "Implemented numerous features using ReactJS, React Table, Tanstack Query, Redux, and Material UI, enhancing overall functionality and UI.",
-      "Played a pivotal role in ensuring product reliability and stability by contributing to E2E testing efforts using Cypress.",
+      "Played a pivotal role in ensuring product reliability and stability by contributing to E2E testing efforts using Cypress."
     ],
-    technologies: [
+    "technologies": [
       "ReactJS",
       "Polymer",
       "MongoDB",
       "Redux",
       "Material UI",
-      "React Table",
+      "React Table"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Scrum master",
       "Team Lead",
       "Code Review",
       "Collaboration with another team leads",
-      "Key feature developments",
-    ],
+      "Key feature developments"
+    ]
   },
   {
-    name: "ATS Core Frontend",
-    scope: "Development and Deployment",
-    processesProducts: [
+    "name": "ATS Core Frontend",
+    "scope": "Development and Deployment",
+    "processesProducts": [
       "Login",
       "Routing",
       "Localization",
@@ -88,19 +81,19 @@ const projects: Project[] = [
       "Material Snack bar",
       "Interceptor",
       "Guards",
-      "Signal R",
+      "Signal R"
     ],
-    technologies: ["Angular 6 with CLI", "Angular Material"],
-    responsibilities: [
+    "technologies": ["Angular 6 with CLI", "Angular Material"],
+    "responsibilities": [
       "Attend regular meetings/discussions with client",
       "Plan and deliver all tasks in an efficient manner",
-      "Develop and deploy the changes on respective environments",
-    ],
+      "Develop and deploy the changes on respective environments"
+    ]
   },
   {
-    name: "Timber Preserve Management",
-    scope: "Development",
-    processesProducts: [
+    "name": "Timber Preserve Management",
+    "scope": "Development",
+    "processesProducts": [
       "Production Scheduling",
       "Treatment Cycles",
       "Spices",
@@ -109,48 +102,48 @@ const projects: Project[] = [
       "Volume calculations",
       "Export to Excel",
       "Export to PDF using WKHTMLTOPDF library",
-      "Printing charge sheet reports",
+      "Printing charge sheet reports"
     ],
-    technologies: [
+    "technologies": [
       "Sencha Architect 4.2",
       "Ext JS 6.5.2",
       "Angular JS",
       "WCF",
-      "SQL Server 2014",
+      "SQL Server 2014"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Create pages with required extension controls",
       "Attend regular meetings/discussions with client",
       "Plan and deliver all tasks in an efficient manner",
-      "Code deployment to the DEV/QA/UAT/PROD environments",
-    ],
+      "Code deployment to the DEV/QA/UAT/PROD environments"
+    ]
   },
   {
-    name: "Tricore - Grand Rapid Reports",
-    scope: "Development and Deployment",
-    processesProducts: [
+    "name": "Tricore - Grand Rapid Reports",
+    "scope": "Development and Deployment",
+    "processesProducts": [
       "Receiving Summary Report",
       "Receiving Details Report",
       "Batch Summary Report",
       "Batch Details Report",
-      "Pre-Batch Report",
+      "Pre-Batch Report"
     ],
-    technologies: ["SSRS", "SQL Server 2014"],
-    responsibilities: [
+    "technologies": ["SSRS", "SQL Server 2014"],
+    "responsibilities": [
       "Attend regular discussions with client",
       "Create reports and stored procedures",
-      "Develop and deploy the changes on respective environments",
-    ],
+      "Develop and deploy the changes on respective environments"
+    ]
   },
   {
-    name: "Gas Management System (GMS)",
-    scope: "Development and Support",
-    processesProducts: [
+    "name": "Gas Management System (GMS)",
+    "scope": "Development and Support",
+    "processesProducts": [
       "Volume loading",
       "Nominations and allocations",
-      "Report generation",
+      "Report generation"
     ],
-    technologies: [
+    "technologies": [
       "ASP.NET MVC",
       "C#.NET",
       "VB6.0",
@@ -164,9 +157,9 @@ const projects: Project[] = [
       "SQL Server",
       "JSON",
       "XML",
-      "HTML",
+      "HTML"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic, WCF services, and stored procedures",
       "Attend daily meetings with client or onsite for project/requirement analysis",
       "Act as a solo project executer",
@@ -179,70 +172,70 @@ const projects: Project[] = [
       "Document the changes in database and code as required",
       "Prepare Knowledge Captured Document (KCD) for the applications",
       "Preparation of Root Cause Analysis (RCA) for the critical issues",
-      "Code deployment to the DEV /QA/ UAT/ PROD environments",
-    ],
+      "Code deployment to the DEV /QA/ UAT/ PROD environments"
+    ]
   },
   {
-    name: "Brewery Process Management",
-    scope: "Development",
-    processesProducts: ["Material", "Definitions", "Equipment", "Packaging"],
-    technologies: [
+    "name": "Brewery Process Management",
+    "scope": "Development",
+    "processesProducts": ["Material", "Definitions", "Equipment", "Packaging"],
+    "technologies": [
       "Angular 4",
       "Web API",
       "Bootstrap",
       "jQuery",
       "Typescript",
-      "HTML 5",
+      "HTML 5"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic",
       "Attend daily meetings with client or onsite for project/requirement analysis/discussion and task updates",
       "Preparation of test cases and unit testing",
       "Respond promptly and professionally over reported issues",
-      "Code deployment to the DEV /QA/ UAT/ PROD environments",
-    ],
+      "Code deployment to the DEV /QA/ UAT/ PROD environments"
+    ]
   },
   {
-    name: "QR Code Scanner Web App",
-    scope: "Development",
-    processesProducts: [
+    "name": "QR Code Scanner Web App",
+    "scope": "Development",
+    "processesProducts": [
       "Scan QR code on machines",
-      "Fetch documents as per QR code and open respective PDF files and display to user",
+      "Fetch documents as per QR code and open respective PDF files and display to user"
     ],
-    technologies: [
+    "technologies": [
       "Bootstrap",
       "HTML 5",
       "Instascan JavaScript library for QR Code",
-      "WebRTC",
+      "WebRTC"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic",
       "Plan and deliver all tasks in an efficient manner",
       "Test code with different browsers on laptops, tablets, and mobiles",
-      "Deployment",
-    ],
+      "Deployment"
+    ]
   },
   {
-    name: "OPARM (Organizational Projects Asset Retention and Management)",
-    scope: "Development",
-    processesProducts: [
+    "name": "OPARM (Organizational Projects Asset Retention and Management)",
+    "scope": "Development",
+    "processesProducts": [
       "User Profile",
       "Skills",
       "Contacts",
       "Domain Exposure",
       "Customer Exposure",
-      "Industry Standard and Skill Matrix",
+      "Industry Standard and Skill Matrix"
     ],
-    technologies: [
+    "technologies": [
       "ASP.NET MVC 4",
       "Web API",
       "SQL Server",
       "C#.NET",
       "JQuery",
       "Bootstrap",
-      "HTML5",
+      "HTML5"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Write code to implement modules",
       "Attend daily meetings with client or onsite for project/requirement analysis/discussion and task updates",
       "Plan and deliver all tasks in an efficient manner",
@@ -250,20 +243,20 @@ const projects: Project[] = [
       "Respond promptly and professionally over reported issues",
       "Prepare Knowledge Captured Document (KCD) for the applications",
       "Preparation of Root Cause Analysis (RCA) for the critical issues",
-      "Deployment to Dev, QA and Prod environments",
-    ],
+      "Deployment to Dev, QA and Prod environments"
+    ]
   },
   {
-    name: "Next Gen Portal",
-    scope: "Design and Development",
-    processesProducts: [
+    "name": "Next Gen Portal",
+    "scope": "Design and Development",
+    "processesProducts": [
       "Create Libraries",
       "Users",
       "Topics",
       "Artifacts",
-      "Review and update Artifacts",
+      "Review and update Artifacts"
     ],
-    technologies: [
+    "technologies": [
       "ASP.NET MVC",
       "Entity Framework",
       "WCF",
@@ -272,9 +265,9 @@ const projects: Project[] = [
       "BOOTSTRAP",
       "JSON",
       "jQuery",
-      "SQL Server",
+      "SQL Server"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic, WCF services",
       "Design project architecture and define rules",
       "Design database structure and write stored procedures",
@@ -283,26 +276,26 @@ const projects: Project[] = [
       "Respond promptly and professionally to technical issues resolving",
       "Document the changes in database and code as required",
       "Code deployment to the DEV /QA/ UAT/ PROD environments",
-      "Write test cases",
-    ],
+      "Write test cases"
+    ]
   },
   {
-    name: "Power Transmission Project",
-    scope: "Designing and Development",
-    processesProducts: [
+    "name": "Power Transmission Project",
+    "scope": "Designing and Development",
+    "processesProducts": [
       "Collect information from all locations",
-      "Send data to server",
+      "Send data to server"
     ],
-    technologies: [
+    "technologies": [
       "C#.NET",
       "LINQ",
       "Entity Framework",
       "SQL Server 2008 R2",
       "ASP.NET MVC",
       "WCF",
-      "jQuery",
+      "jQuery"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic, WCF services",
       "Attend daily meetings with client for requirement analysis/discussion and task updates",
       "Design project architecture and define rules",
@@ -310,24 +303,24 @@ const projects: Project[] = [
       "Manage team, estimate tasks, allocate tasks and review the same",
       "Develop and deploy the project within timeline defined",
       "Unit testing of the deliverable module",
-      "Code deployment to the DEV /QA/ UAT/ PROD",
-    ],
+      "Code deployment to the DEV /QA/ UAT/ PROD"
+    ]
   },
   {
-    name: "Business Mobile App",
-    scope: "Designing and Development",
-    processesProducts: [
+    "name": "Business Mobile App",
+    "scope": "Designing and Development",
+    "processesProducts": [
       "Fetching data from database and manipulate data on server using JSON based web services",
-      "Mail notifications as well as Push notifications for Android and iOS",
+      "Mail notifications as well as Push notifications for Android and iOS"
     ],
-    technologies: [
+    "technologies": [
       "ASP.NET",
       "C#.NET",
       "JSON",
       "SQL Server 2008",
-      "Web Services",
+      "Web Services"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic",
       "Attend daily meetings with client for requirements and task updates",
       "Design project architecture and define rules",
@@ -335,66 +328,66 @@ const projects: Project[] = [
       "Act as a solo project executer",
       "Write web services for Android and iOS applications",
       "Respond promptly and professionally to bugs/issues resolving",
-      "Code deployment to the DEV /QA/ UAT/ PROD",
-    ],
+      "Code deployment to the DEV /QA/ UAT/ PROD"
+    ]
   },
   {
-    name: "iOS Mobile App with Admin",
-    scope: "Designing and Development",
-    processesProducts: [
+    "name": "iOS Mobile App with Admin",
+    "scope": "Designing and Development",
+    "processesProducts": [
       "Fetching data from database and manipulate data on server using JSON based web services",
       "Mail notifications as well as Push notifications for iOS",
-      "Admin section to review data, video, audio and doc files",
+      "Admin section to review data, video, audio and doc files"
     ],
-    technologies: [
+    "technologies": [
       "ASP.NET",
       "C#.NET",
       "jQuery",
       "JSON",
       "SQL Server 2008",
-      "Web Services",
+      "Web Services"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic",
       "Attend daily meetings with client for requirement and task updates",
       "Design project architecture and define rules",
       "Design database structure and write stored procedures",
       "Respond promptly and professionally to bug fixes",
       "Write web services for Android and iOS applications",
-      "Code deployment to the DEV /QA/ UAT/ PROD",
-    ],
+      "Code deployment to the DEV /QA/ UAT/ PROD"
+    ]
   },
   {
-    name: "Transport Application - Snylsis",
-    scope: "Designing & Development",
-    processesProducts: [
+    "name": "Transport Application - Snylsis",
+    "scope": "Designing & Development",
+    "processesProducts": [
       "Manage the shipments, journeys, drivers, vehicles, packages, contacts, customers, dispatchers, invoices",
-      "Access permissions and dashboard for admin",
+      "Access permissions and dashboard for admin"
     ],
-    technologies: [
+    "technologies": [
       "ASP.NET MVC",
       "SQL Server 2014",
       "jQuery",
       "Bootstrap",
-      "HTML5",
+      "HTML5"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic",
       "Attend daily meetings with client for requirement/ task updates",
       "Design project architecture and define rules",
       "Design database structure and write stored procedures",
       "Respond promptly and professionally to bugs/issues",
-      "Code deployment to the DEV/ QA/ UAT/ PROD",
-    ],
+      "Code deployment to the DEV/ QA/ UAT/ PROD"
+    ]
   },
   {
-    name: "San Joaquin Valley (SJV) App Upgrade (NET Framework Upgrade)",
-    scope: "Upgradation",
-    processesProducts: [
+    "name": "San Joaquin Valley (SJV) App Upgrade (NET Framework Upgrade)",
+    "scope": "Upgradation",
+    "processesProducts": [
       "Upgradation of .NET 3.5/2.0 applications to .NET 4.5",
-      "Pre-and Post-migration SAST (Static Application Security Testing) scanning for vulnerability check",
+      "Pre-and Post-migration SAST (Static Application Security Testing) scanning for vulnerability check"
     ],
-    technologies: [
+    "technologies": [
       "ASP.NET",
       "C#.NET",
       "VB.NET",
@@ -402,36 +395,36 @@ const projects: Project[] = [
       "VS 2012",
       "TFS",
       "Crystal Reports",
-      "HP Fortify (SAST Scan Tool)",
+      "HP Fortify (SAST Scan Tool)"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic",
       "Attend daily meetings with client or onsite for requirement and task updates",
       "Plan and deliver all tasks in an efficient manner",
       "Respond promptly and professionally to bugs",
       "Document the changes in database and code as required",
       "Create resource files for multi-language support",
-      "Perform SAST Scanning before and after migration of the application to ensure that post migration there are no new issues",
-    ],
+      "Perform SAST Scanning before and after migration of the application to ensure that post migration there are no new issues"
+    ]
   },
   {
-    name: "Project Management System (PMS)",
-    scope: "Designing & Development",
-    processesProducts: [
+    "name": "Project Management System (PMS)",
+    "scope": "Designing & Development",
+    "processesProducts": [
       "Manage project related data such as programmer/Tester and Designer’s daily work and related tasks, testing related activities",
       "Assignment and Tracking of Projects with various kinds of reports",
-      "Reports - Daily work report, Quarter report, and Resource Summary report",
+      "Reports - Daily work report, Quarter report, and Resource Summary report"
     ],
-    technologies: [
+    "technologies": [
       "VS2010",
       "ASP.NET",
       "C#.NET",
       "SQL Server 2008",
       "jQuery",
       "JavaScript",
-      "CSS",
+      "CSS"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic",
       "Attend daily meetings with end users for requirement",
       "Design project architecture and define rules",
@@ -440,27 +433,27 @@ const projects: Project[] = [
       "Respond promptly and professionally to bug fixes",
       "Prepare test cases for developed functionalities",
       "Document the changes in database and code as required",
-      "Code deployment to the DEV /QA/ UAT/ PROD",
-    ],
+      "Code deployment to the DEV /QA/ UAT/ PROD"
+    ]
   },
   {
-    name: "Customer Relationship Management (CRM)",
-    scope: "Designing & Development",
-    processesProducts: [
+    "name": "Customer Relationship Management (CRM)",
+    "scope": "Designing & Development",
+    "processesProducts": [
       "Managing company’s interactions between customers and sales",
       "Organizing, automating, and synchronizing business processes and sales activities",
-      "Goal to find, attract, win new clients and retain existing clients",
+      "Goal to find, attract, win new clients and retain existing clients"
     ],
-    technologies: [
+    "technologies": [
       "VS2010",
       "ASP.NET",
       "C#.NET",
       "SQL Server 2008",
       "jQuery",
       "JavaScript",
-      "CSS",
+      "CSS"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic",
       "Attend daily meetings with end users for requirement analysis/discussion",
       "Design project architecture and define rules",
@@ -468,17 +461,17 @@ const projects: Project[] = [
       "Plan and deliver all tasks in an efficient manner",
       "Prepare test cases for developed functionalities",
       "Document the changes in database and code as required",
-      "Code deployment to the DEV /QA/ UAT/ PROD",
-    ],
+      "Code deployment to the DEV /QA/ UAT/ PROD"
+    ]
   },
   {
-    name: "Pathology System",
-    scope: "Designing & Development",
-    processesProducts: [
+    "name": "Pathology System",
+    "scope": "Designing & Development",
+    "processesProducts": [
       "Maintain all pathology reports in smart card",
-      "Retrieve data using smart card reader at pathology centre",
+      "Retrieve data using smart card reader at pathology centre"
     ],
-    technologies: [
+    "technologies": [
       "VS2008",
       "VB.NET",
       "MS Access",
@@ -486,9 +479,9 @@ const projects: Project[] = [
       "SCOSTA File System",
       "RDLC / Crystal Reports",
       "Wojtek tool",
-      "Microsystems SCR3310 and SCOSTA based smart cards",
+      "Microsystems SCR3310 and SCOSTA based smart cards"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic",
       "Attend daily meetings with onsite for requirement",
       "Design project architecture and define rules",
@@ -498,25 +491,25 @@ const projects: Project[] = [
       "Prepare user manual for the end user",
       "Write stored procedure as required",
       "Create file system on SCOSTA smart cards using Wojtek Tool",
-      "Create deployable setup file",
-    ],
+      "Create deployable setup file"
+    ]
   },
   {
-    name: "File Tracking System",
-    scope: "Designing & Development",
-    processesProducts: [
+    "name": "File Tracking System",
+    "scope": "Designing & Development",
+    "processesProducts": [
       "File Registration, File Allocation, File Search, File Theft Detection and buzzed Alarm on Theft",
-      "Various Reports",
+      "Various Reports"
     ],
-    technologies: [
+    "technologies": [
       "VS2008",
       "C#.NET",
       "SQL Server 2008",
       "Windows-CE",
       "Sirit Infinity UHF Reader Antenna with RFID Tags",
-      "Windows-CE based Handheld Reader with RFID UHF Tags",
+      "Windows-CE based Handheld Reader with RFID UHF Tags"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Attend daily meetings with onsite for requirement",
       "Design project architecture and define rules",
       "Design database structure and write stored procedures",
@@ -524,25 +517,25 @@ const projects: Project[] = [
       "Document the changes in database and code as required",
       "Prepare user manual for the end user",
       "Write module to read data from RFID tags and process it",
-      "Create deployable setup file",
-    ],
+      "Create deployable setup file"
+    ]
   },
   {
-    name: "Bicycle Kitting Management",
-    scope: "Designing & Development",
-    processesProducts: [
+    "name": "Bicycle Kitting Management",
+    "scope": "Designing & Development",
+    "processesProducts": [
       "Allocate smartcards for different processes of bicycle manufacturing",
-      "Allow supervisor login and verify all the processes",
+      "Allow supervisor login and verify all the processes"
     ],
-    technologies: [
+    "technologies": [
       "C#.NET",
       "SQL Server 2008",
       "Omnikey Diagnostic Tool",
       "NFC Multi Smartcard",
       "DUALi Reader with Mifare Smartcards",
-      "Feig RFID Pad Antenna with RFID Tags",
+      "Feig RFID Pad Antenna with RFID Tags"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic",
       "Attend daily meetings with onsite for requirement",
       "Design project architecture and define rules",
@@ -551,16 +544,16 @@ const projects: Project[] = [
       "Document the changes in database and code as required",
       "Prepare user manual for the end user",
       "Create file system using SCOSTA smart cards using Wojtek Tool",
-      "Create deployable setup file",
-    ],
+      "Create deployable setup file"
+    ]
   },
   {
-    name: "Vehicle Management System",
-    scope: "Designing & Development",
-    processesProducts: [
-      "Read / write the vehicle information, customer information, services information and all payment related information",
+    "name": "Vehicle Management System",
+    "scope": "Designing & Development",
+    "processesProducts": [
+      "Read / write the vehicle information, customer information, services information and all payment related information"
     ],
-    technologies: [
+    "technologies": [
       "VS2008",
       "VB.NET",
       "MS Access",
@@ -568,9 +561,9 @@ const projects: Project[] = [
       "SCOSTA File System",
       "RDLC / Crystal Reports",
       "Wojtek tool",
-      "SCM Microsystems SCR3310 and SCOSTA based Smartcards",
+      "SCM Microsystems SCR3310 and SCOSTA based Smartcards"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Develop and write programming logic",
       "Attend daily meetings with onsite for requirement analysis/discussion",
       "Design project architecture and define rules",
@@ -579,137 +572,125 @@ const projects: Project[] = [
       "Document the changes in database and code as required",
       "Prepare user manual for the end user",
       "Create file system using SCOSTA smart cards using Wojtek Tool",
-      "Create deployable setup file",
-    ],
+      "Create deployable setup file"
+    ]
   },
   {
-    name: "Answer to Reset (ATR) Reader System",
-    scope: "Designing & Development",
-    processesProducts: [
-      "In manufacturing of SCOSTA smartcards, used to check ATR of smartcard for testing",
+    "name": "Answer to Reset (ATR) Reader System",
+    "scope": "Designing & Development",
+    "processesProducts": [
+      "In manufacturing of SCOSTA smartcards, used to check ATR of smartcard for testing"
     ],
-    technologies: [
+    "technologies": [
       "VS2008",
       "VB.NET",
       "SCOSTA File System",
       "Wojtek tool",
-      "SCM Microsystems SCR3310 and SCOSTA based Smartcards",
+      "SCM Microsystems SCR3310 and SCOSTA based Smartcards"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Proactively provide a solution to the manufacturing team to automate the manual process",
       "Execute APDU commands through .NET application which removed manual execution on APDU commands",
-      "Demo the application and explain how the manual process can be removed and provide setup file of the application",
-    ],
+      "Demo the application and explain how the manual process can be removed and provide setup file of the application"
+    ]
   },
   {
-    name: "Enterprise Resource Planning (ERP)",
-    scope: "Development and Support",
-    processesProducts: [
-      "Material management in enterprises - from purchase management to aspects of sales and production planning",
+    "name": "Enterprise Resource Planning (ERP)",
+    "scope": "Development and Support",
+    "processesProducts": [
+      "Material management in enterprises - from purchase management to aspects of sales and production planning"
     ],
-    technologies: ["Visual Basic 6.0", "MS Access", "SQL Server 2005"],
-    responsibilities: [
+    "technologies": ["Visual Basic 6.0", "MS Access", "SQL Server 2005"],
+    "responsibilities": [
       "Develop and write programming logic",
       "Create crystal reports as per requirements",
       "Make changes in crystal reports as per client requirement",
       "Onsite visit to fix any issue to generate BOL through application",
       "Customization in ERP and creation of new module as per client requirement",
       "Manage team, estimate tasks, allocate tasks and review the same",
-      "Database changes as per requirement",
-    ],
+      "Database changes as per requirement"
+    ]
   },
   {
-    name: "SJV (San Joaquin Valley) Migration (ETL Packages Migration)",
-    scope: "Migration",
-    processesProducts: [
+    "name": "SJV (San Joaquin Valley) Migration (ETL Packages Migration)",
+    "scope": "Migration",
+    "processesProducts": [
       "Migrate SSIS 2008 to SSIS 2014 and remove dependency of ETL Framework",
-      "Remove hard coded connection strings and expressions",
+      "Remove hard coded connection strings and expressions"
     ],
-    technologies: [
+    "technologies": [
       "ETL Framework",
       "SQL Server 2008",
       "SQL Server 2014",
       "VS.NET 2008 BI",
-      "VS.NET 2012 BI",
+      "VS.NET 2012 BI"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Attend daily scrum call with client for requirement analysis/discussion",
-      "Migration of SSIS Packages from 2008 to 2014",
-    ],
+      "Migration of SSIS Packages from 2008 to 2014"
+    ]
   },
   {
-    name: "Midway Sunset Site (MDWS) Creation in PI Explorer",
-    scope: "Design and Development",
-    processesProducts: [
-      "Create hierarchy and various templates, elements and attributes",
+    "name": "Midway Sunset Site (MDWS) Creation in PI Explorer",
+    "scope": "Design and Development",
+    "processesProducts": [
+      "Create hierarchy and various templates, elements and attributes"
     ],
-    technologies: [
+    "technologies": [
       "OSI PI system Explorer",
       "PI Builder",
       "PI Data Link",
-      "SQL Server 2012",
+      "SQL Server 2012"
     ],
-    responsibilities: [
+    "responsibilities": [
       "Create new site hierarchy in PI system explorer",
       "Create PI Elements, PI Templates in PI system explorer",
       "Attend daily scrum call with client for requirement analysis/discussion",
       "Testing of the application",
       "Prepare documents of tags which are not returning values and analyse them",
-      "Prepare release document for production",
-    ],
+      "Prepare release document for production"
+    ]
   },
   {
-    name: "Daily Journal",
-    scope: "Designing and Development",
-    processesProducts: [
+    "name": "Daily Journal",
+    "scope": "Designing and Development",
+    "processesProducts": [
       "Creation of consoles, systems, sub-systems",
-      "Monitor the physical sites of oil and gas and assign event to employees",
+      "Monitor the physical sites of oil and gas and assign event to employees"
     ],
-    technologies: ["ServiceNow", "JavaScript"],
-    responsibilities: [
+    "technologies": ["ServiceNow", "JavaScript"],
+    "responsibilities": [
       "Attend daily scrum call with client",
       "Work on JavaScript in client scripts, UI Actions and Glide Records",
-      "Unit testing of the application",
-    ],
+      "Unit testing of the application"
+    ]
   },
   {
-    name: "Service Catalogs",
-    scope: "Designing and Development",
-    processesProducts: [
+    "name": "Service Catalogs",
+    "scope": "Designing and Development",
+    "processesProducts": [
       "Add user in different Active Directory groups after getting approvals using workflow activities",
-      "Inform users and approvers by sending email notifications",
+      "Inform users and approvers by sending email notifications"
     ],
-    technologies: ["ServiceNow", "JavaScript", "Workflows"],
-    responsibilities: [
+    "technologies": ["ServiceNow", "JavaScript", "Workflows"],
+    "responsibilities": [
       "Attend daily scrum call with client",
       "Work on JavaScript in client scripts, UI Actions and Glide Records",
-      "Unit testing of the application",
-    ],
+      "Unit testing of the application"
+    ]
   },
   {
-    name: "Align Registration",
-    scope: "Designing and Development",
-    processesProducts: [
-      "Registration of external users to Active Directory using ServiceNow Workflows, Client Scripts and UI-actions",
+    "name": "Align Registration",
+    "scope": "Designing and Development",
+    "processesProducts": [
+      "Registration of external users to Active Directory using ServiceNow Workflows, Client Scripts and UI-actions"
     ],
-    technologies: ["ServiceNow", "JavaScript", "CSS", "Workflows"],
-    responsibilities: [
+    "technologies": ["ServiceNow", "JavaScript", "CSS", "Workflows"],
+    "responsibilities": [
       "Attend daily scrum call with client",
       "Work in JavaScript in client environment, UI Actions and Glide Records",
       "Write PowerShell script",
-      "Active Directory integration to add/edit users",
-    ],
-  },
-];
-
-const ProjectsComponent: React.FC = () => {
-  return (
-    <div className={styles.cardContainer}>
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
-      ))}
-    </div>
-  );
-};
-
-export default ProjectsComponent;
+      "Active Directory integration to add/edit users"
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Worker, Viewer } from "@react-pdf-viewer/core";
-import myCV from "../assets/CV_Gaurav_Thorat.pdf";
+import myCV from "../../assets/CV_Gaurav_Thorat.pdf";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";

@@ -4,100 +4,28 @@ import { LinkedIn, GitHub, Email, Call } from "@mui/icons-material";
 import styles from "./About.module.css";
 import gauravAboutPhoto from "../../assets/gaurav_about.jpeg";
 import ReactTypingEffect from "react-typing-effect";
-
-const skillGroups = {
-  "Frontend Technologies": [
-    "React.js",
-    "JavaScript",
-    "TypeScript",
-    "Angular",
-    "Angular.js",
-    "Webpack",
-    "Redux",
-    "MobX",
-    "CSS",
-    "HTML5",
-    "JSON",
-    "HTTP/AJAX",
-    "Theia",
-  ],
-  "Backend Technologies": [
-    "Node",
-    "Express",
-    "ASP.NET Web API",
-    "C#.NET",
-    "ASP.NET MVC",
-  ],
-  "Performance Testing Frameworks": [
-    "Jest",
-    "Cypress",
-    "React Testing Library",
-    "Playwright",
-    "Jasmine",
-  ],
-  "UI Libraries": ["Material UI", "Bootstrap", "Tailwind", "Angular Material"],
-  "Other Libraries": [
-    "Remirror (SVG rendering)",
-    "Instascan.JS (barcode/QR code scanning)",
-    "ChartJs",
-    "GoJs (interactive graphics)",
-    "React-Leaflet (maps)",
-    "Wojtek (SmartCards and RFID)",
-    "OSIsoft PI (sensor integrations)",
-    "AGGrid",
-    "React Table",
-    "Rechart",
-    "Formik and Yup",
-    "Lodash.JS",
-    "Moment",
-    "Angular-gantt chart",
-    "jQuery",
-    "WKHTMLTOPDF library",
-  ],
-  "Agile Methodologies": ["Scrum", "Kanban"],
-  Tools: [
-    "Git",
-    "JIRA",
-    "GitLab",
-    "GitHub",
-    "CI/CD",
-    "Docker",
-    "Postman",
-    "OSIsoft PI AF",
-    "OSIsoft PI explorer System",
-    "OzekiSMS (SMS Gateway)",
-    "WebRTC",
-    "Wojtek (Smart Card Tool)",
-    "SCOSTA (Smart Card OS)",
-    "APDU Commands",
-    "OWASP Top 10",
-    "Accessibility (WCAG, ARIA)",
-    "HP Fortify (SAST scan)",
-  ],
-  "DataBases and API Integration": [
-    "Microsoft SQL Server",
-    "MongoDB",
-    "PostgreSQL",
-    "REST API",
-    "GraphQL",
-    "SSRS",
-    "SSIS",
-    "SQL Profiler",
-  ],
-};
+import skillGroups from "./skills.json";
 
 const About: React.FC = () => {
   return (
     <section className={styles.about_section}>
       <div className={styles.about_container}>
         <div className={styles.about_grid}>
-          {/* Image Section with Animated Text */}
+          {/* Image Section with Titles */}
           <div className={styles.about_image_wrapper}>
+            <div className={styles.titles_container}>
+              <h2 className={styles.title}>Technical Lead</h2>
+            </div>
+
             <img
               src={gauravAboutPhoto}
               alt="Gaurav Thorat"
               className={styles.about_image}
             />
+
+            <div className={styles.titles_container}>
+              <h3 className={styles.subtitle}>Scrum Master</h3>
+            </div>
             <div className={styles.typing_effect}>
               <span className={styles.constant_text}>Senior </span>
               <ReactTypingEffect
@@ -166,11 +94,11 @@ const About: React.FC = () => {
                 Applications MCPD Certification)
               </p>
               <p>
-                <strong>70-564 </strong> (Designing and Developing Applications){" "}
+                <strong>70-564 </strong> (Designing and Developing Applications)
               </p>
               <p>
                 <strong>70-562 </strong> (Microsoft Certified Technology
-                Specialist: ASP.NET Application Development){" "}
+                Specialist: ASP.NET Application Development)
               </p>
               <p>
                 <strong>70-536 </strong> (Microsoft NET Framework, Application
