@@ -53,16 +53,16 @@ const NavBar: React.FC = () => {
 
             {/* Center: Navigation Links */}
             <div style={{ display: "flex", alignItems: "center" }}>
-              <Button color="inherit" component={Link} to="/about">
+              <Button color="inherit" component={Link} to="/Portfolio/about">
                 About
               </Button>
-              <Button color="inherit" component={Link} to="/projects">
+              <Button color="inherit" component={Link} to="/Portfolio/projects">
                 Projects
               </Button>
-              <Button color="inherit" component={Link} to="/contact">
+              <Button color="inherit" component={Link} to="/Portfolio/contact">
                 Contact
               </Button>
-              <Button color="inherit" component={Link} to="/cv">
+              <Button color="inherit" component={Link} to="/Portfolio/cv">
                 CV
               </Button>
             </div>

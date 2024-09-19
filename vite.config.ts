@@ -4,7 +4,7 @@ import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
 export default defineConfig(({ mode }) => ({
   plugins: [TanStackRouterVite(), viteReact()],
-  base: mode === "production" ? "/Portfolio/" : "/", // Ensure correct base path
+  base: mode === "production" ? "/Portfolio/" : "/Portfolio/", // Ensure correct base path
   server: {
     open: true,
     historyApiFallback: true, // Important for SPA
