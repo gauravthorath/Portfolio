@@ -23,13 +23,15 @@
     "@react-pdf-viewer/zoom": "^3.12.0",
     "@tanstack/react-query": "^5.51.21",
     "@tanstack/react-router": "^1.47.1",
+    "@types/react-typing-effect": "^2.0.7",
     "@vitejs/plugin-react": "^4.3.1",
     "leaflet": "^1.9.4",
     "pdfjs-dist": "2.11.338",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-leaflet": "^4.2.1",
-    "react-pdf": "^9.1.0"
+    "react-pdf": "^9.1.0",
+    "react-typing-effect": "^2.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",

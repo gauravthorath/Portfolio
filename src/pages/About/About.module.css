@@ -1,0 +1,224 @@
+/* About Section */
+.about_section {
+  padding: 60px 20px;
+  background-color: #f4f7f9;
+  display: flex;
+  justify-content: center;
+}
+
+.about_container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about_image_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.about_image {
+  border-radius: 50%;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border: 5px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about_content {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.big_title {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.about_description {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #555;
+}
+
+.personal_info p {
+  font-size: 1.1em;
+  color: #333;
+  margin: 8px 0;
+}
+
+.skills_title {
+  font-size: 2em;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.skills_group {
+  flex: 1;
+  min-width: 220px;
+}
+
+.skills_group h3 {
+  font-size: 1.4em;
+  color: #444;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.chip_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill_chip {
+  background-color: #0077b5;
+  color: #fff;
+  font-weight: 600;
+}
+
+.extra_info h2 {
+  font-size: 2em;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.extra_info p {
+  font-size: 1.1em;
+  color: #555;
+  margin: 8px 0;
+}
+
+/* Animated Text Styles */
+.animated_text_left,
+.animated_text_right,
+.animated_text_bottom {
+  position: absolute;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #0077b5;
+  white-space: nowrap;
+}
+
+.animated_text_left {
+  left: 0px; /* Adjust position as needed */
+  top: 25%;
+  transform: translateY(-50%);
+  animation: moveLeft 10s infinite linear;
+}
+
+.animated_text_right {
+  right: 0px; /* Adjust position as needed */
+  top: 25%;
+  transform: translateY(-50%);
+  animation: moveRight 10s infinite linear;
+}
+
+.animated_text_bottom {
+}
+
+/* Keyframe Animations */
+@keyframes moveLeft {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* About Section */
+.about_section {
+  padding: 60px 20px;
+  background-color: #f4f7f9;
+  display: flex;
+  justify-content: center;
+}
+
+.about_container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Ensure absolute positioning of animated text */
+}
+
+.about_image_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* To position animated text relative to this container */
+}
+
+.about_image {
+  border-radius: 50%;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border: 5px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Typing Effect Styles */
+.typing_effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #0077b5;
+  padding-top: 230px;
+}
+
+.constant_text {
+  margin-right: 6px;
+  margin-left: 10px;
+  white-space: nowrap;
+  color: #0077b5;
+}
+
+/* Other existing styles here */
