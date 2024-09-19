@@ -18,7 +18,7 @@ import {
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Avatar from "@mui/material/Avatar";
 import { Link, Outlet } from "@tanstack/react-router";
-import GauravImage from "../assets/Gaurav.png";
+import GauravImage from "../../assets/gaurav_avatar.png";
 
 const NavBar: React.FC = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -37,7 +37,7 @@ const NavBar: React.FC = () => {
     <ThemeProvider theme={darkTheme}>
       <AppBar
         position="sticky"
-        sx={{ backgroundColor: isDarkTheme ? "#333" : "#1976d2" }}
+        sx={{ backgroundColor: isDarkTheme ? "#333" : "#0177B5" }}
       >
         <Container maxWidth="xl" sx={{ padding: "0 !important" }}>
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
