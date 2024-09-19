@@ -1,5 +1,5 @@
 /* Container for the cards */
-.card-container {
+.card_container {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -28,7 +28,7 @@
 }
 
 /* Show more button style */
-.show-more-btn {
+.show_more_btn {
   margin-top: 16px;
   padding: 8px 16px;
   border: none;
@@ -39,13 +39,13 @@
   transition: background-color 0.3s ease;
 }
 
-.show-more-btn:hover {
+.show_more_btn:hover {
   background-color: #0056b3; /* Darker button color on hover */
 }
 
 /* Responsive grid layout for different screen sizes */
 @media (min-width: 600px) {
-  .card-container {
+  .card_container {
     grid-template-columns: repeat(
       2,
       1fr
@@ -54,7 +54,7 @@
 }
 
 @media (min-width: 900px) {
-  .card-container {
+  .card_container {
     grid-template-columns: repeat(
       3,
       1fr

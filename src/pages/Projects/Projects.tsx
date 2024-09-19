@@ -6,7 +6,7 @@ import projects from "./Projects.json";
 const projectList: Project[] = projects;
 const ProjectsComponent: React.FC = () => {
   return (
-    <div className={styles.cardContainer}>
+    <div className={styles.card_container}>
       {projectList.map((project, index) => (
         <ProjectCard key={index} project={project} />
       ))}
