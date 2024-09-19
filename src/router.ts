@@ -3,8 +3,8 @@ import {
   createRoute,
   createRouter,
 } from "@tanstack/react-router";
-import NavBar from "./components/NavBar";
-import About from "./pages/About";
+import NavBar from "./components/NavBar/NavBar";
+import About from "./pages/About/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import CVPage from "./pages/CV";
