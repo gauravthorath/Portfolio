@@ -14,7 +14,16 @@ const About: React.FC = () => {
           {/* Image Section with Titles */}
           <div className={styles.about_image_wrapper}>
             <div className={styles.titles_container}>
-              <h2 className={styles.title}>Technical Lead</h2>
+              <h2
+                className={styles.constant_text}
+                style={{
+                  paddingRight: "20px",
+                  fontSize: "22px",
+                  fontWeight: "bold",
+                }}
+              >
+                Technical Lead
+              </h2>
             </div>
 
             <img
@@ -24,7 +33,16 @@ const About: React.FC = () => {
             />
 
             <div className={styles.titles_container}>
-              <h3 className={styles.subtitle}>Scrum Master</h3>
+              <h3
+                className={styles.constant_text}
+                style={{
+                  paddingRight: "20px",
+                  fontSize: "22px",
+                  fontWeight: "bold",
+                }}
+              >
+                Scrum Master
+              </h3>
             </div>
             <div className={styles.typing_effect}>
               <span className={styles.constant_text}>Senior </span>

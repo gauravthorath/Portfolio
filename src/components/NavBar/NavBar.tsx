@@ -46,7 +46,7 @@ const NavBar: React.FC = () => {
               {/* <IconButton edge="start" color="inherit" aria-label="menu">
                 <MenuIcon />
               </IconButton> */}
-              <Typography variant="h6" sx={{ ml: 0 }}>
+              <Typography variant="h5" sx={{ ml: 0 }}>
                 Gaurav Thorat
               </Typography>
             </div>
