@@ -28,6 +28,7 @@
     "leaflet": "^1.9.4",
     "pdfjs-dist": "2.11.338",
     "react": "^18.3.1",
+    "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-leaflet": "^4.2.1",
     "react-pdf": "^9.1.0",

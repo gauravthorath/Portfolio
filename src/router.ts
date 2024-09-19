@@ -18,13 +18,13 @@ const rootRoute = createRootRoute({
 const homeRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/Portfolio/",
-  component: About, // Home page component
+  component: About, // landing page component
 });
 
 const home2Route = createRoute({
   getParentRoute: () => rootRoute,
   path: "/Portfolio",
-  component: About, // Home page component
+  component: About, // landing page component
 });
 
 const aboutRoute = createRoute({
