@@ -1,12 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Chip, IconButton } from "@mui/material";
 import { LinkedIn, GitHub, Email, Call } from "@mui/icons-material";
 import styles from "./About.module.css";
 import gauravAboutPhoto from "../../assets/gaurav_about.jpeg";
 import ReactTypingEffect from "react-typing-effect";
 import skillGroups from "./skills.json";
+import { supabase } from "../../api/supabaseClient";
+import { getIpAddress } from "../../api/utils";
 
 const About: React.FC = () => {
+  const [ipAddress, setIpAddress] = useState<string>("");
+  useEffect(() => {
+    // Function to fetch IP address and track visit
+    const fetchIpAddress = async () => {
+      const ip = await getIpAddress();
+      setIpAddress(ip);
+    };
+
+    fetchIpAddress();
+
+    const trackVisit = async () => {
+      if (!ipAddress) return;
+
+      const today = new Date().toISOString().split("T")[0]; // Get today's date in 'YYYY-MM-DD' format
+
+      // Check if a record already exists for this IP address and date
+      const { data, error } = await supabase
+        .from("visitors")
+        .select("*")
+        .eq("ip_address", ipAddress)
+        .eq("visit_date", today);
+
+      if (error) {
+        console.error("Error fetching records:", error);
+        return;
+      }
+
+      if (data && data.length === 0) {
+        // No record exists for this IP and date, so we insert a new one
+        const { error: insertError } = await supabase.from("visitors").insert([
+          {
+            ip_address: ipAddress,
+            visit_date: today,
+          },
+        ]);
+
+        if (insertError) console.error("Error inserting record:", insertError);
+      }
+    };
+
+    trackVisit();
+  }, [ipAddress]);
+
   return (
     <section className={styles.about_section}>
       <div className={styles.about_container}>

@@ -2,15 +2,24 @@ import React, { useEffect, useState } from "react";
 import { Container, Typography, Box } from "@mui/material";
 import CountUp from "react-countup";
 import styles from "./Footer.module.css"; // Custom CSS for the meter effect
+import { supabase } from "../../api/supabaseClient";
 
 const Footer: React.FC = () => {
   const [visitorCount, setVisitorCount] = useState<number>(0);
 
   useEffect(() => {
-    // Simulate a fetch for visitor count. Replace with actual API logic.
-    setTimeout(() => {
-      setVisitorCount(12345); // Example visitor count
-    }, 1000);
+    const fetchVisitorCount = async () => {
+      const { data, error } = await supabase
+        .from("visitors")
+        .select("ip_address", { count: "exact" });
+      if (error) {
+        console.error(error);
+      } else {
+        setVisitorCount(data?.length || 0);
+      }
+    };
+
+    fetchVisitorCount();
   }, []);
 
   // Function to split the visitor count into individual digits
