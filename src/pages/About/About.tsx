@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Chip, IconButton } from "@mui/material";
+import { Box, Chip, IconButton } from "@mui/material";
 import { LinkedIn, GitHub, Email, Call } from "@mui/icons-material";
 import styles from "./About.module.css";
 import gauravAboutPhoto from "../../assets/gaurav_about.jpeg";
@@ -56,41 +56,16 @@ const About: React.FC = () => {
     <section className={styles.about_section}>
       <div className={styles.about_container}>
         <div className={styles.about_grid}>
-          {/* Image Section with Titles */}
-          <div className={styles.about_image_wrapper}>
-            <div className={styles.titles_container}>
-              <h2
-                className={styles.constant_text}
-                style={{
-                  paddingRight: "20px",
-                  fontSize: "22px",
-                  fontWeight: "bold",
-                }}
-              >
-                Technical Lead
-              </h2>
-            </div>
-
+          {/* Image with Title Section */}
+          <Box className={styles.about_image_wrapper}>
+            <Box className={styles.constant_text}>Technical Lead</Box>
             <img
               src={gauravAboutPhoto}
               alt="Gaurav Thorat"
               className={styles.about_image}
             />
-
-            <div className={styles.titles_container}>
-              <h3
-                className={styles.constant_text}
-                style={{
-                  paddingRight: "20px",
-                  fontSize: "22px",
-                  fontWeight: "bold",
-                }}
-              >
-                Scrum Master
-              </h3>
-            </div>
+            <Box className={styles.constant_text}>Scrum Master</Box>
             <div className={styles.typing_effect}>
-              <span className={styles.constant_text}> </span>
               <ReactTypingEffect
                 text={["Frontend Developer", "FullStack Developer"]}
                 speed={100}
@@ -99,7 +74,7 @@ const About: React.FC = () => {
                 typingDelay={1000}
               />
             </div>
-          </div>
+          </Box>
 
           {/* Info Section */}
           <div className={styles.about_content}>

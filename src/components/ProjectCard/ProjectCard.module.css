@@ -27,20 +27,8 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-/* Show more button style */
-.show_more_btn {
-  margin-top: 16px;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff; /* Primary button color */
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.show_more_btn:hover {
-  background-color: #0056b3; /* Darker button color on hover */
+.titleText {
+  color: #0177b5;
 }
 
 /* Responsive grid layout for different screen sizes */
