@@ -1,11 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Container, Typography, Box } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Box,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import CountUp from "react-countup";
 import styles from "./Footer.module.css"; // Custom CSS for the meter effect
 import { supabase } from "../../api/supabaseClient";
 
 const Footer: React.FC = () => {
   const [visitorCount, setVisitorCount] = useState<number>(0);
+
+  const theme = useTheme();
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
 
   useEffect(() => {
     const fetchVisitorCount = async () => {
@@ -39,6 +48,7 @@ const Footer: React.FC = () => {
         <Box
           sx={{
             display: "flex",
+            flexDirection: isSmall ? "column" : "row", // Vertically aligned for small screens
             justifyContent: "space-between",
             alignItems: "center",
             py: 2,

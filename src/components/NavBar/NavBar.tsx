@@ -32,7 +32,8 @@ const NavBar: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
 
   const darkTheme = createTheme({
     palette: {
@@ -48,8 +49,12 @@ const NavBar: React.FC = () => {
     setDrawerOpen(open);
   };
 
+  const closeDrawer = () => {
+    setDrawerOpen(false);
+  };
+
   const drawer = (
-    <div>
+    <div role="presentation" onClick={closeDrawer}>
       <List>
         <ListItem button component={Link} to="/Portfolio/about">
           <ListItemText primary="About" />
@@ -71,12 +76,30 @@ const NavBar: React.FC = () => {
     <ThemeProvider theme={darkTheme}>
       <AppBar
         position="sticky"
-        sx={{ backgroundColor: isDarkTheme ? "#333" : "#0177B5" }}
+        sx={{
+          backgroundColor: isDarkTheme ? "#333" : "#0177B5",
+          width: "100%", // Make sure the AppBar takes the full width
+        }}
       >
-        <Container maxWidth="xl" sx={{ padding: "0 !important" }}>
-          <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Container
+          maxWidth={false}
+          sx={{
+            padding: "0 !important",
+            width: "100%", // Ensure the container spans full width
+            display: "flex",
+            flexGrow: 1,
+          }}
+        >
+          <Toolbar
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              flexGrow: 1, // Make Toolbar take full space
+              width: "100%",
+            }}
+          >
             {/* Mobile Menu Button */}
-            {isMobile && (
+            {isMedium && (
               <IconButton
                 color="inherit"
                 edge="start"
@@ -89,8 +112,15 @@ const NavBar: React.FC = () => {
 
             {/* Left side: Name and Info Icon */}
             <div style={{ display: "flex", alignItems: "center" }}>
-              <Typography variant="h5" sx={{ ml: 0 }}>
-                Gaurav Thorat
+              <Typography
+                variant={isMedium ? "h6" : "h5"} // Responsive variant
+                sx={{
+                  ml: 0,
+                  fontSize: isMedium ? "1.25rem" : "1.75rem", // Mobile font size adjustments
+                  fontWeight: 700,
+                }}
+              >
+                {isSmall ? "Gaurav" : "Gaurav Thorat"}
               </Typography>
 
               {/* Tooltip with Info Icon */}
@@ -118,7 +148,7 @@ const NavBar: React.FC = () => {
             </div>
 
             {/* Center: Navigation Links (for desktop) */}
-            {!isMobile && (
+            {!isMedium && (
               <div style={{ display: "flex", alignItems: "center" }}>
                 <Button color="inherit" component={Link} to="/Portfolio/about">
                   About
@@ -189,7 +219,13 @@ const NavBar: React.FC = () => {
       </Drawer>
 
       {/* Here is where the nested routes will render */}
-      <Container maxWidth="xl" sx={{ padding: "0 !important" }}>
+      <Container
+        maxWidth={false}
+        sx={{
+          padding: "0 !important",
+          width: "100%", // Ensure full width for content
+        }}
+      >
         <Outlet />
       </Container>
     </ThemeProvider>

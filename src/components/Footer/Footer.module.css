@@ -4,8 +4,8 @@
   padding: 10px;
   color: white;
   font-family: "Courier New", Courier, monospace;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(214, 28, 28, 0.2);
+  border-radius: 20px;
   padding-right: 20px;
 }
 
@@ -28,4 +28,19 @@
   font-family: "Courier New", Courier, monospace;
   border-radius: 5px;
   margin: 0 2px;
+}
+
+@media (max-width: 600px) {
+  .meter_wrapper {
+    padding: 5px;
+  }
+
+  .meter_digits {
+    font-size: 1rem;
+  }
+
+  .meter_box {
+    width: 25px;
+    height: 35px;
+  }
 }
