@@ -5,8 +5,12 @@ import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { zoomPlugin } from "@react-pdf-viewer/zoom";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 const CVPage: React.FC = () => {
+  const theme = useTheme();
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+
   // Create an instance of the default layout plugin
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
   // Create an instance of the zoom plugin
@@ -16,8 +20,8 @@ const CVPage: React.FC = () => {
     const { zoomTo } = zoomPluginInstance;
 
     // Ensure that the zoom level is set to 100% once the document is loaded
-    zoomTo(1); // 1 represents 100% zoom
-  }, [zoomPluginInstance]);
+    zoomTo(isSmall ? 0.6 : 1); // 1 represents 100% zoom
+  }, [isSmall, zoomPluginInstance]);
 
   return (
     <div className="pdf-container p-4">
