@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
           }}
         >
           <Typography variant="body2" color="textSecondary" sx={{ px: 2 }}>
-            © {new Date().getFullYear()} Gaurav Thorat. All rights reserved.
+            © {new Date().getFullYear()} Gaurav Thorat. All rights reserved
           </Typography>
 
           {/* Electricity Meter Style Visitor Count */}
