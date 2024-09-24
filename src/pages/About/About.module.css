@@ -79,7 +79,6 @@
 
 .about_content {
   padding: 30px;
-  background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -89,7 +88,6 @@
 
 .big_title {
   font-size: 1.8em;
-  color: #333;
   margin-bottom: 15px;
   font-weight: 700;
 }
@@ -97,18 +95,15 @@
 .about_description {
   font-size: 1.1em;
   line-height: 1.8;
-  color: #555;
 }
 
 .personal_info p {
   font-size: 1.1em;
-  color: #333;
   margin: 8px 0;
 }
 
 .skills_title {
   font-size: 1.8em;
-  color: #333;
   margin-top: 20px;
   margin-bottom: 15px;
   font-weight: 700;
@@ -127,7 +122,6 @@
 
 .skills_group h3 {
   font-size: 1.4em;
-  color: #444;
   margin-bottom: 12px;
   font-weight: 600;
 }
@@ -140,13 +134,11 @@
 
 .skill_chip {
   background-color: #0077b5;
-  color: #fff;
   font-weight: 600;
 }
 
 .extra_info h2 {
   font-size: 1.8em;
-  color: #333;
   margin-top: 20px;
   margin-bottom: 15px;
   font-weight: 700;
@@ -154,6 +146,15 @@
 
 .extra_info p {
   font-size: 1.1em;
-  color: #555;
   margin: 8px 0;
+}
+
+.dark {
+  background-color: #454545 !important;
+  color: #fff;
+}
+
+.light {
+  background-color: #fff !important;
+  color: #1a1818;
 }

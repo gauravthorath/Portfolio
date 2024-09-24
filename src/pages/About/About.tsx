@@ -7,9 +7,12 @@ import ReactTypingEffect from "react-typing-effect";
 import skillGroups from "./skills.json";
 import { supabase } from "../../api/supabaseClient";
 import { getIpAddress } from "../../api/utils";
+import { useThemeContext } from "../../context/ThemeContext";
 
 const About: React.FC = () => {
   const [ipAddress, setIpAddress] = useState<string>("");
+  const { isDarkTheme } = useThemeContext();
+
   useEffect(() => {
     // Function to fetch IP address and track visit
     const fetchIpAddress = async () => {
@@ -53,9 +56,15 @@ const About: React.FC = () => {
   }, [ipAddress]);
 
   return (
-    <section className={styles.about_section}>
-      <div className={styles.about_container}>
-        <div className={styles.about_grid}>
+    <section
+      className={`${styles.about_section} ${isDarkTheme ? styles.dark : styles.light}`}
+    >
+      <div
+        className={`${styles.about_container} ${isDarkTheme ? styles.dark : styles.light}`}
+      >
+        <div
+          className={`${styles.about_grid} ${isDarkTheme ? styles.dark : styles.light}`}
+        >
           {/* Image with Title Section */}
           <Box className={styles.about_image_wrapper}>
             <Box className={styles.constant_text}>Technical Lead</Box>
@@ -77,9 +86,17 @@ const About: React.FC = () => {
           </Box>
 
           {/* Info Section */}
-          <div className={styles.about_content}>
-            <h1 className={styles.big_title}>About Me</h1>
-            <p className={styles.about_description}>
+          <div
+            className={`${styles.about_content} ${isDarkTheme ? styles.dark : styles.light}`}
+          >
+            <h1
+              className={`${styles.big_title} ${isDarkTheme ? styles.dark : styles.light}`}
+            >
+              About Me
+            </h1>
+            <p
+              className={`${styles.about_description} ${isDarkTheme ? styles.dark : styles.light}`}
+            >
               I am a highly skilled Technical Lead with over 13 years of
               expertise in software development, specializing in advanced
               frontend technologies with ReactJS. I have a proven track record
@@ -92,7 +109,9 @@ const About: React.FC = () => {
               effective communicator, I excel in enhancing code quality through
               thorough peer reviews and meticulous documentation.
             </p>
-            <div className={styles.personal_info}>
+            <div
+              className={`${styles.personal_info} ${isDarkTheme ? styles.dark : styles.light}`}
+            >
               <p>
                 <strong>Name:</strong> Gaurav Thorat
               </p>
@@ -108,11 +127,18 @@ const About: React.FC = () => {
               </p>
             </div>
 
-            <h2 className={styles.skills_title}>Skills</h2>
+            <h2
+              className={`${styles.skills_title} ${isDarkTheme ? styles.dark : styles.light}`}
+            >
+              Skills
+            </h2>
+
             <div className={styles.skills}>
               {Object.entries(skillGroups).map(([category, skills]) => (
                 <div className={styles.skills_group} key={category}>
-                  <h3>{category}</h3>
+                  <h3 className={`${isDarkTheme ? styles.dark : styles.light}`}>
+                    {category}
+                  </h3>
                   <div className={styles.chip_container}>
                     {skills.map((skill) => (
                       <Chip
@@ -125,8 +151,9 @@ const About: React.FC = () => {
                 </div>
               ))}
             </div>
-
-            <div className={styles.extra_info}>
+            <div
+              className={`${styles.extra_info} ${isDarkTheme ? styles.dark : styles.light}`}
+            >
               <h2>Certifications</h2>
               <p>
                 <strong>Microsoft : 70-486 </strong> (Developing ASP.NET MVC Web
@@ -201,6 +228,7 @@ const About: React.FC = () => {
                   href="https://www.linkedin.com/in/gauravthorath/"
                   target="_blank"
                   aria-label="LinkedIn"
+                  color="primary"
                 >
                   <LinkedIn />
                 </IconButton>
@@ -209,6 +237,7 @@ const About: React.FC = () => {
                   href="https://github.com/gauravthorath"
                   target="_blank"
                   aria-label="GitHub"
+                  color="primary"
                 >
                   <GitHub />
                 </IconButton>
@@ -216,6 +245,7 @@ const About: React.FC = () => {
                   component="a"
                   href="mailto:gauravjobs25@gmail.com"
                   aria-label="Gmail"
+                  color="primary"
                 >
                   <Email />
                 </IconButton>
@@ -224,6 +254,7 @@ const About: React.FC = () => {
                   href="tel:+49-15216127113"
                   target="_blank"
                   aria-label="Skype"
+                  color="primary"
                 >
                   <Call />
                 </IconButton>
