@@ -50,4 +50,4 @@ jobs:
       - name: Deploy to GitHub Pages
         run: yarn deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided automatically by GitHub Actions
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # This token is provided automatically by GitHub Actions
