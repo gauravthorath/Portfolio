@@ -61,7 +61,6 @@ const NavBar: React.FC = () => {
       </List>
     </div>
   );
-  console.log("🚀 ~ isDarkTheme 333:", isDarkTheme);
 
   return (
     <Container>
@@ -207,16 +206,8 @@ const NavBar: React.FC = () => {
         <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
           {drawer}
         </Drawer>
-
-        {/* Here is where the nested routes will render */}
-        <Container
-          maxWidth={false}
-          sx={{
-            padding: "0 !important",
-            width: "100%", // Ensure full width for content
-          }}
-        ></Container>
       </AppBar>
+      {/* Here is where the nested routes will render */}
       <Outlet />
     </Container>
   );

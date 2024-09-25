@@ -2,7 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -15,28 +16,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "latest"
+          node-version: "20"
 
       - name: Install dependencies
         run: yarn install
 
-      - name: Build
+      - name: Build the project
         run: yarn build
 
-      - name: Debug Artifacts
-        run: echo "Checking the contents of the dist directory"
+      # - name: Debug Artifacts
+      #   run: echo "Checking the contents of the dist directory"
 
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          name: "github-pages"
-          path: dist
+      # - name: Upload Artifacts
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     name: "github-pages"
+      #     path: dist
+
+      # - name: Deploy to GitHub Pages
+      #   uses: actions/deploy-pages@v4
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     artifact_name: "github-pages"
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifact_name: "github-pages"
+        run: yarn deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided automatically by GitHub Actions
