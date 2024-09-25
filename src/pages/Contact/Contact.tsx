@@ -52,8 +52,8 @@ const Contact: React.FC = () => {
                   component="a"
                   href="mailto:gauravjobs25@gmail.com"
                   target="_blank"
-                  aria-label="LinkedIn"
-                  title="View Linked Profile"
+                  aria-label="Email"
+                  title="Send Email"
                   size="small"
                 >
                   gauravjobs25@gmail.com
@@ -67,8 +67,8 @@ const Contact: React.FC = () => {
                   component="a"
                   href="tel:+49-15216127113"
                   target="_blank"
-                  aria-label="LinkedIn"
-                  title="View Linked Profile"
+                  aria-label="Phone"
+                  title="Call"
                   size="small"
                 >
                   +49-15216127113
@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
                   href="https://github.com/gauravthorath"
                   target="_blank"
                   aria-label="GitHub"
-                  title="View Linked Profile"
+                  title="View GitHub Profile"
                   size="small"
                 >
                   Github Profile

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button, Typography } from "@mui/material";
 import styles from "./ProjectCard.module.css";
 import { useThemeContext } from "../../context/ThemeContext";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
 export interface Project {
   name: string;
@@ -36,8 +38,7 @@ const ProjectCard = ({
 
       {showMore ? (
         <>
-          {/* Show full project details */}
-          <Typography variant="body1" paragraph>
+          <Typography variant="body2" paragraph>
             {project.description}
           </Typography>
           <Typography variant="body2">
@@ -56,17 +57,17 @@ const ProjectCard = ({
           </Typography>
         </>
       ) : (
-        <Typography variant="body1" paragraph>
+        <Typography variant="body2" paragraph>
           {project.description?.substring(0, 100)}...
-        </Typography> // Show short description when not expanded
+        </Typography>
       )}
 
-      {/* MUI outlined button for "Show More"/"Show Less" */}
       <Button
         variant="text"
         color="success"
         className={styles.showMoreBtn}
         onClick={handleShowMore}
+        startIcon={showMore ? <ExpandLessIcon /> : <ExpandMoreIcon />}
       >
         {showMore ? "Show Less" : "Show More"}
       </Button>
