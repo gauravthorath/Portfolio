@@ -1,7 +1,7 @@
 [
   {
     "name": "CSOX",
-    "description": "Led development and optimization of a ReactJS application with Theia and Material UI.",
+    "description": "A ReactJS application with Theia and Material UI, designed to optimize performance and enhance functionality. The application utilizes AGGrid and Testing for improved user experience, and features automated deployment processes with CI/CD pipelines on GitLab.",
     "scope": "Lead development and optimization",
     "processesProducts": [
       "Led the development of a ReactJS application with Theia and Material UI.",
@@ -27,7 +27,7 @@
 
   {
     "name": "Justtrack Application",
-    "description": "Implemented features and enhanced product reliability using various technologies.",
+    "description": "A feature-rich application built using ReactJS, React Table, Tanstack Query, Redux, and Material UI. The application enhances overall functionality and UI, and features E2E testing efforts using Cypress for improved product reliability and stability.",
     "scope": "Feature implementation and reliability enhancement",
     "processesProducts": [
       "Implemented numerous features using ReactJS, React Table, Tanstack Query, Redux, and Material UI, enhancing overall functionality and UI.",
@@ -49,6 +49,7 @@
   },
   {
     "name": "Finacle",
+    "description": "A comprehensive banking solution that integrates Finacle with React and Polymer. The application leverages React for dynamic and responsive user interfaces and Polymer for web component development, enhancing modularity and reusability.",
     "scope": "Worked on integrating Finacle with React and Polymer for a comprehensive banking solution. Leveraged React for dynamic and responsive user interfaces and Polymer for web component development, enhancing modularity and reusability.",
     "processesProducts": [
       "Implemented numerous features using ReactJS, React Table, Tanstack Query, Redux, and Material UI, enhancing overall functionality and UI.",
@@ -72,6 +73,7 @@
   },
   {
     "name": "ATS Core Frontend",
+    "description": "A frontend application built using Angular 6 with CLI and Angular Material, featuring various components such as login, routing, localization, and material spinner.",
     "scope": "Development and Deployment",
     "processesProducts": [
       "Login",
@@ -92,7 +94,8 @@
   },
   {
     "name": "Timber Preserve Management",
-    "scope": "Development",
+    "description": "A comprehensive application designed to manage timber preserve operations, featuring production scheduling, treatment cycles, spices, wood types, profiles, volume calculations, and export to Excel and PDF using WKHTMLTOPDF library.",
+    "scope": "Development and Deployment",
     "processesProducts": [
       "Production Scheduling",
       "Treatment Cycles",
@@ -120,6 +123,7 @@
   },
   {
     "name": "Tricore - Grand Rapid Reports",
+    "description": "A reporting system designed to generate various reports, including Receiving Summary Report, Receiving Details Report, Batch Summary Report, Batch Details Report, and Pre-Batch Report, utilizing SSRS and SQL Server 2014.",
     "scope": "Development and Deployment",
     "processesProducts": [
       "Receiving Summary Report",
@@ -137,6 +141,7 @@
   },
   {
     "name": "Gas Management System (GMS)",
+    "description": "A comprehensive gas management system developed using ASP.NET MVC, C#.NET, VB6.0, ASP.NET, WCF, BOOTSTRAP, Crystal Reports, jQuery, JavaScript, SharePoint, SQL Server, JSON, XML, and HTML, featuring volume loading, nominations and allocations, and report generation.",
     "scope": "Development and Support",
     "processesProducts": [
       "Volume loading",
@@ -177,6 +182,7 @@
   },
   {
     "name": "Brewery Process Management",
+    "description": "A brewery process management system developed using Angular 4, Web API, Bootstrap, jQuery, Typescript, and HTML 5, featuring material, definitions, equipment, and packaging management.",
     "scope": "Development",
     "processesProducts": ["Material", "Definitions", "Equipment", "Packaging"],
     "technologies": [
@@ -197,6 +203,7 @@
   },
   {
     "name": "QR Code Scanner Web App",
+    "description": "A web-based QR code scanner application developed using Bootstrap, HTML 5, Instascan JavaScript library for QR Code, and WebRTC, enabling users to scan QR codes on machines and fetch documents as per QR code.",
     "scope": "Development",
     "processesProducts": [
       "Scan QR code on machines",
@@ -217,6 +224,7 @@
   },
   {
     "name": "OPARM (Organizational Projects Asset Retention and Management)",
+    "description": "A comprehensive organizational project asset retention and management system developed using ASP.NET MVC 4, Web API, SQL Server, C#.NET, JQuery, Bootstrap, and HTML5, featuring user profile, skills, contacts, domain exposure, customer exposure, and industry standard and skill matrix management.",
     "scope": "Development",
     "processesProducts": [
       "User Profile",
@@ -248,6 +256,7 @@
   },
   {
     "name": "Next Gen Portal",
+    "description": "A next-generation portal developed using ASP.NET MVC, Entity Framework, WCF, LINQ, HTML5, BOOTSTRAP, JSON, jQuery, and SQL Server, featuring library creation, user management, topic management, artifact management, and review and update of artifacts.",
     "scope": "Design and Development",
     "processesProducts": [
       "Create Libraries",
@@ -281,6 +290,7 @@
   },
   {
     "name": "Power Transmission Project",
+    "description": "A power transmission project developed using C#.NET, LINQ, Entity Framework, SQL Server 2008 R2, ASP.NET MVC, WCF, and jQuery, featuring data collection from all locations and sending data to the server.",
     "scope": "Designing and Development",
     "processesProducts": [
       "Collect information from all locations",
@@ -308,6 +318,7 @@
   },
   {
     "name": "Business Mobile App",
+    "description": "A business mobile application developed using ASP.NET, C#.NET, JSON, SQL Server 2008, and Web Services, featuring data fetching from the database, data manipulation on the server using JSON-based web services, mail notifications, and push notifications for Android and iOS.",
     "scope": "Designing and Development",
     "processesProducts": [
       "Fetching data from database and manipulate data on server using JSON based web services",
@@ -333,6 +344,7 @@
   },
   {
     "name": "iOS Mobile App with Admin",
+    "description": "A comprehensive iOS mobile application with an admin section, developed using ASP.NET, C#.NET, jQuery, JSON, SQL Server 2008, and Web Services, featuring data fetching from the database, data manipulation on the server using JSON-based web services, mail notifications, and push notifications for iOS.",
     "scope": "Designing and Development",
     "processesProducts": [
       "Fetching data from database and manipulate data on server using JSON based web services",
@@ -359,6 +371,7 @@
   },
   {
     "name": "Transport Application - Snylsis",
+    "description": "A comprehensive transport application developed using ASP.NET MVC, SQL Server 2014, jQuery, Bootstrap, and HTML5, featuring shipment management, journey management, driver management, vehicle management, package management, contact management, customer management, dispatcher management, and invoice management.",
     "scope": "Designing & Development",
     "processesProducts": [
       "Manage the shipments, journeys, drivers, vehicles, packages, contacts, customers, dispatchers, invoices",
@@ -382,6 +395,7 @@
   },
   {
     "name": "San Joaquin Valley (SJV) App Upgrade (NET Framework Upgrade)",
+    "description": "An application upgrade project that involved upgrading .NET 3.5/2.0 applications to .NET 4.5, and performing pre-and post-migration SAST (Static Application Security Testing) scanning for vulnerability checks, using ASP.NET, C#.NET, VB.NET, IIS Server, VS 2012, TFS, Crystal Reports, and HP Fortify (SAST Scan Tool).",
     "scope": "Upgradation",
     "processesProducts": [
       "Upgradation of .NET 3.5/2.0 applications to .NET 4.5",
@@ -409,6 +423,7 @@
   },
   {
     "name": "Project Management System (PMS)",
+    "description": "A comprehensive project management system developed using VS2010, ASP.NET, C#.NET, SQL Server 2008, jQuery, JavaScript, and CSS, featuring project-related data management, assignment and tracking of projects, and various reports such as daily work reports, quarter reports, and resource summary reports.",
     "scope": "Designing & Development",
     "processesProducts": [
       "Manage project related data such as programmer/Tester and Designer’s daily work and related tasks, testing related activities",
@@ -438,6 +453,7 @@
   },
   {
     "name": "Customer Relationship Management (CRM)",
+    "description": "A comprehensive customer relationship management system developed using VS2010, ASP.NET, C#.NET, SQL Server 2008, jQuery, JavaScript, and CSS, featuring company-customer interaction management, business process automation, and sales activity synchronization.",
     "scope": "Designing & Development",
     "processesProducts": [
       "Managing company’s interactions between customers and sales",
@@ -466,6 +482,7 @@
   },
   {
     "name": "Pathology System",
+    "description": "A comprehensive pathology system developed using VS2008, VB.NET, MS Access, SQL Server 2008, SCOSTA File System, RDLC / Crystal Reports, Wojtek tool, and Microsystems SCR3310 and SCOSTA based smart cards, featuring pathology report management and data retrieval using smart card readers.",
     "scope": "Designing & Development",
     "processesProducts": [
       "Maintain all pathology reports in smart card",
@@ -496,6 +513,7 @@
   },
   {
     "name": "File Tracking System",
+    "description": "A comprehensive file tracking system developed using VS2008, C#.NET, SQL Server 2008, Windows-CE, Sirit Infinity UHF Reader Antenna with RFID Tags, and Windows-CE based Handheld Reader with RFID UHF Tags, featuring file registration, file allocation, file search, file theft detection, and alarm systems.",
     "scope": "Designing & Development",
     "processesProducts": [
       "File Registration, File Allocation, File Search, File Theft Detection and buzzed Alarm on Theft",
@@ -522,6 +540,7 @@
   },
   {
     "name": "Bicycle Kitting Management",
+    "description": "A comprehensive bicycle kitting management system developed using C#.NET, SQL Server 2008, Omnikey Diagnostic Tool, NFC Multi Smartcard, DUALi Reader with Mifare Smartcards, and Feig RFID Pad Antenna with RFID Tags, featuring smartcard allocation for different bicycle manufacturing processes and supervisor login verification.",
     "scope": "Designing & Development",
     "processesProducts": [
       "Allocate smartcards for different processes of bicycle manufacturing",
@@ -549,6 +568,7 @@
   },
   {
     "name": "Vehicle Management System",
+    "description": "A comprehensive vehicle management system developed using VS2008, VB.NET, MS Access, SQL Server 2008, SCOSTA File System, RDLC / Crystal Reports, Wojtek tool, and SCM Microsystems SCR3310 and SCOSTA based Smartcards, featuring vehicle information management, customer information management, services information management, and payment-related information management.",
     "scope": "Designing & Development",
     "processesProducts": [
       "Read / write the vehicle information, customer information, services information and all payment related information"
@@ -577,6 +597,7 @@
   },
   {
     "name": "Answer to Reset (ATR) Reader System",
+    "description": "A comprehensive ATR reader system developed using VS2008, VB.NET, SCOSTA File System, Wojtek tool, and SCM Microsystems SCR3310 and SCOSTA based Smartcards, featuring ATR checking for SCOSTA smartcard testing in manufacturing.",
     "scope": "Designing & Development",
     "processesProducts": [
       "In manufacturing of SCOSTA smartcards, used to check ATR of smartcard for testing"
@@ -596,6 +617,7 @@
   },
   {
     "name": "Enterprise Resource Planning (ERP)",
+    "description": "A comprehensive enterprise resource planning system developed using Visual Basic 6.0, MS Access, and SQL Server 2005, featuring material management, purchase management, sales management, and production planning.",
     "scope": "Development and Support",
     "processesProducts": [
       "Material management in enterprises - from purchase management to aspects of sales and production planning"
@@ -613,6 +635,7 @@
   },
   {
     "name": "SJV (San Joaquin Valley) Migration (ETL Packages Migration)",
+    "description": "A comprehensive migration project for ETL packages from SSIS 2008 to SSIS 2014, featuring removal of dependency on ETL Framework and hard-coded connection strings and expressions.",
     "scope": "Migration",
     "processesProducts": [
       "Migrate SSIS 2008 to SSIS 2014 and remove dependency of ETL Framework",
@@ -632,6 +655,7 @@
   },
   {
     "name": "Midway Sunset Site (MDWS) Creation in PI Explorer",
+    "description": "A comprehensive design and development project for creating a new site hierarchy in PI system explorer, featuring creation of PI elements, PI templates, and attributes.",
     "scope": "Design and Development",
     "processesProducts": [
       "Create hierarchy and various templates, elements and attributes"
@@ -653,6 +677,7 @@
   },
   {
     "name": "Daily Journal",
+    "description": "A comprehensive design and development project for creating a daily journal application, featuring creation of consoles, systems, sub-systems, and monitoring of physical sites of oil and gas.",
     "scope": "Designing and Development",
     "processesProducts": [
       "Creation of consoles, systems, sub-systems",
@@ -667,6 +692,7 @@
   },
   {
     "name": "Service Catalogs",
+    "description": "A comprehensive design and development project for creating service catalogs, featuring addition of users to different Active Directory groups after getting approvals using workflow activities and sending email notifications.",
     "scope": "Designing and Development",
     "processesProducts": [
       "Add user in different Active Directory groups after getting approvals using workflow activities",
@@ -681,6 +707,7 @@
   },
   {
     "name": "Align Registration",
+    "description": "A comprehensive design and development project for creating an align registration application, featuring registration of external users to Active Directory using ServiceNow Workflows, Client Scripts, and UI-actions.",
     "scope": "Designing and Development",
     "processesProducts": [
       "Registration of external users to Active Directory using ServiceNow Workflows, Client Scripts and UI-actions"
