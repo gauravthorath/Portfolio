@@ -42,6 +42,11 @@ jobs:
       #     token: ${{ secrets.GITHUB_TOKEN }}
       #     artifact_name: "github-pages"
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "gauravjobs25@gmail.com"
+          git config --global user.name "Gaurav Thorat"
+
       - name: Deploy to GitHub Pages
         run: yarn deploy
         env:
