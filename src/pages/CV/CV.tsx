@@ -35,7 +35,7 @@ const CVPage: React.FC = () => {
         component="h1"
         gutterBottom
         align="center"
-        sx={{ pt: 9 }}
+        sx={{ pt: 10 }}
       >
         My detailed professional journey is outlined in the CV below.
       </Typography>

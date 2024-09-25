@@ -63,7 +63,7 @@ const NavBar: React.FC = () => {
   );
 
   return (
-    <Container>
+    <>
       <AppBar
         position="fixed"
         sx={{
@@ -209,7 +209,7 @@ const NavBar: React.FC = () => {
       </AppBar>
       {/* Here is where the nested routes will render */}
       <Outlet />
-    </Container>
+    </>
   );
 };
 

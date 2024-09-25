@@ -6,8 +6,8 @@
 }
 
 .about_container {
-  /* max-width: 1200px; */
-  /* width: 100%; */
+  max-width: 1200px;
+  width: 100%;
   padding-top: 50px;
 }
 
@@ -57,7 +57,7 @@
   font-size: 1.5em;
   font-weight: bold;
   color: #0077b5;
-  padding-top: 230px;
+  padding-top: 250px;
   justify-content: center;
 }
 
@@ -72,7 +72,7 @@
   }
 
   .typing_effect {
-    padding-top: 15px; /* Adjust padding if necessary */
+    padding-top: 20px; /* Adjust padding if necessary */
     position: static; /* Move typing effect below the image */
     transform: none; /* Reset the transform */
     font-size: large;

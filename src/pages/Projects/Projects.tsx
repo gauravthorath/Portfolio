@@ -13,13 +13,14 @@ const ProjectsComponent: React.FC = () => {
     <Container
       maxWidth="xl"
       className={`${isDarkTheme ? styles.dark : styles.light}`}
+      sx={{ p: "0 !important" }}
     >
       <Typography
         variant="h5"
         component="h1"
         gutterBottom
         align="center"
-        sx={{ pt: 9 }}
+        sx={{ pt: 10 }}
       >
         Executed Projects
       </Typography>
