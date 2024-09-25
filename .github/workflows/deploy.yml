@@ -45,7 +45,7 @@ jobs:
       - name: Configure Git
         run: |
           git config --global user.email "gauravjobs25@gmail.com"
-          git config --global user.name "Gaurav Thorat"
+          git config --global user.name "gauravthorath"
 
       - name: Deploy to GitHub Pages
         run: yarn deploy
