@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
         component="h1"
         gutterBottom
         align="center"
-        sx={{ pt: "20px" }}
+        sx={{ pt: 9 }}
       >
         Contact Me
       </Typography>

@@ -5,12 +5,14 @@ import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { zoomPlugin } from "@react-pdf-viewer/zoom";
-import { useMediaQuery, useTheme } from "@mui/material";
+import { Container, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { useThemeContext } from "../../context/ThemeContext";
+import styles from "./CV.module.css";
 
 const CVPage: React.FC = () => {
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
-
+  const { isDarkTheme } = useThemeContext();
   // Create an instance of the default layout plugin
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
   // Create an instance of the zoom plugin
@@ -24,7 +26,19 @@ const CVPage: React.FC = () => {
   }, [isSmall, zoomPluginInstance]);
 
   return (
-    <div className="pdf-container p-4">
+    <Container
+      maxWidth="xl"
+      className={`${isDarkTheme ? styles.dark : styles.light}`}
+    >
+      <Typography
+        variant="h5"
+        component="h1"
+        gutterBottom
+        align="center"
+        sx={{ pt: 9 }}
+      >
+        My detailed professional journey is outlined in the CV below.
+      </Typography>
       <div className="pdf-viewer" style={{ height: "800px" }}>
         {/* Use the Worker component with the correct worker URL */}
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.11.338/build/pdf.worker.min.js">
@@ -34,7 +48,7 @@ const CVPage: React.FC = () => {
           />
         </Worker>
       </div>
-    </div>
+    </Container>
   );
 };
 export default CVPage;

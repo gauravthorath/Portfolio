@@ -9,12 +9,14 @@ import {
 import CountUp from "react-countup";
 import styles from "./Footer.module.css"; // Custom CSS for the meter effect
 import { supabase } from "../../api/supabaseClient";
+import { useThemeContext } from "../../context/ThemeContext";
 
 const Footer: React.FC = () => {
   const [visitorCount, setVisitorCount] = useState<number>(0);
 
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+  const { isDarkTheme } = useThemeContext();
 
   useEffect(() => {
     const fetchVisitorCount = async () => {
@@ -44,6 +46,7 @@ const Footer: React.FC = () => {
           borderTop: "1px solid #99c6de !important",
           maxWidth: "100% !important",
         }}
+        className={`${isDarkTheme ? styles.dark : styles.light}`}
       >
         <Box
           sx={{
@@ -54,12 +57,12 @@ const Footer: React.FC = () => {
             py: 2,
           }}
         >
-          <Typography variant="body2" color="textSecondary" sx={{ px: 2 }}>
+          <Typography variant="body2" sx={{ px: 2 }}>
             © {new Date().getFullYear()} Gaurav Thorat. All rights reserved
           </Typography>
 
           {/* Electricity Meter Style Visitor Count */}
-          <Typography variant="body2" color="textSecondary" sx={{ px: 2 }}>
+          <Typography variant="body2" sx={{ px: 2 }}>
             <div className={styles.meter_wrapper}>
               <div className={styles.meter_digits}>
                 {formatVisitorCount(visitorCount).map((digit, index) => (

@@ -19,7 +19,7 @@ const ProjectsComponent: React.FC = () => {
         component="h1"
         gutterBottom
         align="center"
-        sx={{ pt: "20px" }}
+        sx={{ pt: 9 }}
       >
         Executed Projects
       </Typography>
