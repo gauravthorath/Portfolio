@@ -28,15 +28,13 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    chunkSizeWarningLimit: 1500, // Adjust to a higher limit if needed
     rollupOptions: {
       output: {
-        manualChunks(id) {
-          if (id.includes("node_modules")) {
-            return "vendor"; // Split node_modules into a separate chunk
-          }
+        manualChunks: {
+          vendor: ["react", "react-dom"], // Example of splitting large vendor chunks
         },
       },
-      chunkSizeWarningLimit: 600, // Adjust size limit if necessary
     },
   },
 }));
