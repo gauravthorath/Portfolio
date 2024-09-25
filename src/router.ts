@@ -24,7 +24,7 @@ const homeRoute = createRoute({
 const home2Route = createRoute({
   getParentRoute: () => rootRoute,
   path: "/Portfolio",
-  component: About, // landing page component
+  component: About, // landing about component
 });
 
 const aboutRoute = createRoute({
@@ -36,19 +36,19 @@ const aboutRoute = createRoute({
 const projectsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/Portfolio/projects",
-  component: Projects, // About page component
+  component: Projects, // Project page component
 });
 
 const contactRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/Portfolio/contact",
-  component: Contact, // About page component
+  component: Contact, // Contact page component
 });
 
 const cvRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/Portfolio/cv",
-  component: CVPage, // About page component
+  component: CVPage, // CV page component
 });
 
 const anyOtherRoute = createRoute({

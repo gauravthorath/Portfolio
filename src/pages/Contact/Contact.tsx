@@ -1,19 +1,13 @@
 import React, { useEffect } from "react";
-import {
-  Container,
-  Typography,
-  Paper,
-  Box,
-  Grid,
-  IconButton,
-} from "@mui/material";
+import { Container, Typography, Box, Grid, IconButton } from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIcon from "@mui/icons-material/Phone";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { LinkedIn, GitHub } from "@mui/icons-material";
-
+import { useThemeContext } from "../../context/ThemeContext";
+import styles from "./Contact.module.css";
 // Custom icon for the map marker
 const customIcon = new L.Icon({
   iconUrl: "https://cdn-icons-png.flaticon.com/512/854/854878.png", // custom icon
@@ -32,15 +26,26 @@ const ResizeMap = () => {
 };
 
 const Contact: React.FC = () => {
+  const { isDarkTheme } = useThemeContext();
+
   return (
-    <Container maxWidth="md" sx={{ marginTop: 4, marginBottom: 4 }}>
-      <Typography variant="h4" component="h1" gutterBottom align="center">
-        Feel Free to Contact Me
+    <Container
+      maxWidth="xl"
+      className={`${isDarkTheme ? styles.dark : styles.light}`}
+    >
+      <Typography
+        variant="h5"
+        component="h1"
+        gutterBottom
+        align="center"
+        sx={{ pt: "20px" }}
+      >
+        Contact Me
       </Typography>
-      <Paper elevation={3} sx={{ padding: 3, borderRadius: 2 }}>
+      <Box sx={{ padding: 3, borderRadius: 2 }}>
         <Box mb={2}>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={6} md={3}>
               <Box display="flex" alignItems="center">
                 <MailOutlineIcon color="primary" sx={{ marginRight: 1 }} />
                 <IconButton
@@ -55,7 +60,7 @@ const Contact: React.FC = () => {
                 </IconButton>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={6} md={3}>
               <Box display="flex" alignItems="center">
                 <PhoneIcon color="primary" sx={{ marginRight: 1 }} />
                 <IconButton
@@ -71,7 +76,7 @@ const Contact: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={6} md={3}>
               <Box display="flex" alignItems="center">
                 <LinkedIn color="primary" sx={{ marginRight: 1 }} />
                 <IconButton
@@ -87,7 +92,7 @@ const Contact: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={6} md={3}>
               <Box display="flex" alignItems="center">
                 <GitHub color="primary" sx={{ marginRight: 1 }} />
                 <IconButton
@@ -108,7 +113,7 @@ const Contact: React.FC = () => {
         {/* Map showing Hamburg */}
         <Box mt={4}>
           <Typography variant="h6" gutterBottom>
-            Location: Hamburg, Germany
+            Current Location: Hamburg, Germany
           </Typography>
           <div style={{ height: "400px", width: "100%" }}>
             <MapContainer
@@ -128,7 +133,7 @@ const Contact: React.FC = () => {
             </MapContainer>
           </div>
         </Box>
-      </Paper>
+      </Box>
     </Container>
   );
 };

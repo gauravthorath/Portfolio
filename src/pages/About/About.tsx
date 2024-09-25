@@ -59,12 +59,8 @@ const About: React.FC = () => {
     <section
       className={`${styles.about_section} ${isDarkTheme ? styles.dark : styles.light}`}
     >
-      <div
-        className={`${styles.about_container} ${isDarkTheme ? styles.dark : styles.light}`}
-      >
-        <div
-          className={`${styles.about_grid} ${isDarkTheme ? styles.dark : styles.light}`}
-        >
+      <div className={`${styles.about_container}`}>
+        <div className={`${styles.about_grid}`}>
           {/* Image with Title Section */}
           <Box className={styles.about_image_wrapper}>
             <Box className={styles.constant_text}>Technical Lead</Box>
@@ -86,17 +82,9 @@ const About: React.FC = () => {
           </Box>
 
           {/* Info Section */}
-          <div
-            className={`${styles.about_content} ${isDarkTheme ? styles.dark : styles.light}`}
-          >
-            <h1
-              className={`${styles.big_title} ${isDarkTheme ? styles.dark : styles.light}`}
-            >
-              About Me
-            </h1>
-            <p
-              className={`${styles.about_description} ${isDarkTheme ? styles.dark : styles.light}`}
-            >
+          <div className={`${styles.about_content}`}>
+            <h1 className={`${styles.big_title}`}>About Me</h1>
+            <p className={`${styles.about_description}`}>
               I am a highly skilled Technical Lead with over 13 years of
               expertise in software development, specializing in advanced
               frontend technologies with ReactJS. I have a proven track record
@@ -109,9 +97,7 @@ const About: React.FC = () => {
               effective communicator, I excel in enhancing code quality through
               thorough peer reviews and meticulous documentation.
             </p>
-            <div
-              className={`${styles.personal_info} ${isDarkTheme ? styles.dark : styles.light}`}
-            >
+            <div className={`${styles.personal_info}`}>
               <p>
                 <strong>Name:</strong> Gaurav Thorat
               </p>
@@ -127,18 +113,12 @@ const About: React.FC = () => {
               </p>
             </div>
 
-            <h2
-              className={`${styles.skills_title} ${isDarkTheme ? styles.dark : styles.light}`}
-            >
-              Skills
-            </h2>
+            <h2 className={`${styles.skills_title}`}>Skills</h2>
 
             <div className={styles.skills}>
               {Object.entries(skillGroups).map(([category, skills]) => (
                 <div className={styles.skills_group} key={category}>
-                  <h3 className={`${isDarkTheme ? styles.dark : styles.light}`}>
-                    {category}
-                  </h3>
+                  <h3>{category}</h3>
                   <div className={styles.chip_container}>
                     {skills.map((skill) => (
                       <Chip
@@ -151,9 +131,7 @@ const About: React.FC = () => {
                 </div>
               ))}
             </div>
-            <div
-              className={`${styles.extra_info} ${isDarkTheme ? styles.dark : styles.light}`}
-            >
+            <div className={`${styles.extra_info}`}>
               <h2>Certifications</h2>
               <p>
                 <strong>Microsoft : 70-486 </strong> (Developing ASP.NET MVC Web

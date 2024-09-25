@@ -1,0 +1,20 @@
+/* Container for the cards */
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(400px, 1fr)
+  ); /* Responsive columns */
+  gap: 16px; /* Adjust gap between cards */
+  padding: 16px; /* Optional padding */
+}
+
+.dark {
+  background-color: #393838 !important;
+  color: #fff;
+}
+
+.light {
+  background-color: #fff !important;
+  color: #1a1818;
+}

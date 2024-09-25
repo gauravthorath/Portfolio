@@ -55,6 +55,7 @@
 import { useState } from "react";
 import { Button, Typography } from "@mui/material";
 import styles from "./ProjectCard.module.css";
+import { useThemeContext } from "../../context/ThemeContext";
 
 export interface Project {
   name: string;
@@ -65,17 +66,26 @@ export interface Project {
   responsibilities: string[];
 }
 
-const ProjectCard = ({ project }: { project: Project }) => {
+const ProjectCard = ({
+  project,
+  projectIndex,
+}: {
+  project: Project;
+  projectIndex: number;
+}) => {
   const [showMore, setShowMore] = useState(false);
+  const { isDarkTheme } = useThemeContext();
 
   const handleShowMore = () => {
     setShowMore((prev) => !prev);
   };
 
   return (
-    <div className={styles.card}>
+    <div
+      className={`${styles.card} ${isDarkTheme ? styles.dark : styles.light}`}
+    >
       <Typography variant="h6" component="h2" className={styles.titleText}>
-        <strong>{project.name}</strong>
+        <strong>{projectIndex + ".  " + project.name}</strong>
       </Typography>
 
       {showMore ? (
