@@ -8,6 +8,7 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Projects from "./pages/Projects/Projects";
 import CVPage from "./pages/CV/CV";
+import Login from "./pages/Login/Login";
 
 // Define the root route using NavBar as the layout
 const rootRoute = createRootRoute({
@@ -51,6 +52,12 @@ const cvRoute = createRoute({
   component: CVPage, // CV page component
 });
 
+const loginRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/Portfolio/login",
+  component: Login, // CV page component
+});
+
 const anyOtherRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "*",
@@ -66,6 +73,7 @@ const router = createRouter({
     projectsRoute,
     contactRoute,
     cvRoute,
+    loginRoute,
     anyOtherRoute,
   ]),
 });

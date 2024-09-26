@@ -85,7 +85,7 @@ const About: React.FC = () => {
           <div className={`${styles.about_content}`}>
             <h1 className={`${styles.big_title}`}>About Me</h1>
             <p className={`${styles.about_description}`}>
-              I am a highly skilled Technical Lead with over 13 years of
+              I am a highly skilled Technical Lead with over 14 years of
               expertise in software development, specializing in advanced
               frontend technologies with ReactJS. I have a proven track record
               of leading teams, managing complex projects, and delivering
@@ -102,8 +102,9 @@ const About: React.FC = () => {
                 <strong>Name:</strong> Gaurav Thorat
               </p>
               <p>
-                <strong>Role:</strong> Frontend Developer | Project Lead | Scrum
-                Master | Project Manager | Solution Architect
+                <strong>Role:</strong> Frontend Developer | Full Stack Developer
+                | Project Lead | Scrum Master | Project Manager | Solution
+                Architect
               </p>
               <p>
                 <strong>Experience:</strong> 14 Years 1 Month

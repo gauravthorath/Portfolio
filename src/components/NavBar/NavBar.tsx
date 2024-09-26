@@ -13,6 +13,8 @@ import {
   ListItemText,
   useMediaQuery,
   useTheme,
+  Menu,
+  MenuItem,
 } from "@mui/material";
 import {
   Brightness4,
@@ -23,17 +25,20 @@ import {
   Menu as MenuIcon,
 } from "@mui/icons-material";
 import Avatar from "@mui/material/Avatar";
-import { Link, Outlet } from "@tanstack/react-router";
+import { Link, useNavigate, Outlet } from "@tanstack/react-router";
 import { useThemeContext } from "../../context/ThemeContext"; // Import the context
 import GauravImage from "../../assets/gaurav_avatar.png";
 
 const NavBar: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null); // State for menu anchor
+
   const { isDarkTheme, toggleTheme } = useThemeContext(); // Use theme context
 
   const theme = useTheme();
   const isMedium = useMediaQuery(theme.breakpoints.down("md"));
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+  const navigate = useNavigate();
 
   const toggleDrawer = (open: boolean) => () => {
     setDrawerOpen(open);
@@ -41,6 +46,21 @@ const NavBar: React.FC = () => {
 
   const closeDrawer = () => {
     setDrawerOpen(false);
+  };
+
+  // Open menu when avatar is clicked
+  const handleAvatarClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  // Close menu
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  // Handle menu item click (redirect to login)
+  const handleMenuItemClick = () => {
+    setAnchorEl(null); // Close the menu
+    navigate({ to: "/Portfolio/login" }); // Navigate to the login component
   };
 
   const drawer = (
@@ -195,9 +215,18 @@ const NavBar: React.FC = () => {
               </IconButton>
 
               {/* Profile Avatar */}
-              <IconButton color="inherit">
+              <IconButton color="inherit" onClick={handleAvatarClick}>
                 <Avatar alt="Gaurav Thorat" src={GauravImage} />
               </IconButton>
+
+              {/* Menu for the Avatar */}
+              <Menu
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleMenuClose}
+              >
+                <MenuItem onClick={handleMenuItemClick}>Admin</MenuItem>
+              </Menu>
             </div>
           </Toolbar>
         </Container>

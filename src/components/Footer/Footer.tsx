@@ -62,23 +62,21 @@ const Footer: React.FC = () => {
           </Typography>
 
           {/* Electricity Meter Style Visitor Count */}
-          <Typography variant="body2" sx={{ px: 2 }}>
-            <div className={styles.meter_wrapper}>
-              <div className={styles.meter_digits}>
-                {formatVisitorCount(visitorCount).map((digit, index) => (
-                  <div key={index} className={styles.meter_box}>
-                    <CountUp
-                      start={0}
-                      end={parseInt(digit)}
-                      duration={0.5}
-                      useEasing={false}
-                      preserveValue
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Typography>
+          <Box className={styles.meter_wrapper} sx={{ px: 2 }}>
+            <Box className={styles.meter_digits}>
+              {formatVisitorCount(visitorCount).map((digit, index) => (
+                <Box key={index} className={styles.meter_box}>
+                  <CountUp
+                    start={0}
+                    end={parseInt(digit)}
+                    duration={0.5}
+                    useEasing={false}
+                    preserveValue
+                  />
+                </Box>
+              ))}
+            </Box>
+          </Box>
         </Box>
       </Container>
     </footer>

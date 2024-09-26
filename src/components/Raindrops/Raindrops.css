@@ -1,0 +1,136 @@
+/* customizable raindrop styling */
+.raindrop {
+  color: #00f; /* Change to blue for rain */
+  font-size: 1.2em; /* Make drops larger */
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 2px #000;
+}
+
+.raindrop,
+.raindrop .inner {
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes raindrops-fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(110vh); /* Fall to the bottom of the screen */
+  }
+}
+
+.raindrop {
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  animation-name: raindrops-fall;
+  animation-timing-function: linear;
+}
+
+.raindrop .inner {
+  animation-name: raindrops-fall;
+  animation-timing-function: linear;
+  transform-origin: center;
+}
+
+/* Adjusted animation speeds for faster raindrop effect */
+.raindrop:nth-of-type(1) {
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 1.5s;
+}
+.raindrop:nth-of-type(2) {
+  left: 15%;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+}
+.raindrop:nth-of-type(3) {
+  left: 20%;
+  animation-delay: 0.25s;
+  animation-duration: 1.75s;
+}
+.raindrop:nth-of-type(4) {
+  left: 25%;
+  animation-delay: 1s;
+  animation-duration: 2.5s;
+}
+.raindrop:nth-of-type(5) {
+  left: 30%;
+  animation-delay: 0.35s;
+  animation-duration: 1.5s;
+}
+.raindrop:nth-of-type(6) {
+  left: 35%;
+  animation-delay: 0.75s;
+  animation-duration: 2s;
+}
+.raindrop:nth-of-type(7) {
+  left: 40%;
+  animation-delay: 0.15s;
+  animation-duration: 1.6s;
+}
+.raindrop:nth-of-type(8) {
+  left: 45%;
+  animation-delay: 0.5s;
+  animation-duration: 2.2s;
+}
+.raindrop:nth-of-type(9) {
+  left: 50%;
+  animation-delay: 0.4s;
+  animation-duration: 1.85s;
+}
+.raindrop:nth-of-type(10) {
+  left: 55%;
+  animation-delay: 0.1s;
+  animation-duration: 2.4s;
+}
+.raindrop:nth-of-type(11) {
+  left: 60%;
+  animation-delay: 0.6s;
+  animation-duration: 2.55s;
+}
+.raindrop:nth-of-type(12) {
+  left: 65%;
+  animation-delay: 0.2s;
+  animation-duration: 2.15s;
+}
+.raindrop:nth-of-type(13) {
+  left: 70%;
+  animation-delay: 0.85s;
+  animation-duration: 1.95s;
+}
+.raindrop:nth-of-type(14) {
+  left: 75%;
+  animation-delay: 0.65s;
+  animation-duration: 2.3s;
+}
+.raindrop:nth-of-type(15) {
+  left: 80%;
+  animation-delay: 0.05s;
+  animation-duration: 2.6s;
+}
+.raindrop:nth-of-type(16) {
+  left: 85%;
+  animation-delay: 0.3s;
+  animation-duration: 2s;
+}
+.raindrop:nth-of-type(17) {
+  left: 90%;
+  animation-delay: 0.7s;
+  animation-duration: 2.5s;
+}
+.raindrop:nth-of-type(18) {
+  left: 95%;
+  animation-delay: 0.45s;
+  animation-duration: 2.2s;
+}
+.raindrop:nth-of-type(19) {
+  left: 98%;
+  animation-delay: 0.9s;
+  animation-duration: 2.55s;
+}
