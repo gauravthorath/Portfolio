@@ -206,8 +206,8 @@ const About: React.FC = () => {
                 <strong>Other Projects</strong>
                 <ul>
                   <li>
-                    35+ Projects Completed across various domains: Automobile,
-                    Energy, Logistics, Banking, etc.
+                    Projects Completed across various domains: Automobile,
+                    Energy, Logistics, Banking, etc. (See <b>Projects</b> tab)
                   </li>
                 </ul>
               </p>
