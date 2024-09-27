@@ -21,7 +21,7 @@ import {
   Brightness7,
   LinkedIn as LinkedInIcon,
   GitHub as GitHubIcon,
-  Info as InfoIcon,
+  // Info as InfoIcon,
   Menu as MenuIcon,
 } from "@mui/icons-material";
 import Avatar from "@mui/material/Avatar";
