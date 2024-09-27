@@ -106,9 +106,9 @@ const About: React.FC = () => {
                 <strong>Name:</strong> Gaurav Thorat
               </p>
               <p>
-                <strong>Role:</strong> Frontend Developer | Full Stack Developer
-                | Project Lead | Scrum Master | Project Manager | Solution
-                Architect
+                <strong>Roles:</strong> Frontend Developer | Full Stack
+                Developer | Project Lead | Scrum Master | Project Manager |
+                Solution Architect
               </p>
               <p>
                 <strong>Experience:</strong> 14+ Years
