@@ -134,7 +134,7 @@ const NavBar: React.FC = () => {
               </Typography>
 
               {/* Tooltip with Info Icon */}
-              <Tooltip
+              {/* <Tooltip
                 title={
                   <React.Fragment>
                     <div>
@@ -154,7 +154,7 @@ const NavBar: React.FC = () => {
                 <IconButton color="inherit" sx={{ ml: 1 }}>
                   <InfoIcon />
                 </IconButton>
-              </Tooltip>
+              </Tooltip> */}
             </div>
 
             {/* Center: Navigation Links (for desktop) */}
