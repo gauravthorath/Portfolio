@@ -72,11 +72,16 @@ const About: React.FC = () => {
             <Box className={styles.constant_text}>Scrum Master</Box>
             <div className={styles.typing_effect}>
               <ReactTypingEffect
-                text={["Frontend Developer", "FullStack Developer"]}
-                speed={100}
-                eraseSpeed={50}
-                eraseDelay={2000}
-                typingDelay={1000}
+                text={[
+                  "Frontend Developer",
+                  "Project Manager",
+                  "Solution Architect",
+                  "FullStack Developer",
+                ]}
+                speed={25} //typing speed
+                eraseSpeed={40} // deleting speed
+                eraseDelay={750} //this is wait before deleting starts
+                typingDelay={500} //this is wait before typing starts
               />
             </div>
           </Box>
@@ -85,17 +90,16 @@ const About: React.FC = () => {
           <div className={`${styles.about_content}`}>
             <h1 className={`${styles.big_title}`}>About Me</h1>
             <p className={`${styles.about_description}`}>
-              I am a highly skilled Technical Lead with over 14 years of
-              expertise in software development, specializing in advanced
-              frontend technologies with ReactJS. I have a proven track record
-              of leading teams, managing complex projects, and delivering
-              solutions on time and within budget. My expertise encompasses
-              Agile methodologies, backend API integration, and implementing
-              robust quality assurance processes. With a strong focus on
-              translating UI designs into high-performance web applications, I
-              am committed to optimizing both usability and speed. As an
-              effective communicator, I excel in enhancing code quality through
-              thorough peer reviews and meticulous documentation.
+              Lead Frontend Developer with 14+ years of experience in software
+              development, specialising in frontend development with ReactJS.
+              Proven ability to lead teams, manage projects, and ensure timely,
+              within-budget delivery. Expert in Agile methodologies, backend API
+              integration, SaaS development, CI/CD pipelines, AWS hosting,
+              project roadmap planning, risk analysis, and implementing quality
+              assurance measures. Skilled in transforming UI designs into
+              high-quality web applications and optimising performance. Strong
+              communicator with a track record of enhancing quality through peer
+              reviews, managing user stories, and thorough documentation.
             </p>
             <div className={`${styles.personal_info}`}>
               <p>
@@ -107,15 +111,20 @@ const About: React.FC = () => {
                 Architect
               </p>
               <p>
-                <strong>Experience:</strong> 14 Years 1 Month
+                <strong>Experience:</strong> 14+ Years
               </p>
               <p>
                 <strong>Address:</strong> Hamburg, Germany
               </p>
+              <p>
+                <strong>Contact:</strong> +49-15216127113
+              </p>
+              <p>
+                <strong>Email:</strong> gauravjobs25@gmail.com
+              </p>
             </div>
 
             <h2 className={`${styles.skills_title}`}>Skills</h2>
-
             <div className={styles.skills}>
               {Object.entries(skillGroups).map(([category, skills]) => (
                 <div className={styles.skills_group} key={category}>
@@ -132,7 +141,8 @@ const About: React.FC = () => {
                 </div>
               ))}
             </div>
-            <div className={`${styles.extra_info}`}>
+
+            <div className={styles.extra_info}>
               <h2>Certifications</h2>
               <p>
                 <strong>Microsoft : 70-486 </strong> (Developing ASP.NET MVC Web
@@ -149,6 +159,57 @@ const About: React.FC = () => {
               <p>
                 <strong>Microsoft : 70-536 </strong> (Microsoft NET Framework,
                 Application Development Foundation)
+              </p>
+            </div>
+
+            <div className={styles.extra_info}>
+              <h2>Experience</h2>
+              <p>
+                <strong>
+                  Technical Lead Frontend Development, ENCO SOFTWARE GMBH - May
+                  2023 - Present
+                </strong>
+                <ul>
+                  <li>
+                    Led development of ReactJS applications with Theia, Material
+                    UI, AGGrid, and Testing.
+                  </li>
+                  <li>
+                    Managed project roadmaps, tracked user stories, and
+                    mitigated risks via risk analysis.
+                  </li>
+                  <li>
+                    Automated deployments with CI/CD pipelines using GitLab,
+                    deployed on IONOS via Portainer.
+                  </li>
+                </ul>
+              </p>
+
+              <p>
+                <strong>
+                  Senior Frontend Developer, JUSTTRACK (APPLIKE GROUP) - Nov
+                  2022 - Apr 2023
+                </strong>
+                <ul>
+                  <li>
+                    Implemented features with ReactJS, React Table, Tanstack
+                    Query, Redux, Material UI, Rechart.
+                  </li>
+                  <li>
+                    Enhanced product reliability through E2E testing and ensured
+                    stable deployments.
+                  </li>
+                </ul>
+              </p>
+
+              <p>
+                <strong>Other Projects</strong>
+                <ul>
+                  <li>
+                    35+ Projects Completed across various domains: Automobile,
+                    Energy, Logistics, Banking, etc.
+                  </li>
+                </ul>
               </p>
             </div>
 
@@ -178,66 +239,42 @@ const About: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.extra_info}>
-              <h2>Profile Information</h2>
-              <p>
-                <strong>Profile:</strong> Software Development
-              </p>
-              <p>
-                <strong>Domain:</strong> Automobile, Oil & Gas, Energy,
-                Logistics, Banking, Hotel, Healthcare and more.
-              </p>
-              <p>
-                <strong>Education:</strong> Master of Technology in Computer
-                Science
-              </p>
-              <p>
-                <strong>Language:</strong> English, Hindi, Marathi, German (A1)
-              </p>
-
-              <p>
-                <strong>Interest:</strong> Traveling, Cricket, Cooking
-              </p>
-              <p>
-                <strong>Projects Completed:</strong> 35+
-              </p>
-              <div className={styles.social_links}>
-                <IconButton
-                  component="a"
-                  href="https://www.linkedin.com/in/gauravthorath/"
-                  target="_blank"
-                  aria-label="LinkedIn"
-                  color="primary"
-                >
-                  <LinkedIn />
-                </IconButton>
-                <IconButton
-                  component="a"
-                  href="https://github.com/gauravthorath"
-                  target="_blank"
-                  aria-label="GitHub"
-                  color="primary"
-                >
-                  <GitHub />
-                </IconButton>
-                <IconButton
-                  component="a"
-                  href="mailto:gauravjobs25@gmail.com"
-                  aria-label="Gmail"
-                  color="primary"
-                >
-                  <Email />
-                </IconButton>
-                <IconButton
-                  component="a"
-                  href="tel:+49-15216127113"
-                  target="_blank"
-                  aria-label="Skype"
-                  color="primary"
-                >
-                  <Call />
-                </IconButton>
-              </div>
+            <div className={styles.social_links}>
+              <IconButton
+                component="a"
+                href="https://www.linkedin.com/in/gauravthorath/"
+                target="_blank"
+                aria-label="LinkedIn"
+                color="primary"
+              >
+                <LinkedIn />
+              </IconButton>
+              <IconButton
+                component="a"
+                href="https://github.com/gauravthorath"
+                target="_blank"
+                aria-label="GitHub"
+                color="primary"
+              >
+                <GitHub />
+              </IconButton>
+              <IconButton
+                component="a"
+                href="mailto:gauravjobs25@gmail.com"
+                aria-label="Gmail"
+                color="primary"
+              >
+                <Email />
+              </IconButton>
+              <IconButton
+                component="a"
+                href="tel:+49-15216127113"
+                target="_blank"
+                aria-label="Call"
+                color="primary"
+              >
+                <Call />
+              </IconButton>
             </div>
           </div>
         </div>
