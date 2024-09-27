@@ -107,7 +107,7 @@ const About: React.FC = () => {
               </p>
               <p>
                 <strong>Roles:</strong> Frontend Developer | Full Stack
-                Developer | Project Lead | Scrum Master | Project Manager |
+                Developer | Technical Lead | Scrum Master | Project Manager |
                 Solution Architect
               </p>
               <p>
