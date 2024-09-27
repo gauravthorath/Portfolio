@@ -58,6 +58,12 @@ const loginRoute = createRoute({
   component: Login, // CV page component
 });
 
+const adminRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/Portfolio/admin",
+  component: Login, // CV page component
+});
+
 const anyOtherRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "*",
@@ -74,6 +80,7 @@ const router = createRouter({
     contactRoute,
     cvRoute,
     loginRoute,
+    adminRoute,
     anyOtherRoute,
   ]),
 });

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Container, Typography, TextField, Button, Box } from "@mui/material";
 import styles from "./Login.module.css";
 import { useThemeContext } from "../../context/ThemeContext";
+import { supabase } from "../../api/supabaseClient";
+import { useNavigate } from "@tanstack/react-router";
 
 // Define an interface for form state
 interface LoginFormState {
@@ -13,7 +15,7 @@ interface LoginFormState {
 
 const Login: React.FC = () => {
   const { isDarkTheme } = useThemeContext();
-
+  const navigate = useNavigate();
   // State for form values and validation errors
   const [formState, setFormState] = useState<LoginFormState>({
     username: "",
@@ -21,6 +23,7 @@ const Login: React.FC = () => {
     usernameError: "",
     passwordError: "",
   });
+  const [loginError, setLoginError] = useState<string>("");
 
   // Validation checks for the form
   const validateForm = () => {
@@ -53,20 +56,56 @@ const Login: React.FC = () => {
       usernameError: "",
       passwordError: "",
     }));
+    setLoginError(""); // Reset login error on input change
+  };
+
+  // Check user credentials with Supabase
+  const checkCredentials = async () => {
+    const { username, password } = formState;
+
+    // Query the 'user' table for the given username and password
+    const { data, error } = await supabase
+      .from("users") // Make sure the table name matches your Supabase schema
+      .select("*")
+      .eq("username", username)
+      .eq("password", password); // It's recommended to hash passwords before checking in production
+
+    if (error) {
+      console.error("Error fetching user:", error);
+      setLoginError("An error occurred. Please try again.");
+      return false;
+    }
+
+    // If no user is found, login fails
+    if (!data || data.length === 0) {
+      setLoginError("Invalid username or password.");
+      return false;
+    }
+
+    // If user is found, login succeeds
+    console.log("User found:", data);
+    return true;
   };
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateForm()) {
       //   console.log("Form is valid. Submitting form:", formState);
-      // Handle login logic here, e.g., API call
+      const isLoginValid = await checkCredentials();
+      if (isLoginValid) {
+        console.log(
+          "Login successful. Redirecting or performing further actions..."
+        );
+        // Handle successful login here, e.g., redirect or store auth tokens
+        navigate({ to: "/Portfolio/admin" });
+      }
     }
   };
 
   return (
     <Container
-      maxWidth="sm"
+      maxWidth="xl"
       className={`${isDarkTheme ? styles.dark : styles.light}`}
       sx={{
         display: "flex",
@@ -82,7 +121,8 @@ const Login: React.FC = () => {
           borderRadius: 2,
           padding: 4,
           boxShadow: 3,
-          minWidth: "500px",
+          minWidth: "400px",
+          maxWidth: "500px",
         }}
       >
         <Typography variant="h5" component="h1" gutterBottom align="center">
@@ -118,6 +158,13 @@ const Login: React.FC = () => {
             error={!!formState.passwordError}
             helperText={formState.passwordError}
           />
+
+          {/* Login Error Message */}
+          {loginError && (
+            <Typography color="error" variant="body2" align="center">
+              {loginError}
+            </Typography>
+          )}
 
           {/* Submit Button */}
           <Button
