@@ -12,7 +12,11 @@
     "HTML5",
     "JSON",
     "HTTP/AJAX",
-    "Theia"
+    "Theia",
+    "Material UI",
+    "Bootstrap",
+    "Tailwind",
+    "Angular Material"
   ],
   "Backend Technologies": [
     "Node",
@@ -28,7 +32,15 @@
     "Playwright",
     "Jasmine"
   ],
-  "UI Libraries": ["Material UI", "Bootstrap", "Tailwind", "Angular Material"],
+  "Cloud": [
+    "AWS S3 bukets",
+    "EC2",
+    "Elastic beanstalk",
+    "AWS Amplifier",
+    "AWS Lambda",
+    "IONOS",
+    "Portainer"
+  ],
   "Other Libraries": [
     "Remirror (SVG rendering)",
     "Instascan.JS (barcode/QR code scanning)",
@@ -47,7 +59,17 @@
     "jQuery",
     "WKHTMLTOPDF library"
   ],
-  "Agile Methodologies": ["Scrum", "Kanban"],
+  "Agile Development": [
+    "Scrum",
+    "Kanban",
+    "User Stories",
+    "Risk Analysis",
+    "Sprint Planning",
+    "Project Roadmaps",
+    "Daily Standups",
+    "Sprint Retrospectives",
+    "Stakeholder Communication"
+  ],
   "Tools": [
     "Git",
     "JIRA",
@@ -55,6 +77,7 @@
     "GitHub",
     "CI/CD",
     "Docker",
+    "Kubernetes",
     "Postman",
     "OSIsoft PI AF",
     "OSIsoft PI explorer System",
@@ -71,6 +94,7 @@
     "Microsoft SQL Server",
     "MongoDB",
     "PostgreSQL",
+    "Supabase",
     "REST API",
     "GraphQL",
     "SSRS",
