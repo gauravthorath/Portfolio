@@ -169,48 +169,48 @@ const About: React.FC = () => {
                   Technical Lead Frontend Development, ENCO SOFTWARE GMBH - May
                   2023 - Present
                 </strong>
-                <ul>
-                  <li>
-                    Led development of ReactJS applications with Theia, Material
-                    UI, AGGrid, and Testing.
-                  </li>
-                  <li>
-                    Managed project roadmaps, tracked user stories, and
-                    mitigated risks via risk analysis.
-                  </li>
-                  <li>
-                    Automated deployments with CI/CD pipelines using GitLab,
-                    deployed on IONOS via Portainer.
-                  </li>
-                </ul>
               </p>
+              <ul>
+                <li>
+                  Led development of ReactJS applications with Theia, Material
+                  UI, AGGrid, and Testing.
+                </li>
+                <li>
+                  Managed project roadmaps, tracked user stories, and mitigated
+                  risks via risk analysis.
+                </li>
+                <li>
+                  Automated deployments with CI/CD pipelines using GitLab,
+                  deployed on IONOS via Portainer.
+                </li>
+              </ul>
 
               <p>
                 <strong>
                   Senior Frontend Developer, JUSTTRACK (APPLIKE GROUP) - Nov
                   2022 - Apr 2023
                 </strong>
-                <ul>
-                  <li>
-                    Implemented features with ReactJS, React Table, Tanstack
-                    Query, Redux, Material UI, Rechart.
-                  </li>
-                  <li>
-                    Enhanced product reliability through E2E testing and ensured
-                    stable deployments.
-                  </li>
-                </ul>
               </p>
+              <ul>
+                <li>
+                  Implemented features with ReactJS, React Table, Tanstack
+                  Query, Redux, Material UI, Rechart.
+                </li>
+                <li>
+                  Enhanced product reliability through E2E testing and ensured
+                  stable deployments.
+                </li>
+              </ul>
 
               <p>
                 <strong>Other Projects</strong>
-                <ul>
-                  <li>
-                    Projects Completed across various domains: Automobile,
-                    Energy, Logistics, Banking, etc. (See <b>Projects</b> tab)
-                  </li>
-                </ul>
               </p>
+              <ul>
+                <li>
+                  Projects Completed across various domains: Automobile, Energy,
+                  Logistics, Banking, etc. (See <b>Projects</b> tab)
+                </li>
+              </ul>
             </div>
 
             <div className={styles.extra_info}>

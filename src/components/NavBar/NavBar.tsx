@@ -28,6 +28,7 @@ import Avatar from "@mui/material/Avatar";
 import { Link, useNavigate, Outlet } from "@tanstack/react-router";
 import { useThemeContext } from "../../context/ThemeContext"; // Import the context
 import GauravImage from "../../assets/gaurav_avatar.png";
+import { useAuth } from "../../context/AuthContext";
 
 const NavBar: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -39,6 +40,7 @@ const NavBar: React.FC = () => {
   const isMedium = useMediaQuery(theme.breakpoints.down("md"));
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
   const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
 
   const toggleDrawer = (open: boolean) => () => {
     setDrawerOpen(open);
@@ -225,7 +227,12 @@ const NavBar: React.FC = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleMenuClose}
               >
-                <MenuItem onClick={handleMenuItemClick}>Admin</MenuItem>
+                {!isAuthenticated && (
+                  <MenuItem onClick={handleMenuItemClick}>Admin Login</MenuItem>
+                )}
+                {isAuthenticated && (
+                  <MenuItem onClick={handleMenuItemClick}> Logout</MenuItem>
+                )}
               </Menu>
             </div>
           </Toolbar>

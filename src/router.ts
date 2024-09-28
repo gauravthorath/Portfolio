@@ -9,6 +9,16 @@ import Contact from "./pages/Contact/Contact";
 import Projects from "./pages/Projects/Projects";
 import CVPage from "./pages/CV/CV";
 import Login from "./pages/Login/Login";
+import ProtectedRoute from "./components/HOCs/ProtectedRoute";
+import Admin from "./pages/Admin/Admin";
+// const Admin = React.lazy(() => import("./pages/Admin/Admin"));
+
+// Define Suspense Wrapper Component for lazy loading Admin page
+// const SuspenseAdmin = () => (
+//   <React.Suspense fallback={<div>Loading...</div>}
+//     <Admin />
+//   </React.Suspense>
+// );
 
 // Define the root route using NavBar as the layout
 const rootRoute = createRootRoute({
@@ -16,73 +26,58 @@ const rootRoute = createRootRoute({
 });
 
 // Define child routes
-const homeRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/Portfolio/",
-  component: About, // landing page component
-});
+const routes = [
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Portfolio/",
+    component: About, // landing page component
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Portfolio",
+    component: About, // landing about component
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Portfolio/about",
+    component: About, // About page component
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Portfolio/projects",
+    component: Projects, // Project page component
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Portfolio/contact",
+    component: Contact, // Contact page component
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Portfolio/cv",
+    component: CVPage, // CV page component
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Portfolio/login",
+    component: Login, // login page component
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Portfolio/restricted-admin-panel",
 
-const home2Route = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/Portfolio",
-  component: About, // landing about component
-});
-
-const aboutRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/Portfolio/about",
-  component: About, // About page component
-});
-
-const projectsRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/Portfolio/projects",
-  component: Projects, // Project page component
-});
-
-const contactRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/Portfolio/contact",
-  component: Contact, // Contact page component
-});
-
-const cvRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/Portfolio/cv",
-  component: CVPage, // CV page component
-});
-
-const loginRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/Portfolio/login",
-  component: Login, // CV page component
-});
-
-const adminRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/Portfolio/admin",
-  component: Login, // CV page component
-});
-
-const anyOtherRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "*",
-  component: About, // About page component
-});
-
+    component: () => ProtectedRoute({ component: Admin }), // Render SuspenseAdmin as a component instead of passing it as a reference
+  }),
+  // Add the catch-all route with the '*' path
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Portfolio/*", // Catch-all route for unmatched paths
+    component: About, // Render About page component (or replace with a custom NotFound page)
+  }),
+];
 // Create the router
 const router = createRouter({
-  routeTree: rootRoute.addChildren([
-    homeRoute,
-    home2Route,
-    aboutRoute,
-    projectsRoute,
-    contactRoute,
-    cvRoute,
-    loginRoute,
-    adminRoute,
-    anyOtherRoute,
-  ]),
+  routeTree: rootRoute.addChildren(routes),
 });
 
 export default router;

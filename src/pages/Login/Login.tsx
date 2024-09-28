@@ -4,6 +4,7 @@ import styles from "./Login.module.css";
 import { useThemeContext } from "../../context/ThemeContext";
 import { supabase } from "../../api/supabaseClient";
 import { useNavigate } from "@tanstack/react-router";
+import { useAuth } from "../../context/AuthContext";
 
 // Define an interface for form state
 interface LoginFormState {
@@ -24,6 +25,7 @@ const Login: React.FC = () => {
     passwordError: "",
   });
   const [loginError, setLoginError] = useState<string>("");
+  const { login } = useAuth();
 
   // Validation checks for the form
   const validateForm = () => {
@@ -83,7 +85,7 @@ const Login: React.FC = () => {
     }
 
     // If user is found, login succeeds
-    console.log("User found:", data);
+    // console.log("User found:", data);
     return true;
   };
 
@@ -94,11 +96,9 @@ const Login: React.FC = () => {
       //   console.log("Form is valid. Submitting form:", formState);
       const isLoginValid = await checkCredentials();
       if (isLoginValid) {
-        console.log(
-          "Login successful. Redirecting or performing further actions..."
-        );
         // Handle successful login here, e.g., redirect or store auth tokens
-        navigate({ to: "/Portfolio/admin" });
+        login(); //To set isAuthenticated to true in Auth Context which later used to check while shoing Admin component
+        navigate({ to: "/Portfolio/restricted-admin-panel" });
       }
     }
   };
