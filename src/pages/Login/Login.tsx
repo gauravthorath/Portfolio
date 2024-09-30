@@ -33,15 +33,15 @@ const Login: React.FC = () => {
     const errors = { usernameError: "", passwordError: "" };
 
     if (formState.username.trim() === "") {
-      errors.usernameError = "Username is required";
+      errors.usernameError = "Username is required.";
       isValid = false;
     }
 
     if (formState.password.trim() === "") {
-      errors.passwordError = "Password is required";
+      errors.passwordError = "Password is required.";
       isValid = false;
     } else if (formState.password.length < 6) {
-      errors.passwordError = "Password must be at least 6 characters long";
+      errors.passwordError = "Password must be at least 6 characters long.";
       isValid = false;
     }
 
