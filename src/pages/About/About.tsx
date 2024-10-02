@@ -74,7 +74,7 @@ const About: React.FC = () => {
               <ReactTypingEffect
                 text={[
                   "Scrum Master",
-                  "Project Manager",
+                  "Technical Project Manager",
                   "Solution Architect",
                   "FullStack Developer",
                 ]}
