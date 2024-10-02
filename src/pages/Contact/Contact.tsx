@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
       className={`${isDarkTheme ? styles.dark : styles.light}`}
     >
       <Typography
-        variant="h5"
+        variant="h6"
         component="h1"
         gutterBottom
         align="center"

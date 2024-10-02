@@ -59,7 +59,7 @@ const ProjectsComponent: React.FC = () => {
       sx={{ p: "0 !important" }}
     >
       <Typography
-        variant="h5"
+        variant="h6"
         component="h1"
         gutterBottom
         align="center"
