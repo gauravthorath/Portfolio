@@ -69,11 +69,11 @@ const About: React.FC = () => {
               alt="Gaurav Thorat"
               className={styles.about_image}
             />
-            <Box className={styles.constant_text}>Scrum Master</Box>
+            <Box className={styles.constant_text}>Frontend Developer</Box>
             <div className={styles.typing_effect}>
               <ReactTypingEffect
                 text={[
-                  "Frontend Developer",
+                  "Scrum Master",
                   "Project Manager",
                   "Solution Architect",
                   "FullStack Developer",
