@@ -32,3 +32,9 @@
 .card.expanded {
   grid-column: 1 / -1; /* Span all columns when expanded */
 }
+
+@media (max-width: 500px) {
+  .card.expanded {
+    grid-column: 1;
+  }
+}

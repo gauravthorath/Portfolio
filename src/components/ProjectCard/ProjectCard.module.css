@@ -52,6 +52,13 @@
   width: 100%; /* Ensure full width is utilized */
 }
 
+@media (max-width: 500px) {
+  .card.expanded {
+    grid-column: span 1; /* Take full width (span all columns) */
+    width: 100%; /* Ensure full width is utilized */
+  }
+}
+
 .titleText {
   color: #0177b5;
 }
