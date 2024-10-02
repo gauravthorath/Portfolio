@@ -1,12 +1,12 @@
-/* Container for the cards */
+/* 
 .card_container {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
     minmax(400px, 1fr)
-  ); /* Responsive columns */
-  gap: 16px; /* Adjust gap between cards */
-  padding: 16px; /* Optional padding */
+  ); 
+  gap: 16px;
+  padding: 16px; 
 }
 
 .dark {
@@ -17,4 +17,18 @@
 .light {
   background-color: #fff !important;
   color: #1a1818;
+}
+
+ */
+
+/* Container for the cards */
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.card.expanded {
+  grid-column: 1 / -1; /* Span all columns when expanded */
 }

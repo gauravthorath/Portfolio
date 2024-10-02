@@ -1,19 +1,55 @@
-/* Individual card style */
+/* 
 .card {
-  border: 1px solid #ddd; /* Border for the card */
-  border-radius: 8px; /* Rounded corners */
-  padding: 16px; /* Padding inside the card */
-  background-color: #fff; /* Card background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  padding: 16px; 
+  background-color: #fff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow 0.3s ease; 
 }
 
-/* Card hover effect */
+
 .card:hover {
-  transform: translateY(-6px); /* Slight lift effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-6px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.titleText {
+  color: #0177b5;
+}
+
+.dark {
+  background-color: #393838 !important;
+  color: #fff;
+}
+
+.light {
+  background-color: #fff !important;
+  color: #1a1818;
+}
+*/
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card.expanded {
+  grid-column: span 2; /* Take full width (span all columns) */
+  width: 100%; /* Ensure full width is utilized */
 }
 
 .titleText {
