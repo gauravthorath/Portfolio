@@ -70,7 +70,7 @@
     "Sprint Retrospectives",
     "Stakeholder Communication"
   ],
-  "Tools": [
+  "Platforms/Tools": [
     "Git",
     "JIRA",
     "GitLab",
@@ -78,6 +78,7 @@
     "CI/CD",
     "Docker",
     "Kubernetes",
+    "ServiceNow-CreateNow",
     "Postman",
     "OSIsoft PI AF",
     "OSIsoft PI explorer System",
