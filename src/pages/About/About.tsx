@@ -63,13 +63,13 @@ const About: React.FC = () => {
         <div className={`${styles.about_grid}`}>
           {/* Image with Title Section */}
           <Box className={styles.about_image_wrapper}>
-            <Box className={styles.constant_text}>Technical Lead</Box>
+            <Box className={styles.constant_text}>Frontend Developer</Box>
             <img
               src={gauravAboutPhoto}
               alt="Gaurav Thorat"
               className={styles.about_image}
             />
-            <Box className={styles.constant_text}>Frontend Developer</Box>
+            <Box className={styles.constant_text}>Technical Lead</Box>
             <div className={styles.typing_effect}>
               <ReactTypingEffect
                 text={[
