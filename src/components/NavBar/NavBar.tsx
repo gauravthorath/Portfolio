@@ -80,6 +80,9 @@ const NavBar: React.FC = () => {
         <ListItem button component={Link} to="/Portfolio/cv">
           <ListItemText primary="CV" />
         </ListItem>
+        <ListItem button component={Link} to="/Portfolio/references">
+          <ListItemText primary="References" />
+        </ListItem>
       </List>
     </div>
   );
@@ -181,6 +184,14 @@ const NavBar: React.FC = () => {
                 </Button>
                 <Button color="inherit" component={Link} to="/Portfolio/cv">
                   CV
+                </Button>
+
+                <Button
+                  color="inherit"
+                  component={Link}
+                  to="/Portfolio/references"
+                >
+                  References
                 </Button>
               </div>
             )}
