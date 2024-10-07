@@ -80,9 +80,9 @@ const NavBar: React.FC = () => {
         <ListItem button component={Link} to="/Portfolio/cv">
           <ListItemText primary="CV" />
         </ListItem>
-        <ListItem button component={Link} to="/Portfolio/references">
+        {/* <ListItem button component={Link} to="/Portfolio/references">
           <ListItemText primary="References" />
-        </ListItem>
+        </ListItem> */}
       </List>
     </div>
   );
