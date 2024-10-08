@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Chip, IconButton } from "@mui/material";
 import { LinkedIn, GitHub, Email, Call } from "@mui/icons-material";
 import styles from "./About.module.css";
-import gauravAboutPhoto from "../../assets/gaurav_about.jpeg";
+import gauravAboutPhoto from "../../assets/gaurav_about.webp";
 import ReactTypingEffect from "react-typing-effect";
 import skillGroups from "./skills.json";
 import { supabase } from "../../api/supabaseClient";
