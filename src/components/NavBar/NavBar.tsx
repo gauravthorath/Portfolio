@@ -26,7 +26,7 @@ import {
 import Avatar from "@mui/material/Avatar";
 import { Link, useNavigate, Outlet } from "@tanstack/react-router";
 import { useThemeContext } from "../../context/ThemeContext";
-import GauravImage from "../../assets/gaurav_avatar.png";
+import GauravImage from "../../assets/gaurav_avatar.jpg";
 import { useAuth } from "../../context/AuthContext";
 
 const NavBar: React.FC = () => {
