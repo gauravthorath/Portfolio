@@ -66,11 +66,12 @@ const About: React.FC = () => {
             <Box className={styles.constant_text}>Frontend Developer</Box>
             <img
               src={gauravAboutPhoto}
-              alt="Gaurav Thorat"
+              alt="Gaurav Thorat - Frontend Developer"
               className={styles.about_image}
-              loading="eager" // Use lazy loading if appropriate
+              loading="lazy" // Lazy loading for performance
               width={200} // Set appropriate width
               height={200} // Set appropriate height
+              style={{ objectFit: "cover" }} // Maintain aspect ratio
             />
             <Box className={styles.constant_text}>Technical Lead</Box>
             <div className={styles.typing_effect}>
