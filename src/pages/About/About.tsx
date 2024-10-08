@@ -68,6 +68,9 @@ const About: React.FC = () => {
               src={gauravAboutPhoto}
               alt="Gaurav Thorat"
               className={styles.about_image}
+              loading="eager" // Use lazy loading if appropriate
+              width={200} // Set appropriate width
+              height={200} // Set appropriate height
             />
             <Box className={styles.constant_text}>Technical Lead</Box>
             <div className={styles.typing_effect}>

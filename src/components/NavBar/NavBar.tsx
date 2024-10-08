@@ -21,21 +21,18 @@ import {
   Brightness7,
   LinkedIn as LinkedInIcon,
   GitHub as GitHubIcon,
-  // Info as InfoIcon,
   Menu as MenuIcon,
 } from "@mui/icons-material";
 import Avatar from "@mui/material/Avatar";
 import { Link, useNavigate, Outlet } from "@tanstack/react-router";
-import { useThemeContext } from "../../context/ThemeContext"; // Import the context
+import { useThemeContext } from "../../context/ThemeContext";
 import GauravImage from "../../assets/gaurav_avatar.png";
 import { useAuth } from "../../context/AuthContext";
 
 const NavBar: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null); // State for menu anchor
-
-  const { isDarkTheme, toggleTheme } = useThemeContext(); // Use theme context
-
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const { isDarkTheme, toggleTheme } = useThemeContext();
   const theme = useTheme();
   const isMedium = useMediaQuery(theme.breakpoints.down("md"));
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
@@ -50,19 +47,17 @@ const NavBar: React.FC = () => {
     setDrawerOpen(false);
   };
 
-  // Open menu when avatar is clicked
   const handleAvatarClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
-  // Close menu
+
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
 
-  // Handle menu item click (redirect to login)
   const handleMenuItemClick = () => {
-    setAnchorEl(null); // Close the menu
-    navigate({ to: "/Portfolio/login" }); // Navigate to the login component
+    setAnchorEl(null);
+    navigate({ to: "/Portfolio/login" });
   };
 
   const drawer = (
@@ -93,14 +88,14 @@ const NavBar: React.FC = () => {
         position="fixed"
         sx={{
           backgroundColor: isDarkTheme ? "#111111" : "#0177B5",
-          width: "100%", // Make sure the AppBar takes the full width
+          width: "100%",
         }}
       >
         <Container
           maxWidth={false}
           sx={{
             padding: "0 !important",
-            width: "100%", // Ensure the container spans full width
+            width: "100%",
             display: "flex",
             flexGrow: 1,
           }}
@@ -109,7 +104,7 @@ const NavBar: React.FC = () => {
             sx={{
               display: "flex",
               justifyContent: "space-between",
-              flexGrow: 1, // Make Toolbar take full space
+              flexGrow: 1,
               width: "100%",
             }}
           >
@@ -120,46 +115,24 @@ const NavBar: React.FC = () => {
                 edge="start"
                 onClick={toggleDrawer(true)}
                 sx={{ mr: 2 }}
+                aria-label="Open menu" // Accessible name added here
               >
                 <MenuIcon />
               </IconButton>
             )}
 
-            {/* Left side: Name and Info Icon */}
+            {/* Left side: Name */}
             <div style={{ display: "flex", alignItems: "center" }}>
               <Typography
-                variant={isMedium ? "h6" : "h5"} // Responsive variant
+                variant={isMedium ? "h6" : "h5"}
                 sx={{
                   ml: 0,
-                  fontSize: isMedium ? "1.25rem" : "1.75rem", // Mobile font size adjustments
+                  fontSize: isMedium ? "1.25rem" : "1.75rem",
                   fontWeight: 700,
                 }}
               >
                 {isSmall ? "Gaurav" : "Gaurav Thorat"}
               </Typography>
-
-              {/* Tooltip with Info Icon */}
-              {/* <Tooltip
-                title={
-                  <React.Fragment>
-                    <div>
-                      <strong>Under Development:</strong>
-                    </div>
-                    <div>
-                      Some features and sections of this portfolio are still in
-                      progress.
-                    </div>
-                    <div>
-                      Check back later for more updates and completed sections.
-                    </div>
-                  </React.Fragment>
-                }
-                placement="bottom"
-              >
-                <IconButton color="inherit" sx={{ ml: 1 }}>
-                  <InfoIcon />
-                </IconButton>
-              </Tooltip> */}
             </div>
 
             {/* Center: Navigation Links (for desktop) */}
@@ -185,18 +158,17 @@ const NavBar: React.FC = () => {
                 <Button color="inherit" component={Link} to="/Portfolio/cv">
                   CV
                 </Button>
-
-                <Button
+                {/* <Button
                   color="inherit"
                   component={Link}
                   to="/Portfolio/references"
                 >
                   References
-                </Button>
+                </Button> */}
               </div>
             )}
 
-            {/* Right side: LinkedIn, GitHub, Theme Toggle, and Profile Avatar */}
+            {/* Right side: Icons and Profile Avatar */}
             <div style={{ display: "flex", alignItems: "center" }}>
               {/* LinkedIn Icon */}
               <Tooltip title="LinkedIn">
@@ -205,6 +177,7 @@ const NavBar: React.FC = () => {
                   component="a"
                   href="https://www.linkedin.com/in/gauravthorath/"
                   target="_blank"
+                  aria-label="LinkedIn" // Accessible name added here
                 >
                   <LinkedInIcon />
                 </IconButton>
@@ -217,18 +190,27 @@ const NavBar: React.FC = () => {
                   component="a"
                   href="https://github.com/gauravthorath"
                   target="_blank"
+                  aria-label="GitHub" // Accessible name added here
                 >
                   <GitHubIcon />
                 </IconButton>
               </Tooltip>
 
               {/* Light/Dark Mode Switch */}
-              <IconButton color="inherit" onClick={toggleTheme}>
+              <IconButton
+                color="inherit"
+                onClick={toggleTheme}
+                aria-label="Toggle theme"
+              >
                 {isDarkTheme ? <Brightness7 /> : <Brightness4 />}
               </IconButton>
 
               {/* Profile Avatar */}
-              <IconButton color="inherit" onClick={handleAvatarClick}>
+              <IconButton
+                color="inherit"
+                onClick={handleAvatarClick}
+                aria-label="Open profile menu"
+              >
                 <Avatar alt="Gaurav Thorat" src={GauravImage} />
               </IconButton>
 
