@@ -45,9 +45,7 @@ const App: React.FC = () => {
     >
       {/* Conditionally render components based on weather conditions */}
       {weatherConditions.snow && <Snowflakes />}
-      {/* {weatherConditions.rainy && <Raindrops />} */}
-      <Raindrops />
-
+      {weatherConditions.rainy && <Raindrops />}
       <AuthProvider>
         <RouterProvider router={router} />
         <Footer />
