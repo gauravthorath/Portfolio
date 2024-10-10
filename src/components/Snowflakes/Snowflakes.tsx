@@ -1,16 +1,23 @@
-// Snowflakes.tsx
 import React from "react";
-import "./Snowflakes.css";
+import Snowfall from "react-snowfall";
 
 const Snowflakes: React.FC = () => {
   return (
-    <div className="snowflakes" aria-hidden="true">
-      {Array.from({ length: 12 }).map((_, index) => (
-        <div key={index} className="snowflake">
-          <div className="inner">❅</div>
-        </div>
-      ))}
-    </div>
+    <Snowfall
+      style={{
+        position: "fixed",
+        width: "100vw",
+        height: "100vh",
+      }}
+      snowflakeCount={500}
+      // color = defaultConfig.color,
+      // changeFrequency = defaultConfig.changeFrequency,
+      radius={[4, 6]}
+      // speed = defaultConfig.speed,
+      // wind = defaultConfig.wind,
+      // rotationSpeed = defaultConfig.rotationSpeed,
+      // images,
+    />
   );
 };
 
