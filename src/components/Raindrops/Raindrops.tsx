@@ -1,15 +1,19 @@
-// Raindrops.tsx
 import React from "react";
-import "./Raindrops.css";
+import { Rainify } from "rainify";
 const Raindrops: React.FC = () => {
+  console.log("rain started...");
   return (
-    <div className="raindrops" aria-hidden="true">
-      {Array.from({ length: 20 }).map((_, index) => (
-        <div key={index} className="raindrop">
-          <div className="inner">💧</div> {/* Raindrop emoji */}
-        </div>
-      ))}
-    </div>
+    <Rainify
+      isRaining
+      intensity={1000}
+      color="skyblue"
+      zIndex={0}
+      speed={10}
+      wind={10}
+      thickness={1}
+      splashColor="skyblue"
+      splashDuration={6}
+    />
   );
 };
 

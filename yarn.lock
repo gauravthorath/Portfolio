@@ -2903,6 +2903,14 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
+rainify@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/rainify/-/rainify-1.0.6.tgz#62623b83e68d98c9eb229e25a2aca989b810f05b"
+  integrity sha512-lXtv7GKqVLLKXbLoFluX/lJ3rfPuaeAcHB0VgvBb0eArlCa57No2fEIu3HIZEu2JxY1b5HbZR6yZgTSxG2ugnw==
+  dependencies:
+    react "^18.3.1"
+    react-dom "^18.3.1"
+
 react-countup@^6.5.3:
   version "6.5.3"
   resolved "https://registry.yarnpkg.com/react-countup/-/react-countup-6.5.3.tgz#e892aa3eab2d6ba9c3cdba30bf4ed6764826d848"
