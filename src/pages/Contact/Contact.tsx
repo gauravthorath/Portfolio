@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
 
   return (
     <Container
-      maxWidth="xl"
+      maxWidth="lg"
       className={`${isDarkTheme ? styles.dark : styles.light}`}
     >
       <Typography
