@@ -8,6 +8,8 @@ import {
   Paper,
   Button,
   Snackbar,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import { useThemeContext } from "../../context/ThemeContext";
 import styles from "./Admin.module.css";
@@ -22,7 +24,8 @@ const Admin: React.FC = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [recordId, setRecordId] = useState<number | null>(null); // Track the record ID
-
+  const theme = useTheme();
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
   // Fetch existing settings when the component mounts
   useEffect(() => {
     const fetchSettings = async () => {
@@ -83,7 +86,6 @@ const Admin: React.FC = () => {
       rainy: isRainy,
     };
 
-    console.log("🚀 ~ handleSave ~ recordId: on save checking if exists : ", recordId)
     if (recordId) {
       // If record ID exists, update it
       const { error: updateError } = await supabase
@@ -109,11 +111,19 @@ const Admin: React.FC = () => {
     setSnackbarOpen(false);
   };
 
+  const minHeight = isSmall ? "90vh" : "87vh";
   return (
     <Container
       maxWidth="xl"
       className={`${isDarkTheme ? styles.dark : styles.light}`}
-      sx={{ p: "100px !important" }}
+      sx={{
+        p: "100px !important",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+        minHeight: { minHeight },
+      }}
     >
       <Typography
         variant="h5"
@@ -125,7 +135,14 @@ const Admin: React.FC = () => {
         Admin Panel
       </Typography>
 
-      <Paper elevation={3} style={{ padding: "20px", marginTop: "20px" }}>
+      <Paper
+        elevation={3}
+        style={{
+          padding: "20px",
+          marginTop: "20px",
+          width: "400px",
+        }}
+      >
         <Typography variant="h6" gutterBottom>
           Weather Conditions
         </Typography>
