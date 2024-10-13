@@ -19,28 +19,33 @@ const ProjectsComponent: React.FC = () => {
     <Container
       maxWidth="xl"
       className={`${isDarkTheme ? styles.dark : styles.light}`}
-      sx={{ p: "0 !important" }}
     >
-      <Typography
-        variant="h6"
-        component="h1"
-        gutterBottom
-        align="center"
-        sx={{ pt: 10 }}
+      <Container
+        maxWidth="lg"
+        className={`${isDarkTheme ? styles.dark : styles.light}`}
+        sx={{ p: "0 !important" }}
       >
-        Executed Projects
-      </Typography>
-      <Box className={styles.card_container}>
-        {projectList.map((project, index) => (
-          <ProjectCard
-            key={index}
-            project={project}
-            projectIndex={index + 1}
-            isExpanded={expandedCard === index}
-            onExpand={() => handleExpand(index)}
-          />
-        ))}
-      </Box>
+        <Typography
+          variant="h6"
+          component="h1"
+          gutterBottom
+          align="center"
+          sx={{ pt: 10 }}
+        >
+          Executed Projects
+        </Typography>
+        <Box className={styles.card_container}>
+          {projectList.map((project, index) => (
+            <ProjectCard
+              key={index}
+              project={project}
+              projectIndex={index + 1}
+              isExpanded={expandedCard === index}
+              onExpand={() => handleExpand(index)}
+            />
+          ))}
+        </Box>
+      </Container>
     </Container>
   );
 };

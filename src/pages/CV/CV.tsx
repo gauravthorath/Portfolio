@@ -22,32 +22,37 @@ const CVPage: React.FC = () => {
     const { zoomTo } = zoomPluginInstance;
 
     // Ensure that the zoom level is set to 100% once the document is loaded
-    zoomTo(isSmall ? 0.6 : 1); // 1 represents 100% zoom
+    zoomTo(isSmall ? 0.5 : 1); // 1 represents 100% zoom
   }, [isSmall, zoomPluginInstance]);
 
   return (
     <Container
-      maxWidth="xl"
+      maxWidth={isSmall ? "lg" : "xl"}
       className={`${isDarkTheme ? styles.dark : styles.light}`}
     >
-      <Typography
-        variant="h6"
-        component="h1"
-        gutterBottom
-        align="center"
-        sx={{ pt: 10 }}
+      <Container
+        maxWidth="lg"
+        className={`${isDarkTheme ? styles.dark : styles.light}`}
       >
-        My detailed professional journey is outlined in the CV below.
-      </Typography>
-      <div className="pdf-viewer" style={{ height: "800px" }}>
-        {/* Use the Worker component with the correct worker URL */}
-        <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.11.338/build/pdf.worker.min.js">
-          <Viewer
-            fileUrl={myCV}
-            plugins={[defaultLayoutPluginInstance, zoomPluginInstance]}
-          />
-        </Worker>
-      </div>
+        <Typography
+          variant="h6"
+          component="h1"
+          gutterBottom
+          align="center"
+          sx={{ pt: 10 }}
+        >
+          My detailed professional journey is outlined in the CV below.
+        </Typography>
+        <div className="pdf-viewer" style={{ height: "800px" }}>
+          {/* Use the Worker component with the correct worker URL */}
+          <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.11.338/build/pdf.worker.min.js">
+            <Viewer
+              fileUrl={myCV}
+              plugins={[defaultLayoutPluginInstance, zoomPluginInstance]}
+            />
+          </Worker>
+        </div>
+      </Container>
     </Container>
   );
 };

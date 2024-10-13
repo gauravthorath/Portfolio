@@ -30,110 +30,115 @@ const Contact: React.FC = () => {
 
   return (
     <Container
-      maxWidth="lg"
+      maxWidth="xl"
       className={`${isDarkTheme ? styles.dark : styles.light}`}
     >
-      <Typography
-        variant="h6"
-        component="h1"
-        gutterBottom
-        align="center"
-        sx={{ pt: 10 }}
+      <Container
+        maxWidth="lg"
+        className={`${isDarkTheme ? styles.dark : styles.light}`}
       >
-        Contact Me
-      </Typography>
-      <Box sx={{ padding: 3, borderRadius: 2 }}>
-        <Box mb={2}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6} md={3}>
-              <Box display="flex" alignItems="center">
-                <MailOutlineIcon color="primary" sx={{ marginRight: 1 }} />
-                <IconButton
-                  component="a"
-                  href="mailto:gauravjobs25@gmail.com"
-                  target="_blank"
-                  aria-label="Email"
-                  title="Send Email"
-                  size="small"
-                >
-                  gauravjobs25@gmail.com
-                </IconButton>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Box display="flex" alignItems="center">
-                <PhoneIcon color="primary" sx={{ marginRight: 1 }} />
-                <IconButton
-                  component="a"
-                  href="tel:+49-15216127113"
-                  target="_blank"
-                  aria-label="Phone"
-                  title="Call"
-                  size="small"
-                >
-                  +49-15216127113
-                </IconButton>
-              </Box>
-            </Grid>
+        <Typography
+          variant="h6"
+          component="h1"
+          gutterBottom
+          align="center"
+          sx={{ pt: 10 }}
+        >
+          Contact Me
+        </Typography>
+        <Box sx={{ padding: 3, borderRadius: 2 }}>
+          <Box mb={2}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6} md={3}>
+                <Box display="flex" alignItems="center">
+                  <MailOutlineIcon color="primary" sx={{ marginRight: 1 }} />
+                  <IconButton
+                    component="a"
+                    href="mailto:gauravjobs25@gmail.com"
+                    target="_blank"
+                    aria-label="Email"
+                    title="Send Email"
+                    size="small"
+                  >
+                    gauravjobs25@gmail.com
+                  </IconButton>
+                </Box>
+              </Grid>
+              <Grid item xs={12} sm={6} md={3}>
+                <Box display="flex" alignItems="center">
+                  <PhoneIcon color="primary" sx={{ marginRight: 1 }} />
+                  <IconButton
+                    component="a"
+                    href="tel:+49-15216127113"
+                    target="_blank"
+                    aria-label="Phone"
+                    title="Call"
+                    size="small"
+                  >
+                    +49-15216127113
+                  </IconButton>
+                </Box>
+              </Grid>
 
-            <Grid item xs={12} sm={6} md={3}>
-              <Box display="flex" alignItems="center">
-                <LinkedIn color="primary" sx={{ marginRight: 1 }} />
-                <IconButton
-                  component="a"
-                  href="https://www.linkedin.com/in/gauravthorath/"
-                  target="_blank"
-                  aria-label="LinkedIn"
-                  title="View Linked Profile"
-                  size="small"
-                >
-                  LinkedIn Profile
-                </IconButton>
-              </Box>
-            </Grid>
+              <Grid item xs={12} sm={6} md={3}>
+                <Box display="flex" alignItems="center">
+                  <LinkedIn color="primary" sx={{ marginRight: 1 }} />
+                  <IconButton
+                    component="a"
+                    href="https://www.linkedin.com/in/gauravthorath/"
+                    target="_blank"
+                    aria-label="LinkedIn"
+                    title="View Linked Profile"
+                    size="small"
+                  >
+                    LinkedIn Profile
+                  </IconButton>
+                </Box>
+              </Grid>
 
-            <Grid item xs={12} sm={6} md={3}>
-              <Box display="flex" alignItems="center">
-                <GitHub color="primary" sx={{ marginRight: 1 }} />
-                <IconButton
-                  component="a"
-                  href="https://github.com/gauravthorath"
-                  target="_blank"
-                  aria-label="GitHub"
-                  title="View GitHub Profile"
-                  size="small"
-                >
-                  Github Profile
-                </IconButton>
-              </Box>
+              <Grid item xs={12} sm={6} md={3}>
+                <Box display="flex" alignItems="center">
+                  <GitHub color="primary" sx={{ marginRight: 1 }} />
+                  <IconButton
+                    component="a"
+                    href="https://github.com/gauravthorath"
+                    target="_blank"
+                    aria-label="GitHub"
+                    title="View GitHub Profile"
+                    size="small"
+                  >
+                    Github Profile
+                  </IconButton>
+                </Box>
+              </Grid>
             </Grid>
-          </Grid>
+          </Box>
+
+          {/* Map showing Hamburg */}
+          <Box mt={4}>
+            <Typography variant="h6" gutterBottom>
+              Current Location: Hamburg, Germany
+            </Typography>
+            <div style={{ height: "400px", width: "100%" }}>
+              <MapContainer
+                center={[53.5653, 9.9802]} // Coordinates for Hamburg
+                zoom={13}
+                style={{ height: "100%", width: "100%" }} // Ensure full size for the map container
+              >
+                {/* Resize Map component to handle re-rendering issues */}
+                <ResizeMap />
+                <TileLayer
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                />
+                <Marker position={[53.5653, 9.9802]} icon={customIcon}>
+                  <Popup>Hamburg, Germany</Popup>
+                </Marker>
+              </MapContainer>
+            </div>
+          </Box>
         </Box>
-
-        {/* Map showing Hamburg */}
-        <Box mt={4}>
-          <Typography variant="h6" gutterBottom>
-            Current Location: Hamburg, Germany
-          </Typography>
-          <div style={{ height: "400px", width: "100%" }}>
-            <MapContainer
-              center={[53.5653, 9.9802]} // Coordinates for Hamburg
-              zoom={13}
-              style={{ height: "100%", width: "100%" }} // Ensure full size for the map container
-            >
-              {/* Resize Map component to handle re-rendering issues */}
-              <ResizeMap />
-              <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              />
-              <Marker position={[53.5653, 9.9802]} icon={customIcon}>
-                <Popup>Hamburg, Germany</Popup>
-              </Marker>
-            </MapContainer>
-          </div>
-        </Box>
-      </Box>
+      </Container>{" "}
     </Container>
   );
 };
