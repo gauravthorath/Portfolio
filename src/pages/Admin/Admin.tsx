@@ -111,13 +111,12 @@ const Admin: React.FC = () => {
     setSnackbarOpen(false);
   };
 
-  const minHeight = isSmall ? "90vh" : "87vh";
+  const minHeight = isSmall ? "90vh" : "88vh";
   return (
     <Container
       maxWidth="xl"
       className={`${isDarkTheme ? styles.dark : styles.light}`}
       sx={{
-        p: "100px !important",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
