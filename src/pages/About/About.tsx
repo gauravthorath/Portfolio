@@ -62,33 +62,37 @@ const About: React.FC = () => {
       <div className={`${styles.about_container}`}>
         <div className={`${styles.about_grid}`}>
           {/* Image with Title Section */}
-          <Box className={styles.about_image_wrapper}>
-            <Box className={styles.constant_text}>Frontend Developer</Box>
-            <img
-              src={gauravAboutPhoto}
-              alt="Gaurav Thorat - Frontend Developer"
-              className={styles.about_image}
-              loading="lazy" // Lazy loading for performance
-              width={200} // Set appropriate width
-              height={200} // Set appropriate height
-              style={{ objectFit: "cover" }} // Maintain aspect ratio
-            />
-            <Box className={styles.constant_text}>Technical Lead</Box>
-            <div className={styles.typing_effect}>
-              <ReactTypingEffect
-                text={[
-                  "Scrum Master",
-                  "Technical Project Manager",
-                  "Solution Architect",
-                  "FullStack Developer",
-                ]}
-                speed={25} //typing speed
-                eraseSpeed={40} // deleting speed
-                eraseDelay={750} //this is wait before deleting starts
-                typingDelay={500} //this is wait before typing starts
+          <div className={isDarkTheme ? "dark" : "light"}>
+            <Box className={styles.about_image_wrapper}>
+              <Box className={styles.constant_text}>Frontend Developer</Box>
+              <img
+                src={gauravAboutPhoto}
+                alt="Gaurav Thorat - Frontend Developer"
+                className={styles.about_image}
+                loading="lazy" // Lazy loading for performance
+                width={200} // Set appropriate width
+                height={200} // Set appropriate height
+                style={{ objectFit: "cover" }} // Maintain aspect ratio
               />
-            </div>
-          </Box>
+
+              <Box className={styles.constant_text}>Technical Lead</Box>
+
+              <div className={styles.typing_effect}>
+                <ReactTypingEffect
+                  text={[
+                    "Scrum Master",
+                    "Technical Project Manager",
+                    "Solution Architect",
+                    "FullStack Developer",
+                  ]}
+                  speed={25} //typing speed
+                  eraseSpeed={40} // deleting speed
+                  eraseDelay={750} //this is wait before deleting starts
+                  typingDelay={500} //this is wait before typing starts
+                />
+              </div>
+            </Box>
+          </div>
 
           {/* Info Section */}
           <div className={`${styles.about_content}`}>

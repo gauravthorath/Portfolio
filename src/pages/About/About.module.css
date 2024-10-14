@@ -27,11 +27,18 @@
 }
 
 .constant_text {
-  color: #0077b5;
   font-weight: 700;
   font-size: x-large;
   text-align: center;
   padding: 45px;
+}
+
+.light .constant_text {
+  color: #0077b5;
+}
+
+.dark .constant_text {
+  color: #1ddadc;
 }
 
 .about_image {
@@ -57,9 +64,16 @@
   text-align: center;
   font-size: 1.5em;
   font-weight: bold;
-  color: #0077b5;
   padding-top: 250px;
   justify-content: center;
+}
+
+.light .typing_effect {
+  color: #0077b5;
+}
+
+.dark .typing_effect {
+  color: #1ddadc;
 }
 
 @media (max-width: 768px) {
