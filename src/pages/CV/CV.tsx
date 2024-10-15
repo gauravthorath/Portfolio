@@ -49,6 +49,7 @@ const CVPage: React.FC = () => {
             <Viewer
               fileUrl={myCV}
               plugins={[defaultLayoutPluginInstance, zoomPluginInstance]}
+              theme={isDarkTheme ? "dark" : "light"} // Set PDF viewer theme manually
             />
           </Worker>
         </div>
