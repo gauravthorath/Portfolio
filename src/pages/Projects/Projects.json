@@ -141,7 +141,7 @@
   },
   {
     "name": "Gas Management System (GMS)",
-    "description": "A comprehensive gas management system developed using ASP.NET MVC, C#.NET, VB6.0, ASP.NET, WCF, BOOTSTRAP, Crystal Reports, jQuery, JavaScript, SharePoint, SQL Server, JSON, XML, and HTML, featuring volume loading, nominations and allocations, and report generation.",
+    "description": "A comprehensive gas management system developed using ASP.NET MVC, C#.NET, VB6.0, ASP.NET, WCF, BOOTSTRAP, Crystal Reports, jQuery, JavaScript, Service Now-Create Now workflows, SharePoint, SQL Server, JSON, XML, and HTML, featuring volume loading, nominations and allocations, and report generation.",
     "scope": "Development and Support",
     "processesProducts": [
       "Volume loading",
@@ -158,6 +158,7 @@
       "Crystal Reports",
       "jQuery",
       "JavaScript",
+      "Service Now - Create Now",
       "SharePoint",
       "SQL Server",
       "JSON",
