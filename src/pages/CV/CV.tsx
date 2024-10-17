@@ -41,7 +41,7 @@ const CVPage: React.FC = () => {
           align="center"
           sx={{ pt: 10 }}
         >
-          My detailed professional journey is outlined in the CV below.
+          My detailed professional journey is outlined in the CV.
         </Typography>
         <div className="pdf-viewer" style={{ height: "800px" }}>
           {/* Use the Worker component with the correct worker URL */}
