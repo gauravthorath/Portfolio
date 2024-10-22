@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
           align="center"
           sx={{ pt: 10 }}
         >
-          Contact Me
+          Connect with Me
         </Typography>
         <Box sx={{ padding: 3, borderRadius: 2 }}>
           <Box mb={2}>
