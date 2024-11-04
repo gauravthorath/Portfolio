@@ -1226,13 +1226,13 @@
     "@tanstack/store" "0.5.5"
     use-sync-external-store "^1.2.2"
 
-"@tanstack/router-devtools@^1.47.1":
-  version "1.47.1"
-  resolved "https://registry.npmjs.org/@tanstack/router-devtools/-/router-devtools-1.47.1.tgz"
-  integrity sha512-8mXuvBUoydvgh+aoK3cDpsf2/CaHPRTub3sSGkhJUm/FgUK6+1M8XAzxq35KJlL33Cse6Ufj8Xck50Irm3m5Nw==
+"@tanstack/router-devtools@^1.77.6":
+  version "1.77.6"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.77.6.tgz#8dbb9950465ee35919782dc82a02bc9a5d580fec"
+  integrity sha512-2u+3+jQPo4WR/dqwTdvP7+UW8ptYTWflaWBLrd1Q1CoXfQz6SF3weiNELLROh63iUxoo0jnQ3aCAlKjHzs6Y9Q==
   dependencies:
     clsx "^2.1.1"
-    goober "^2.1.14"
+    goober "^2.1.16"
 
 "@tanstack/router-generator@^1.77.7":
   version "1.77.7"
@@ -2420,10 +2420,10 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-goober@^2.1.14:
-  version "2.1.14"
-  resolved "https://registry.npmjs.org/goober/-/goober-2.1.14.tgz"
-  integrity sha512-4UpC0NdGyAFqLNPnhCT2iHpza2q+RAY3GV85a/mRPdzyPQMsj0KmMMuetdIkzWRbJ+Hgau1EZztq8ImmiMGhsg==
+goober@^2.1.16:
+  version "2.1.16"
+  resolved "https://registry.yarnpkg.com/goober/-/goober-2.1.16.tgz#7d548eb9b83ff0988d102be71f271ca8f9c82a95"
+  integrity sha512-erjk19y1U33+XAMe1VTvIONHYoSqE4iS7BYUZfHaqeohLmnC0FdxEh7rQU+6MZ4OajItzjZFSRtVANrQwNq6/g==
 
 graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   version "4.2.11"
