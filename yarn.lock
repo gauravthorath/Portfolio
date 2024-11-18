@@ -1208,10 +1208,10 @@
   dependencies:
     "@tanstack/query-core" "5.59.20"
 
-"@tanstack/react-router@^1.81.9":
-  version "1.81.9"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.81.9.tgz#5f1d4362d63d9c0a29e7b742fca78e4f4016a818"
-  integrity sha512-vQV9ZL6ik+OR8sLrkeuDvgB3gDxVd6nDX+PJ/LHMrpUDTFvnXh+rsjisiL9O1EKlVKaGQ/gq0nUSHreFLuatgQ==
+"@tanstack/react-router@^1.82.0":
+  version "1.82.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.82.0.tgz#fe255014af24e2a7adfbc66c1a7ccb901599af2c"
+  integrity sha512-A4e5xXQ4B+UGYki5qi31wIJCmTDK7NE8z+Xb2ledx2zf9gmKm4G8pOJt4gdFfMbivKImkGHE8o5eLhNW86F7iA==
   dependencies:
     "@tanstack/history" "1.81.9"
     "@tanstack/react-store" "^0.5.6"
