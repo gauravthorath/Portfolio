@@ -1227,10 +1227,10 @@
     "@tanstack/store" "0.5.5"
     use-sync-external-store "^1.2.2"
 
-"@tanstack/router-devtools@^1.81.9":
-  version "1.81.9"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.81.9.tgz#01506c872ebf3c8f20e89ea8cef3fa9b5370fa33"
-  integrity sha512-qDO5AXxT+tcjid578ByO4RgslEk7UIA1ysECAHw5cKPdteq/tW6hdflU8EX2kUgbm1/SKmMlIYrW+MevZeRv2w==
+"@tanstack/router-devtools@^1.82.0":
+  version "1.82.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.82.0.tgz#6f965919c263fb6fbc45efa00df314b2e1fe8b2e"
+  integrity sha512-H8KyRdmzvuNKYxHZhDiQLfkwq7BUVKIPv7ZmUSpE7wRe7oo2AIqCxkmH4+9hbWxz+Rea76XXhXN2Nq0AOUp1iQ==
   dependencies:
     clsx "^2.1.1"
     goober "^2.1.16"
