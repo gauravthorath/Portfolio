@@ -58,7 +58,7 @@ jobs:
 
       - name: Generate Test Report
         run: |
-         npx ts-node tests/generate-test-report.ts
+         npx ts-node tests/generate-test-report.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
