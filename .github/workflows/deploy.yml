@@ -53,7 +53,10 @@ jobs:
          yarn test
   
       - name: Generate Test Report
-        run: npx ts-node tests/generate-test-report.ts
+        run: |
+         npx ts-node tests/generate-test-report.ts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifacts if tests fail
         if: failure()
