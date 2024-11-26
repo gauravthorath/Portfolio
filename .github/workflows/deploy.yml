@@ -52,9 +52,12 @@ jobs:
         run: |
          yarn test
       - name: Publish CTRF Test Summary Results
-        run: npx github-actions-ctrf test-results/ctrf-report.json
+        run: npx github-actions-ctrf test-results/result.json
         if: always()
 
+      - name: Display Test Summary
+        run: cat test-results/results.json
+        
       - name: Upload artifacts if tests fail
         if: failure()
         uses: actions/upload-artifact@v4
