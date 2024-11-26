@@ -25,6 +25,7 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    baseURL: 'http://localhost:5173',
     headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
@@ -73,9 +74,9 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    cwd: './',
-    url: 'http://localhost:5173/',
-    command: 'yarn preview',
-    reuseExistingServer: true
+    command: 'yarn dev',
+    port: 5173,
+    timeout: 180000, // Longer timeout for slower environments
+    reuseExistingServer: !process.env.CI,
   },
 });
