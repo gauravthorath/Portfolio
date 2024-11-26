@@ -1,6 +1,9 @@
 import { execSync } from 'child_process';
-import * as path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 // Input JSON file path
 const jsonReportPath = path.resolve(__dirname, 'test-results/results.json');
 
