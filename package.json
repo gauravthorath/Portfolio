@@ -11,7 +11,9 @@
     "preview": "vite preview",
     "predeploy": "yarn build",
     "deploy_directly": "gh-pages -d dist",
-    "deploy": "gh-pages -d dist -r https://${GH_TOKEN}@github.com/gauravthorath/Portfolio.git"
+    "deploy": "gh-pages -d dist -r https://${GH_TOKEN}@github.com/gauravthorath/Portfolio.git",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -41,9 +43,11 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@playwright/test": "^1.49.0",
     "@tanstack/router-devtools": "^1.82.0",
     "@tanstack/router-plugin": "^1.81.9",
     "@types/leaflet": "^1.9.14",
+    "@types/node": "^22.10.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.7.1",

@@ -42,6 +42,25 @@ jobs:
       #     token: ${{ secrets.GITHUB_TOKEN }}
       #     artifact_name: "github-pages"
 
+
+      - name: Install Playwright Browsers
+        run: |
+          yarn exec playwright install chromium
+
+      - name: Run Playwright tests against the build
+        run: |
+         yarn run test
+
+      - name: Upload artifacts if tests fail
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            test-results/**/*.webm
+            test-results/**/*.png
+            test-results/**/*.zip
+
       - name: Configure Git
         run: |
           git config --global user.email "gauravjobs25@gmail.com"
