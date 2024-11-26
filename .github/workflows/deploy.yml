@@ -53,7 +53,7 @@ jobs:
          yarn test
   
       - name: Generate Test Report
-        run: npx ts-node scripts/generate-test-report.ts
+        run: npx ts-node tests/generate-test-report.ts
 
       - name: Upload artifacts if tests fail
         if: failure()
