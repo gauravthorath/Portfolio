@@ -27,7 +27,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install ts-node typescript
+          yarn add ts-node typescript
 
       - name: Build the project
         run: yarn build
@@ -55,7 +55,6 @@ jobs:
       - name: Run Playwright tests against the build
         run: |
          yarn test
-  
 
       - name: Generate Test Report
         run: |
