@@ -51,19 +51,9 @@ jobs:
       - name: Run Playwright tests against the build
         run: |
          yarn test
-      - name: Publish CTRF Test Summary Results
-        run: npx github-actions-ctrf test-results/results.json
-        if: always()
-
-      - name: Parse JUnit results
-        uses: dorny/test-reporter@v1
-        with:
-          name: Playwright Tests
-          path: test-results/results.xml
-          reporter: junit
-          
-      - name: Display Test Summary
-        run: cat test-results/results.json
+  
+      - name: Generate Test Report
+        run: node tests/generate-test-report.js
 
       - name: Upload artifacts if tests fail
         if: failure()

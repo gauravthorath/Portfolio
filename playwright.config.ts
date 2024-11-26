@@ -23,9 +23,8 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ['list'], // For console logs
-    ['junit', { outputFile: 'test-results/results.xml' }], // For GitHub annotations
-    ['json', { outputFile: 'test-results/results.json' }]  // For custom processing
+    ['list'], // Shows real-time logs in the console
+    ['json', { outputFile: 'test-results/results.json' }], // JSON format for CTRf reporter
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
