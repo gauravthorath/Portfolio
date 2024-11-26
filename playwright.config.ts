@@ -75,7 +75,7 @@ export default defineConfig({
   webServer: {
     cwd: './',
     url: 'http://localhost:5173/',
-    command: 'yarn app:preview',
+    command: 'yarn preview',
     reuseExistingServer: true
   },
 });
