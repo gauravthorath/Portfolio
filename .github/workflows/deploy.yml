@@ -54,7 +54,7 @@ jobs:
 
       - name: Run Playwright tests against the build
         run: |
-         yarn test
+         yarn test --reporter=list,json
 
       - name: Publish CTRF Test Summary Results
         run: npx github-actions-ctrf summary test-results/results.json
