@@ -57,7 +57,7 @@ jobs:
          yarn test
 
       - name: Publish CTRF Test Summary Results
-        run: npx github-actions-ctrf summary path-to-your-ctrf-report.json
+        run: npx github-actions-ctrf summary test-results/results.json
         if: always()
 
       - name: Upload artifacts if tests fail
