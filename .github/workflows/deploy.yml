@@ -56,9 +56,8 @@ jobs:
         run: |
          yarn test
 
-      - name: Generate Test Report
-        run: |
-         npx ts-node tests/generate-test-report.js
+      - name: Publish CTRF Test Summary Results
+        run: npx github-actions-ctrf summary path-to-your-ctrf-report.json
         if: always()
 
       - name: Upload artifacts if tests fail
