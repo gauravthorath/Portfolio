@@ -9,7 +9,7 @@ const jsonReportPath = path.resolve(__dirname, "test-results/results.json");
 
 // Command to generate CTRf report
 try {
-	execSync(`npx playwright-ctrf-json-reporter summary ${jsonReportPath}`, {
+	execSync(`npx github-actions-ctrf summary ${jsonReportPath}`, {
 		stdio: "inherit", // Ensures the output is shown in the Actions logs
 	});
 } catch (error) {
