@@ -25,10 +25,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Install dependencies
-        run: |
-          yarn add ts-node typescript
-
       - name: Build the project
         run: yarn build
 
@@ -54,7 +50,7 @@ jobs:
 
       - name: Run Playwright tests against the build
         run: |
-         yarn test --reporter=github-actions-ctrf
+         yarn test
 
       # - name: Test detailed with title
       #   run: node dist/index.js tests ctrf-reports/ctrf-report.json --title "Detailed With Title"
@@ -72,7 +68,7 @@ jobs:
       #     path: ctrf-reports/ctrf-report-no-fails.json
 
       - name: Publish CTRF Detailed Test Summary Results
-        run: yarn exec github-actions-ctrf tests ctrf-reports/ctrf-report.json
+        run: node dist/index.js tests ctrf-reports/ctrf-report.json --title "Detailed With Title"
         if: always()
 
       - name: Upload artifacts if tests fail
