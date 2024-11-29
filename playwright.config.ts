@@ -24,7 +24,8 @@ export default defineConfig({
 	/* Reporter to use. See https://playwright.dev/docs/test-reporters */
 	reporter: [
 		["list"], // Shows real-time logs in the console
-		["github-actions-ctrf", { outputFile: "ctrf-reports/ctrf-report.json" }], // JSON format for CTRf reporter
+		// ["github-actions-ctrf", { outputFile: "ctrf-reports/ctrf-report.json" }], // JSON format for CTRf reporter
+		["playwright-ctrf-json-reporter", {}],
 	],
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 	use: {

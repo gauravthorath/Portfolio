@@ -1,0 +1,164 @@
+{
+  "results": {
+    "tool": {
+      "name": "playwright"
+    },
+    "summary": {
+      "tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1732869384231,
+      "stop": 1732869390377,
+      "suites": 0
+    },
+    "tests": [
+      {
+        "name": "Verify header and basic elements are visible",
+        "status": "passed",
+        "duration": 2335,
+        "start": 1732869384,
+        "stop": 1732869386,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/gauravthorat/Gaurav/Projects/Portfolio/tests/compeleteFlow.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [],
+        "suite": "chromium > compeleteFlow.spec.ts > Portfolio Page - About Section",
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "Verify navigation links are visible",
+        "status": "passed",
+        "duration": 2416,
+        "start": 1732869384,
+        "stop": 1732869386,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/gauravthorat/Gaurav/Projects/Portfolio/tests/compeleteFlow.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [],
+        "suite": "chromium > compeleteFlow.spec.ts > Portfolio Page - About Section",
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "Verify banner elements are visible",
+        "status": "passed",
+        "duration": 2365,
+        "start": 1732869384,
+        "stop": 1732869386,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/gauravthorat/Gaurav/Projects/Portfolio/tests/compeleteFlow.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [],
+        "suite": "chromium > compeleteFlow.spec.ts > Portfolio Page - About Section",
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "Verify footer text is visible",
+        "status": "passed",
+        "duration": 2371,
+        "start": 1732869384,
+        "stop": 1732869386,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/gauravthorat/Gaurav/Projects/Portfolio/tests/compeleteFlow.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [],
+        "suite": "chromium > compeleteFlow.spec.ts > Portfolio Page - About Section",
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "Navigate to About section",
+        "status": "passed",
+        "duration": 2078,
+        "start": 1732869387,
+        "stop": 1732869389,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/gauravthorat/Gaurav/Projects/Portfolio/tests/compeleteFlow.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [],
+        "suite": "chromium > compeleteFlow.spec.ts > Portfolio Page - Navigation and Content",
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "Navigate to Projects section",
+        "status": "passed",
+        "duration": 2177,
+        "start": 1732869387,
+        "stop": 1732869389,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/gauravthorat/Gaurav/Projects/Portfolio/tests/compeleteFlow.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [],
+        "suite": "chromium > compeleteFlow.spec.ts > Portfolio Page - Navigation and Content",
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "Navigate to Contact section",
+        "status": "passed",
+        "duration": 2281,
+        "start": 1732869387,
+        "stop": 1732869389,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/gauravthorat/Gaurav/Projects/Portfolio/tests/compeleteFlow.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [],
+        "suite": "chromium > compeleteFlow.spec.ts > Portfolio Page - Navigation and Content",
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "Navigate to CV section",
+        "status": "passed",
+        "duration": 2225,
+        "start": 1732869387,
+        "stop": 1732869390,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/gauravthorat/Gaurav/Projects/Portfolio/tests/compeleteFlow.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [],
+        "suite": "chromium > compeleteFlow.spec.ts > Portfolio Page - Navigation and Content",
+        "extra": {
+          "annotations": []
+        }
+      }
+    ]
+  }
+}
