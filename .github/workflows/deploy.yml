@@ -54,7 +54,7 @@ jobs:
 
       - name: Run Playwright tests against the build
         run: |
-         yarn test --reporter=list,json
+         yarn test --reporter=github-actions-ctrf
 
       # - name: Test detailed with title
       #   run: node dist/index.js tests ctrf-reports/ctrf-report.json --title "Detailed With Title"
