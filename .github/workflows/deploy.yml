@@ -23,10 +23,14 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
+
+      - name: Install dependencies
+        run: |
+          yarn add ts-node typescript
 
       - name: Build the project
-        run: pnpm build
+        run: yarn build
 
       # - name: Debug Artifacts
       #   run: echo "Checking the contents of the dist directory"
@@ -46,11 +50,11 @@ jobs:
 
       - name: Install Playwright Browsers
         run: |
-          pnpm exec playwright install chromium
+          yarn exec playwright install chromium
 
       - name: Run Playwright tests against the build
         run: |
-         pnpm test --reporter=list,json
+         yarn test --reporter=list,json
 
       # - name: Test detailed with title
       #   run: node dist/index.js tests ctrf-reports/ctrf-report.json --title "Detailed With Title"
@@ -68,7 +72,7 @@ jobs:
       #     path: ctrf-reports/ctrf-report-no-fails.json
 
       - name: Publish CTRF Detailed Test Summary Results
-        run: pnpm github-actions-ctrf tests ctrf-reports/ctrf-report.json
+        run: yarn exec github-actions-ctrf tests ctrf-reports/ctrf-report.json
         if: always()
 
       - name: Upload artifacts if tests fail
@@ -87,6 +91,6 @@ jobs:
           git config --global user.name "gauravthorath"
 
       - name: Deploy to GitHub Pages
-        run: pnpm deploy
+        run: yarn deploy
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }} # This token is provided automatically by GitHub Actions
