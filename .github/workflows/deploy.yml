@@ -22,50 +22,22 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Build the project
-        run: yarn build
-
-      # - name: Debug Artifacts
-      #   run: echo "Checking the contents of the dist directory"
-
-      # - name: Upload Artifacts
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     name: "github-pages"
-      #     path: dist
-
-      # - name: Deploy to GitHub Pages
-      #   uses: actions/deploy-pages@v4
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     artifact_name: "github-pages"
-
+        run: pnpm build
 
       - name: Install Playwright Browsers
         run: |
-          yarn exec playwright install chromium
+          pnpm exec playwright install chromium
 
       - name: Run Playwright tests against the build
         run: |
-         yarn test
-
-      # - name: Test detailed with title
-      #   run: node dist/index.js tests ctrf-reports/ctrf-report.json --title "Detailed With Title"
-      # - name: Test list
-      #   run: node dist/index.js test-list ctrf-reports/ctrf-report.json --annotate false --title "List With Title"
-      # - name: Upload test results
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: ctrf-report
-      #     path: ctrf-reports/ctrf-report.json
-      # - name: Upload test results
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: custom-artifact-name
-      #     path: ctrf-reports/ctrf-report-no-fails.json
+          pnpm test
 
       - name: Publish CTRF Detailed Test Summary Results
         run: npx github-actions-ctrf ctrf/ctrf-report.json
@@ -87,6 +59,6 @@ jobs:
           git config --global user.name "gauravthorath"
 
       - name: Deploy to GitHub Pages
-        run: yarn deploy
+        run: pnpm deploy
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }} # This token is provided automatically by GitHub Actions
