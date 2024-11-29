@@ -44,17 +44,17 @@ jobs:
           pnpm test
 
       - name: Generate Test Summary Results
-        run: npx github-actions-ctrf tests/ctrf/ctrf-report.json
+        run: npx github-actions-ctrf ctrf/ctrf-report.json
       - name: Test ai
-        run: npx github-actions-ctrf ai tests/ctrf/ctrf-report.json --annotate false
+        run: npx github-actions-ctrf ai ctrf/ctrf-report.json --annotate false
       - name: Generate Test detailed with title
-        run: npx github-actions-ctrf tests tests/ctrf/ctrf-report.json --title "Detailed With Title"
+        run: npx github-actions-ctrf tests ctrf/ctrf-report.json --title "Detailed With Title"
       - name: Generate Test list
-        run: npx github-actions-ctrf test-list tests/ctrf/ctrf-report.json --annotate false --title "List With Title"
+        run: npx github-actions-ctrf test-list ctrf/ctrf-report.json --annotate false --title "List With Title"
       - name: Generate Test summary
-        run: npx github-actions-ctrf summary tests/ctrf/ctrf-report.json
+        run: npx github-actions-ctrf summary ctrf/ctrf-report.json
       - name: Generate Test historical
-        run: npx github-actions-ctrf historical tests/ctrf/ctrf-report.json --annotate false
+        run: npx github-actions-ctrf historical ctrf/ctrf-report.json --annotate false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: always()
