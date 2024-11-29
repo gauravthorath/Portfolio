@@ -56,8 +56,14 @@ jobs:
         run: |
          yarn test --reporter=list,json
 
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: ctrf-report
+          path: ctrf-reports/ctrf-report.json
+
       - name: Publish CTRF Test Summary Results
-        run: npx github-actions-ctrf summary test-results/results.json
+        run: npx github-actions-ctrf summary ctrf-reports/ctrf-report.json
         if: always()
 
       - name: Upload artifacts if tests fail
