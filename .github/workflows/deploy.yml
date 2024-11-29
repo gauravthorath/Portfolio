@@ -56,14 +56,23 @@ jobs:
         run: |
          yarn test --reporter=list,json
 
+      - name: Test detailed with title
+        run: node dist/index.js tests ctrf-reports/ctrf-report.json --title "Detailed With Title"
+      - name: Test list
+        run: node dist/index.js test-list ctrf-reports/ctrf-report.json --annotate false --title "List With Title"
       - name: Upload test results
         uses: actions/upload-artifact@v4
         with:
           name: ctrf-report
           path: ctrf-reports/ctrf-report.json
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: custom-artifact-name
+          path: ctrf-reports/ctrf-report-no-fails.json
 
-      - name: Publish CTRF Test Summary Results
-        run: npx github-actions-ctrf summary ctrf-reports/ctrf-report.json
+      - name: Generate Test Reports
+        run: npx github-actions-ctrf ctrf-reports/ctrf-report-no-fails.json
         if: always()
 
       - name: Upload artifacts if tests fail
