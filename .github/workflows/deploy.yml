@@ -68,7 +68,7 @@ jobs:
       #     path: ctrf-reports/ctrf-report-no-fails.json
 
       - name: Publish CTRF Detailed Test Summary Results
-        run: node dist/index.js tests ctrf-reports/ctrf-report.json --title "Detailed With Title"
+        run: node dist/github-actions-ctrf/index.js tests ctrf-reports/ctrf-report.json --title "Detailed With Title"
         if: always()
 
       - name: Upload artifacts if tests fail
