@@ -28,7 +28,7 @@ test.describe('Portfolio Page - About Section', () => {
   });
 
   test('Verify footer text is visible', async ({ page }) => {
-    await expect(page.getByText('© 2024 Gaurav Thorat. All').scrollIntoViewIfNeeded()).toBeTruthy();
+    await expect(page.getByText('© 2025 Gaurav Thorat. All').scrollIntoViewIfNeeded()).toBeTruthy();
   });
 });
 
