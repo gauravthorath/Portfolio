@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
               ))}
             </Box>
           </Box>
-        </Box>
+        </Box> 
       </Container>
     </footer>
   );
