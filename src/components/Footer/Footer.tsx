@@ -65,10 +65,10 @@ const Footer: React.FC = () => {
           <Box className={styles.meter_wrapper} sx={{ px: 2 }}>
             <Box className={styles.meter_digits}>
               {formatVisitorCount(visitorCount).map((digit, index) => (
-                <Box key={index} className={styles.meter_box}>
+                <Box key={index.toString()} className={styles.meter_box}>
                   <CountUp
                     start={0}
-                    end={parseInt(digit)}
+                    end={Number.parseInt(digit)}
                     duration={0.5}
                     useEasing={false}
                     preserveValue
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
               ))}
             </Box>
           </Box>
-        </Box> 
+        </Box>
       </Container>
     </footer>
   );
