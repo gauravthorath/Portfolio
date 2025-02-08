@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
   schedule:
     - cron: '0 2 * * *'
 
@@ -45,14 +44,19 @@ jobs:
 
       - name: Generate Test Summary Results
         run: npx github-actions-ctrf ctrf/ctrf-report.json
+
       - name: Test ai
         run: npx github-actions-ctrf ai ctrf/ctrf-report.json --annotate false
+
       - name: Generate Test detailed with title
         run: npx github-actions-ctrf tests ctrf/ctrf-report.json --title "Detailed With Title"
+
       - name: Generate Test list
         run: npx github-actions-ctrf test-list ctrf/ctrf-report.json --annotate false --title "List With Title"
+
       - name: Generate Test summary
         run: npx github-actions-ctrf summary ctrf/ctrf-report.json
+
       - name: Generate Test historical
         run: npx github-actions-ctrf historical ctrf/ctrf-report.json --annotate false
         env:
@@ -73,6 +77,10 @@ jobs:
         run: |
           git config --global user.email "gauravjobs25@gmail.com"
           git config --global user.name "gauravthorath"
+          
+      - name: List contents of dist directory
+        run: |
+          ls -la dist    
 
       - name: Deploy to GitHub Pages
         run: pnpm deploy
