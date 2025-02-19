@@ -25,12 +25,12 @@
 		"@react-pdf-viewer/toolbar": "^3.12.0",
 		"@react-pdf-viewer/zoom": "^3.12.0",
 		"@supabase/supabase-js": "^2.48.1",
-		"@tanstack/react-query": "^5.64.2",
+		"@tanstack/react-query": "^5.66.5",
 		"@tanstack/react-router": "^1.97.20",
 		"@types/react-typing-effect": "^2.0.7",
 		"@vitejs/plugin-react": "^4.3.4",
 		"axios": "^1.7.9",
-		"github-actions-ctrf": "^0.0.50",
+		"github-actions-ctrf": "^0.0.58",
 		"leaflet": "^1.9.4",
 		"pdfjs-dist": "2.11.338",
 		"rainify": "^1.0.6",
@@ -51,7 +51,7 @@
 		"@types/node": "^22.13.4",
 		"@types/react": "^18.3.12",
 		"@types/react-dom": "^18.3.1",
-		"@vitejs/plugin-react-swc": "^3.7.2",
+		"@vitejs/plugin-react-swc": "^3.8.0",
 		"autoprefixer": "^10.4.20",
 		"eslint": "^9.19.0",
 		"eslint-plugin-react-hooks": "^5.1.0",
@@ -62,7 +62,7 @@
 		"postcss": "^8.5.1",
 		"tailwindcss": "^4.0.6",
 		"typescript": "^5.7.3",
-		"typescript-eslint": "^8.23.0",
+		"typescript-eslint": "^8.24.1",
 		"vite": "^6.1.0"
 	}
 }
