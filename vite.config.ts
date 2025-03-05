@@ -18,23 +18,26 @@ import { defineConfig } from "vite";
 import viteReact from "@vitejs/plugin-react";
 
 export default defineConfig(({ mode }) => ({
-  plugins: [viteReact()],
-  base: mode === "production" ? "/Portfolio/" : "/Portfolio/",
-  server: {
-    open: true,
-    historyApiFallback: true,
-    mimeTypes: {
-      "application/javascript": ["js", "mjs"],
-    },
-  },
-  build: {
-    chunkSizeWarningLimit: 1500, // Adjust to a higher limit if needed
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ["react", "react-dom"], // Example of splitting large vendor chunks
-        },
-      },
-    },
-  },
+	define: {
+		"process.env.NODE_ENV": '"production"',
+	},
+	plugins: [viteReact()],
+	base: mode === "production" ? "/Portfolio/" : "/Portfolio/",
+	server: {
+		open: true,
+		historyApiFallback: true,
+		mimeTypes: {
+			"application/javascript": ["js", "mjs"],
+		},
+	},
+	build: {
+		chunkSizeWarningLimit: 1500, // Adjust to a higher limit if needed
+		rollupOptions: {
+			output: {
+				manualChunks: {
+					vendor: ["react", "react-dom"], // Example of splitting large vendor chunks
+				},
+			},
+		},
+	},
 }));
