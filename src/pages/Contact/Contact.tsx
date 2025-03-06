@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import type React from "react";
+import { useEffect } from "react";
 import { Container, Typography, Box, Grid, IconButton } from "@mui/material";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import PhoneIcon from "@mui/icons-material/Phone";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -49,37 +48,6 @@ const Contact: React.FC = () => {
         <Box sx={{ padding: 3, borderRadius: 2 }}>
           <Box mb={2}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={3}>
-                <Box display="flex" alignItems="center">
-                  <MailOutlineIcon color="primary" sx={{ marginRight: 1 }} />
-                  <IconButton
-                    component="a"
-                    href="mailto:gauravjobs25@gmail.com"
-                    target="_blank"
-                    aria-label="Email"
-                    title="Send Email"
-                    size="small"
-                  >
-                    gauravjobs25@gmail.com
-                  </IconButton>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={3}>
-                <Box display="flex" alignItems="center">
-                  <PhoneIcon color="primary" sx={{ marginRight: 1 }} />
-                  <IconButton
-                    component="a"
-                    href="tel:+49-15216127113"
-                    target="_blank"
-                    aria-label="Phone"
-                    title="Call"
-                    size="small"
-                  >
-                    +49-15216127113
-                  </IconButton>
-                </Box>
-              </Grid>
-
               <Grid item xs={12} sm={6} md={3}>
                 <Box display="flex" alignItems="center">
                   <LinkedIn color="primary" sx={{ marginRight: 1 }} />

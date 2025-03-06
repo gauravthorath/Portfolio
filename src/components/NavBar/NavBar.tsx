@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -61,7 +62,7 @@ const NavBar: React.FC = () => {
   };
 
   const drawer = (
-    <div role="presentation" onClick={closeDrawer}>
+    <div role="presentation" onClick={closeDrawer} onKeyDown={closeDrawer}>
       <List>
         <ListItem button component={Link} to="/Portfolio/about">
           <ListItemText primary="About" />
@@ -72,9 +73,9 @@ const NavBar: React.FC = () => {
         <ListItem button component={Link} to="/Portfolio/contact">
           <ListItemText primary="Contact" />
         </ListItem>
-        <ListItem button component={Link} to="/Portfolio/cv">
+        {/* <ListItem button component={Link} to="/Portfolio/cv">
           <ListItemText primary="CV" />
-        </ListItem>
+        </ListItem> */}
         {/* <ListItem button component={Link} to="/Portfolio/references">
           <ListItemText primary="References" />
         </ListItem> */}
@@ -155,9 +156,9 @@ const NavBar: React.FC = () => {
                 >
                   Contact
                 </Button>
-                <Button color="inherit" component={Link} to="/Portfolio/cv">
+                {/* <Button color="inherit" component={Link} to="/Portfolio/cv">
                   CV
-                </Button>
+                </Button> */}
                 {/* <Button
                   color="inherit"
                   component={Link}

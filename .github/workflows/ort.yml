@@ -1,0 +1,26 @@
+name: ORT 
+
+on:
+  schedule:
+    - cron: '10 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "ort"
+  cancel-in-progress: true
+
+jobs:
+  ort:
+    name: Check Open Source Usage
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+      - name: Run GitHub Action for ORT
+        uses: oss-review-toolkit/ort-ci-github-action@v1

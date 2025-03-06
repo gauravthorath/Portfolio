@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import type React from "react";
+import { useEffect, useState } from "react";
 import {
   Container,
   Typography,
@@ -94,7 +95,7 @@ const Admin: React.FC = () => {
         .eq("id", recordId); // Use the record ID for updating
 
       if (updateError) {
-        setSnackbarMessage("Error updating data: " + updateError.message);
+        setSnackbarMessage(`Error updating data: ${updateError.message}`);
         setSnackbarOpen(true);
       } else {
         setSnackbarMessage("Weather settings updated successfully!");

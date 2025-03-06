@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import type React from "react";
+import { useEffect, useState } from "react";
 import { RouterProvider } from "@tanstack/react-router";
 import router from "./router";
 import Footer from "./components/Footer/Footer";

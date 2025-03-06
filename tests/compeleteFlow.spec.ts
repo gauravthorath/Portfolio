@@ -25,7 +25,7 @@ test.describe("Portfolio Page - About Section", () => {
 		await expect(page.getByRole("link", { name: "About" })).toBeVisible();
 		await expect(page.getByRole("link", { name: "Projects" })).toBeVisible();
 		await expect(page.getByRole("link", { name: "Contact" })).toBeVisible();
-		await expect(page.getByRole("link", { name: "CV" })).toBeVisible();
+		// await expect(page.getByRole("link", { name: "CV" })).toBeVisible();
 	});
 
 	test("Verify banner elements are visible", async ({ page }) => {
@@ -69,10 +69,10 @@ test.describe("Portfolio Page - Navigation and Content", () => {
 		).toBeVisible();
 	});
 
-	test("Navigate to CV section", async ({ page }) => {
-		await page.getByRole("link", { name: "CV" }).click();
-		await expect(
-			page.getByRole("heading", { name: "My detailed professional" }),
-		).toBeVisible();
-	});
+	// test("Navigate to CV section", async ({ page }) => {
+	// 	await page.getByRole("link", { name: "CV" }).click();
+	// 	await expect(
+	// 		page.getByRole("heading", { name: "My detailed professional" }),
+	// 	).toBeVisible();
+	// });
 });

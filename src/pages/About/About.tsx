@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import type React from "react";
+import { useEffect, useState } from "react";
 import { Box, Chip, IconButton } from "@mui/material";
-import { LinkedIn, GitHub, Email, Call } from "@mui/icons-material";
+import { LinkedIn, GitHub } from "@mui/icons-material";
 import styles from "./About.module.css";
 import gauravAboutPhoto from "../../assets/gaurav_about.webp";
 import ReactTypingEffect from "react-typing-effect";
@@ -265,23 +266,6 @@ const About: React.FC = () => {
                 color="primary"
               >
                 <GitHub />
-              </IconButton>
-              <IconButton
-                component="a"
-                href="mailto:gauravjobs25@gmail.com"
-                aria-label="Gmail"
-                color="primary"
-              >
-                <Email />
-              </IconButton>
-              <IconButton
-                component="a"
-                href="tel:+49-15216127113"
-                target="_blank"
-                aria-label="Call"
-                color="primary"
-              >
-                <Call />
               </IconButton>
             </div>
           </div>

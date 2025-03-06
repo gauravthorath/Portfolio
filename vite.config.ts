@@ -18,9 +18,6 @@ import { defineConfig } from "vite";
 import viteReact from "@vitejs/plugin-react";
 
 export default defineConfig(({ mode }) => ({
-	define: {
-		"process.env.NODE_ENV": '"production"',
-	},
 	plugins: [viteReact()],
 	base: mode === "production" ? "/Portfolio/" : "/Portfolio/",
 	server: {
