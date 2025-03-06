@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 import { Container, Typography, TextField, Button, Box } from "@mui/material";
 import styles from "./Login.module.css";
 import { useThemeContext } from "../../context/ThemeContext";

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import ProjectCard, { Project } from "../../components/ProjectCard/ProjectCard";
+import type React from "react";
+import { useState } from "react";
+import ProjectCard, { type Project } from "../../components/ProjectCard/ProjectCard";
 import styles from "./Projects.module.css";
 import projects from "./Projects.json";
 import { Box, Container, Typography } from "@mui/material";
@@ -35,13 +36,18 @@ const ProjectsComponent: React.FC = () => {
           Executed Projects
         </Typography>
         <Box className={styles.card_container}>
-          {projectList.map((project, index) => (
+
+          {projectList.map((project) => (
             <ProjectCard
-              key={index}
+
+              key={project.name}
               project={project}
-              projectIndex={index + 1}
-              isExpanded={expandedCard === index}
-              onExpand={() => handleExpand(index)}
+
+
+
+              projectIndex={projectList.indexOf(project) + 1}
+              isExpanded={expandedCard === projectList.indexOf(project)}
+              onExpand={() => handleExpand(projectList.indexOf(project))}
             />
           ))}
         </Box>
