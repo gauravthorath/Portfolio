@@ -2,8 +2,15 @@ name: ORT
 
 on:
   schedule:
-    - cron: '10 0 * * *'
+    # - cron: '0 0 * * *'
+    - cron: '12 0 * * *'
+    # - cron: '*/15 * * * *'
   workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: false
+        default: 'warning'
 
 permissions:
   contents: read
@@ -16,11 +23,11 @@ concurrency:
 
 jobs:
   ort:
-    name: Check Open Source Usage
+    name: ORT Checkpoint
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - name: Checkout the repository
+      - name: Checkout repo
         uses: actions/checkout@v4
       - name: Run GitHub Action for ORT
         uses: oss-review-toolkit/ort-ci-github-action@v1
