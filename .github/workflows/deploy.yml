@@ -94,6 +94,6 @@ jobs:
           ls -la dist    
 
       - name: Deploy to GitHub Pages
-        run: pnpm --filter . deploy
+        run: pnpm deploy
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }} # This token is provided automatically by GitHub Actions
