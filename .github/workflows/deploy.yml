@@ -26,14 +26,14 @@ jobs:
           node-version: "20"
           cache: "pnpm"
 
-      # ✅ Install PNPM properly using setup-pnpm
+      # ✅ Ensure PNPM is installed and in PATH
       - name: Install PNPM
         uses: pnpm/action-setup@v3
         with:
-          version: 9 # Use latest stable PNPM version
+          version: 9 # Use latest stable version
 
-      # ✅ Verify PNPM installation
-      - name: Check PNPM version
+      # ✅ Ensure the correct PNPM version is installed
+      - name: Verify PNPM Installation
         run: pnpm --version
 
       - name: Install dependencies
