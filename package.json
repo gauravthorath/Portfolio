@@ -42,7 +42,7 @@
 		"@tailwindcss/postcss": "^4.0.9",
 		"@tanstack/router-devtools": "^1.97.20",
 		"@tanstack/router-plugin": "^1.97.14",
-		"@types/leaflet": "^1.9.16",
+		"@types/leaflet": "^1.9.17",
 		"@types/node": "^22.14.0",
 		"@types/react": "^18.3.12",
 		"@types/react-dom": "^18.3.1",
