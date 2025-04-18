@@ -38,7 +38,7 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.21.0",
-		"@playwright/test": "^1.50.1",
+		"@playwright/test": "^1.52.0",
 		"@tailwindcss/postcss": "^4.0.9",
 		"@tanstack/router-devtools": "^1.97.20",
 		"@tanstack/router-plugin": "^1.97.14",
