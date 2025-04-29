@@ -115,8 +115,8 @@ importers:
         specifier: ^16.0.0
         version: 16.0.0
       playwright-ctrf-json-reporter:
-        specifier: ^0.0.18
-        version: 0.0.18
+        specifier: ^0.0.20
+        version: 0.0.20
       postcss:
         specifier: ^8.5.3
         version: 8.5.3
@@ -2227,8 +2227,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright-ctrf-json-reporter@0.0.18:
-    resolution: {integrity: sha512-AjFNpIMKI8zeyaktA2LBphYzy3ffiBjXobBXxEfrVUDov/Z8v5+y9FI0m3cBCr8yauk2brN+Er225vHsZDIu0g==}
+  playwright-ctrf-json-reporter@0.0.20:
+    resolution: {integrity: sha512-pv8ZZ1PBgztgQ1iShB8NqcFigTWGeZZ8zowld3wLlaeRF3bo4O9QrB5qlb2W7HcgppVWbM8SDvUszRLiLi923A==}
 
   playwright@1.50.1:
     resolution: {integrity: sha512-G8rwsOQJ63XG6BbKj2w5rHeavFjy5zynBA9zsJMMtBoe/Uf757oG12NXz6e6OirF7RCrTVAKFXbLmn1RbL7Qaw==}
@@ -4682,7 +4682,7 @@ snapshots:
 
   playwright-core@1.50.1: {}
 
-  playwright-ctrf-json-reporter@0.0.18: {}
+  playwright-ctrf-json-reporter@0.0.20: {}
 
   playwright@1.50.1:
     dependencies:
