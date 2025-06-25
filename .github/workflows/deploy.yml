@@ -25,14 +25,25 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+      # ✅ Ensure PNPM is installed and in PATH
+      - name: Install PNPM
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9 # Use latest stable version
+
+      # ✅ Ensure the correct PNPM version is installed
+      - name: Verify PNPM Installation
+        run: pnpm --version
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build the project
         run: pnpm build
+
+      - name: Verify Build Output
+        run: |
+          ls -la dist || echo "dist folder is missing!"
 
       - name: Install Playwright Browsers
         run: |
