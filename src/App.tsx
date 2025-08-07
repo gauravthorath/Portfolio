@@ -42,7 +42,7 @@ const App: React.FC = () => {
 
   return (
     <Box
-      sx={{ flex: 1, display: "flex", flexDirection: "column", height: "100%" }}
+      sx={{ flex: 1, display: "flex", flexDirection: "column", height: "100%", width:"100%"}}
     >
       {/* Conditionally render components based on weather conditions */}
       {weatherConditions.snow && <Snowflakes />}

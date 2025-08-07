@@ -175,8 +175,27 @@ const About: React.FC = () => {
               <h2>Experience</h2>
               <p>
                 <strong>
+                  Senior Frontend Developer, Papayo AI - Nov 2024 - Present
+                </strong>
+              </p>
+              <ul>
+                <li>
+                Developed intelligent, data-driven features in React/Next.js with TypeScript and Node.js.
+                </li>
+                <li>
+                Integrated GraphQL APIs and implemented end-to-end tests using Playwright & QASE in CI/CD pipelines.
+                </li>
+                <li>
+                Contributed to cloud deployment strategies via Netlify and Docker.
+                </li>
+                <li>
+                Applied performance and accessibility best practices to deliver stable, scalable frontends.
+                </li>
+              </ul>
+              <p>
+                <strong>
                   Technical Lead Frontend Development, ENCO SOFTWARE GMBH - May
-                  2023 - Present
+                  2023 - Sep 2024
                 </strong>
               </p>
               <ul>

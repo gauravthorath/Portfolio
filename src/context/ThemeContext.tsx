@@ -1,5 +1,5 @@
 import type React from "react";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { darkTheme, lightTheme } from "../styles/theme";
 
@@ -30,6 +30,11 @@ export const ThemeContextProvider: React.FC<{ children: React.ReactNode }> = ({
   const toggleTheme = () => {
     setIsDarkTheme(!isDarkTheme);
   };
+
+  // Set data-theme attribute on document for CSS custom properties
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', isDarkTheme ? 'dark' : 'light');
+  }, [isDarkTheme]);
 
   //   const theme = createTheme({
   //     palette: {
