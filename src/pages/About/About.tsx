@@ -99,7 +99,7 @@ const About: React.FC = () => {
           <div className={`${styles.about_content}`}>
             <h1 className={`${styles.big_title}`}>About Me</h1>
             <p className={`${styles.about_description}`}>
-              Lead Frontend Developer with 14+ years of experience in software
+              Frontend focused full stack developer with 14+ years of experience in software
               development, specializing in frontend development with React JS.
               Proven ability to lead teams, manage projects, and ensure timely,
               within-budget delivery. Expert in Agile methodologies, backend API
