@@ -15,6 +15,7 @@ interface LoginFormState {
   passwordError: string;
 }
 
+//TODO: This needs to be fixed, its asking to enter credential twice before login
 const Login: React.FC = () => {
   const { isDarkTheme } = useThemeContext();
   const navigate = useNavigate();
