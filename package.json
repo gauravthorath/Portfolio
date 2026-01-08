@@ -33,7 +33,7 @@
 		"react-countup": "^6.5.3",
 		"react-dom": "^18.3.1",
 		"react-leaflet": "^4.2.1",
-		"react-snowfall": "^2.2.0",
+		"react-snowfall": "^2.3.0",
 		"react-typing-effect": "^2.0.5"
 	},
 	"devDependencies": {
@@ -46,7 +46,7 @@
 		"@types/node": "^22.14.0",
 		"@types/react": "^18.3.12",
 		"@types/react-dom": "^18.3.1",
-		"@vitejs/plugin-react-swc": "^3.8.0",
+		"@vitejs/plugin-react-swc": "^4.2.0",
 		"autoprefixer": "^10.4.21",
 		"eslint": "^9.19.0",
 		"eslint-plugin-react-hooks": "^5.2.0",
@@ -57,7 +57,7 @@
 		"postcss": "^8.5.3",
 		"tailwindcss": "^4.0.9",
 		"typescript": "^5.8.3",
-		"typescript-eslint": "^8.29.0",
+		"typescript-eslint": "^8.46.2",
 		"vite": "^6.2.5"
 	}
 }
