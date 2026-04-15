@@ -5,9 +5,9 @@ import router from "./router";
 import Footer from "./components/Footer/Footer";
 import { Box } from "@mui/material";
 import { AuthProvider } from "./context/AuthContext";
-import { supabase } from "./api/supabaseClient"; // Import your Supabase client
-import Snowflakes from "./components/Snowflakes/Snowflakes"; // Uncomment to use
-import Raindrops from "./components/Raindrops/Raindrops"; // Uncomment to use
+import { supabase } from "./api/supabaseClient";
+import Snowflakes from "./components/Snowflakes/Snowflakes";
+import Raindrops from "./components/Raindrops/Raindrops";
 
 const App: React.FC = () => {
   const [weatherConditions, setWeatherConditions] = useState<{
@@ -21,7 +21,7 @@ const App: React.FC = () => {
       const { data, error } = await supabase
         .from("global_settings")
         .select("currentWeather")
-        .single(); // Fetch single record
+        .single();
 
       if (error) {
         console.error("Error fetching weather settings: ", error);
@@ -42,13 +42,18 @@ const App: React.FC = () => {
 
   return (
     <Box
-      sx={{ flex: 1, display: "flex", flexDirection: "column", height: "100%", width:"100%"}}
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
     >
-      {/* Conditionally render components based on weather conditions */}
       {weatherConditions.snow && <Snowflakes />}
       {weatherConditions.rainy && <Raindrops />}
       <AuthProvider>
-        <RouterProvider router={router} />
+        <Box component="main" sx={{ flex: 1 }}>
+          <RouterProvider router={router} />
+        </Box>
         <Footer />
       </AuthProvider>
     </Box>

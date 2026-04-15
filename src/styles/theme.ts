@@ -1,32 +1,79 @@
-// src/theme.ts
 import { createTheme } from "@mui/material/styles";
 
-// Define your light theme
 export const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#0177b5",
+      main: "#5b5bf7",
+    },
+    secondary: {
+      main: "#0ea5e9",
     },
     background: {
-      default: "#ffffff",
-      paper: "#f5f5f5",
+      default: "#f8f9ff",
+      paper: "#ffffff",
     },
-    // Add other palette options as needed
+    text: {
+      primary: "#101828",
+      secondary: "#475467",
+    },
+  },
+  shape: {
+    borderRadius: 16,
+  },
+  typography: {
+    fontFamily:
+      '"Inter", "Sora", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
+    h1: {
+      fontWeight: 700,
+      letterSpacing: "-0.02em",
+    },
+    h2: {
+      fontWeight: 700,
+      letterSpacing: "-0.02em",
+    },
+    h3: {
+      fontWeight: 600,
+      letterSpacing: "-0.01em",
+    },
   },
 });
 
-// Define your dark theme
 export const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#90caf9",
+      main: "#8b9dff",
+    },
+    secondary: {
+      main: "#22d3ee",
     },
     background: {
-      default: "#121212",
-      paper: "#424242",
+      default: "#070b18",
+      paper: "#10172a",
     },
-    // Add other palette options as needed
+    text: {
+      primary: "#e2e8f0",
+      secondary: "#a7b3c8",
+    },
+  },
+  shape: {
+    borderRadius: 16,
+  },
+  typography: {
+    fontFamily:
+      '"Inter", "Sora", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
+    h1: {
+      fontWeight: 700,
+      letterSpacing: "-0.02em",
+    },
+    h2: {
+      fontWeight: 700,
+      letterSpacing: "-0.02em",
+    },
+    h3: {
+      fontWeight: 600,
+      letterSpacing: "-0.01em",
+    },
   },
 });

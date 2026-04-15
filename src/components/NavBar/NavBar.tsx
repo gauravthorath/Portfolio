@@ -1,244 +1,207 @@
 import type React from "react";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
+  Avatar,
+  Box,
   Button,
   Container,
-  Tooltip,
   Drawer,
+  IconButton,
   List,
-  ListItem,
+  ListItemButton,
   ListItemText,
-  useMediaQuery,
-  useTheme,
   Menu,
   MenuItem,
+  Toolbar,
+  Tooltip,
+  Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import {
   Brightness4,
   Brightness7,
-  LinkedIn as LinkedInIcon,
   GitHub as GitHubIcon,
+  LinkedIn as LinkedInIcon,
   Menu as MenuIcon,
 } from "@mui/icons-material";
-import Avatar from "@mui/material/Avatar";
-import { Link, useNavigate, Outlet } from "@tanstack/react-router";
+import { Link, Outlet, useNavigate } from "@tanstack/react-router";
 import { useThemeContext } from "../../context/ThemeContext";
 import GauravImage from "../../assets/gaurav_avatar.webp";
 import { useAuth } from "../../context/AuthContext";
 
+const links = [
+  { label: "About", to: "/Portfolio/about" },
+  { label: "Projects", to: "/Portfolio/projects" },
+  { label: "Contact", to: "/Portfolio/contact" },
+];
+
 const NavBar: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const { isDarkTheme, toggleTheme } = useThemeContext();
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const theme = useTheme();
-  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
-  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const { isDarkTheme, toggleTheme } = useThemeContext();
+  const { isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
 
-  const toggleDrawer = (open: boolean) => () => {
-    setDrawerOpen(open);
-  };
-
-  const closeDrawer = () => {
-    setDrawerOpen(false);
-  };
-
-  const handleAvatarClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
-
-  const handleMenuItemClick = () => {
-    setAnchorEl(null);
-    navigate({ to: "/Portfolio/login" });
-  };
-
-  const drawer = (
-    <div role="presentation" onClick={closeDrawer} onKeyDown={closeDrawer}>
-      <List>
-        <ListItem button component={Link} to="/Portfolio/about">
-          <ListItemText primary="About" />
-        </ListItem>
-        <ListItem button component={Link} to="/Portfolio/projects">
-          <ListItemText primary="Projects" />
-        </ListItem>
-        <ListItem button component={Link} to="/Portfolio/contact">
-          <ListItemText primary="Contact" />
-        </ListItem>
-        {/* <ListItem button component={Link} to="/Portfolio/cv">
-          <ListItemText primary="CV" />
-        </ListItem> */}
-        {/* <ListItem button component={Link} to="/Portfolio/references">
-          <ListItemText primary="References" />
-        </ListItem> */}
-      </List>
-    </div>
+  const appBarBg = useMemo(
+    () =>
+      isDarkTheme
+        ? "rgba(7, 11, 24, 0.72)"
+        : "rgba(255, 255, 255, 0.72)",
+    [isDarkTheme]
   );
+
+  const handleAdminAction = () => {
+    if (isAuthenticated) {
+      logout();
+      navigate({ to: "/Portfolio/about" });
+    } else {
+      navigate({ to: "/Portfolio/login" });
+    }
+    setAnchorEl(null);
+  };
 
   return (
     <>
       <AppBar
-        position="fixed"
+        position="sticky"
+        elevation={0}
         sx={{
-          backgroundColor: isDarkTheme ? "#111111" : "#0177B5",
-          width: "100%",
+          backdropFilter: "blur(14px)",
+          backgroundColor: appBarBg,
+          borderBottom: "1px solid",
+          borderColor: isDarkTheme
+            ? "rgba(148, 163, 184, 0.2)"
+            : "rgba(59, 130, 246, 0.2)",
+          color: "text.primary",
         }}
       >
-        <Container
-          maxWidth={false}
-          sx={{
-            padding: "0 !important",
-            width: "100%",
-            display: "flex",
-            flexGrow: 1,
-          }}
-        >
-          <Toolbar
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              flexGrow: 1,
-              width: "100%",
-            }}
-          >
-            {/* Mobile Menu Button */}
-            {isMedium && (
-              <IconButton
-                color="inherit"
-                edge="start"
-                onClick={toggleDrawer(true)}
-                sx={{ mr: 2 }}
-                aria-label="Open menu" // Accessible name added here
-              >
-                <MenuIcon />
-              </IconButton>
-            )}
-
-            {/* Left side: Name */}
-            <div style={{ display: "flex", alignItems: "center" }}>
+        <Container maxWidth="xl">
+          <Toolbar disableGutters sx={{ minHeight: 74 }}>
+            <Box sx={{ display: "flex", alignItems: "center", flex: 1 }}>
+              {isMobile && (
+                <IconButton
+                  sx={{ mr: 1.5 }}
+                  onClick={() => setDrawerOpen(true)}
+                  aria-label="Open navigation menu"
+                >
+                  <MenuIcon />
+                </IconButton>
+              )}
               <Typography
-                variant={isMedium ? "h6" : "h5"}
+                component={Link}
+                to="/Portfolio/about"
                 sx={{
-                  ml: 0,
-                  fontSize: isMedium ? "1.25rem" : "1.75rem",
+                  color: "inherit",
+                  textDecoration: "none",
                   fontWeight: 700,
+                  fontSize: { xs: "1.1rem", sm: "1.25rem" },
                 }}
               >
-                {isSmall ? "Gaurav" : "Gaurav Thorat"}
+                Gaurav Thorat
               </Typography>
-            </div>
+            </Box>
 
-            {/* Center: Navigation Links (for desktop) */}
-            {!isMedium && (
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <Button color="inherit" component={Link} to="/Portfolio/about">
-                  About
-                </Button>
-                <Button
-                  color="inherit"
-                  component={Link}
-                  to="/Portfolio/projects"
-                >
-                  Projects
-                </Button>
-                <Button
-                  color="inherit"
-                  component={Link}
-                  to="/Portfolio/contact"
-                >
-                  Contact
-                </Button>
-                {/* <Button color="inherit" component={Link} to="/Portfolio/cv">
-                  CV
-                </Button> */}
-                {/* <Button
-                  color="inherit"
-                  component={Link}
-                  to="/Portfolio/references"
-                >
-                  References
-                </Button> */}
-              </div>
+            {!isMobile && (
+              <Box sx={{ display: "flex", gap: 1 }}>
+                {links.map((link) => (
+                  <Button
+                    key={link.to}
+                    component={Link}
+                    to={link.to}
+                    sx={{
+                      color: "text.primary",
+                      fontWeight: 600,
+                      px: 2,
+                      borderRadius: 999,
+                    }}
+                  >
+                    {link.label}
+                  </Button>
+                ))}
+              </Box>
             )}
 
-            {/* Right side: Icons and Profile Avatar */}
-            <div style={{ display: "flex", alignItems: "center" }}>
-              {/* LinkedIn Icon */}
+            <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, ml: 2 }}>
               <Tooltip title="LinkedIn">
                 <IconButton
-                  color="inherit"
                   component="a"
                   href="https://www.linkedin.com/in/gauravthorath/"
                   target="_blank"
-                  aria-label="LinkedIn" // Accessible name added here
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
                 >
                   <LinkedInIcon />
                 </IconButton>
               </Tooltip>
-
-              {/* GitHub Icon */}
               <Tooltip title="GitHub">
                 <IconButton
-                  color="inherit"
                   component="a"
                   href="https://github.com/gauravthorath"
                   target="_blank"
-                  aria-label="GitHub" // Accessible name added here
+                  rel="noreferrer"
+                  aria-label="GitHub"
                 >
                   <GitHubIcon />
                 </IconButton>
               </Tooltip>
-
-              {/* Light/Dark Mode Switch */}
+              <Tooltip title="Toggle theme">
+                <IconButton onClick={toggleTheme} aria-label="Toggle theme">
+                  {isDarkTheme ? <Brightness7 /> : <Brightness4 />}
+                </IconButton>
+              </Tooltip>
               <IconButton
-                color="inherit"
-                onClick={toggleTheme}
-                aria-label="Toggle theme"
-              >
-                {isDarkTheme ? <Brightness7 /> : <Brightness4 />}
-              </IconButton>
-
-              {/* Profile Avatar */}
-              <IconButton
-                color="inherit"
-                onClick={handleAvatarClick}
-                aria-label="Open profile menu"
+                aria-label="Open account menu"
+                onClick={(event) => setAnchorEl(event.currentTarget)}
               >
                 <Avatar alt="Gaurav Thorat" src={GauravImage} />
               </IconButton>
-
-              {/* Menu for the Avatar */}
-              <Menu
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
-                onClose={handleMenuClose}
-              >
-                {!isAuthenticated && (
-                  <MenuItem onClick={handleMenuItemClick}>Admin Login</MenuItem>
-                )}
-                {isAuthenticated && (
-                  <MenuItem onClick={handleMenuItemClick}> Logout</MenuItem>
-                )}
-              </Menu>
-            </div>
+            </Box>
           </Toolbar>
         </Container>
-
-        {/* Drawer for mobile menu */}
-        <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-          {drawer}
-        </Drawer>
       </AppBar>
-      {/* Here is where the nested routes will render */}
-      <Outlet />
+
+      <Drawer
+        anchor="left"
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        PaperProps={{
+          sx: {
+            width: 260,
+            background: isDarkTheme ? "#0b1220" : "#ffffff",
+          },
+        }}
+      >
+        <List sx={{ pt: 3 }}>
+          {links.map((link) => (
+            <ListItemButton
+              key={link.to}
+              component={Link}
+              to={link.to}
+              onClick={() => setDrawerOpen(false)}
+            >
+              <ListItemText primary={link.label} />
+            </ListItemButton>
+          ))}
+        </List>
+      </Drawer>
+
+      <Menu
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        onClose={() => setAnchorEl(null)}
+      >
+        <MenuItem onClick={handleAdminAction}>
+          {isAuthenticated ? "Logout" : "Admin Login"}
+        </MenuItem>
+      </Menu>
+
+      <Box sx={{ px: { xs: 1.5, md: 3 }, pb: 4 }}>
+        <Outlet />
+      </Box>
     </>
   );
 };

@@ -1,25 +1,21 @@
 import type React from "react";
 import { useState } from "react";
-import { Container, Typography, TextField, Button, Box } from "@mui/material";
-import styles from "./Login.module.css";
+import { Card, CardContent, Container, Typography, TextField, Button, Box } from "@mui/material";
 import { useThemeContext } from "../../context/ThemeContext";
 import { supabase } from "../../api/supabaseClient";
 import { useNavigate } from "@tanstack/react-router";
 import { useAuth } from "../../context/AuthContext";
 
-// Define an interface for form state
-interface LoginFormState {
+type LoginFormState = {
   username: string;
   password: string;
   usernameError: string;
   passwordError: string;
-}
+};
 
-//TODO: This needs to be fixed, its asking to enter credential twice before login
 const Login: React.FC = () => {
   const { isDarkTheme } = useThemeContext();
   const navigate = useNavigate();
-  // State for form values and validation errors
   const [formState, setFormState] = useState<LoginFormState>({
     username: "",
     password: "",
@@ -29,7 +25,6 @@ const Login: React.FC = () => {
   const [loginError, setLoginError] = useState<string>("");
   const { login } = useAuth();
 
-  // Validation checks for the form
   const validateForm = () => {
     let isValid = true;
     const errors = { usernameError: "", passwordError: "" };
@@ -51,7 +46,6 @@ const Login: React.FC = () => {
     return isValid;
   };
 
-  // Handle input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormState((prev) => ({
@@ -60,19 +54,17 @@ const Login: React.FC = () => {
       usernameError: "",
       passwordError: "",
     }));
-    setLoginError(""); // Reset login error on input change
+    setLoginError("");
   };
 
-  // Check user credentials with Supabase
   const checkCredentials = async () => {
     const { username, password } = formState;
 
-    // Query the 'user' table for the given username and password
     const { data, error } = await supabase
-      .from("users") // Make sure the table name matches your Supabase schema
+      .from("users")
       .select("*")
       .eq("username", username)
-      .eq("password", password); // It's recommended to hash passwords before checking in production
+      .eq("password", password);
 
     if (error) {
       console.error("Error fetching user:", error);
@@ -80,106 +72,85 @@ const Login: React.FC = () => {
       return false;
     }
 
-    // If no user is found, login fails
     if (!data || data.length === 0) {
       setLoginError("Invalid username or password.");
       return false;
     }
 
-    // If user is found, login succeeds
-    // console.log("User found:", data);
     return true;
   };
 
-  // Handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateForm()) {
-      //   console.log("Form is valid. Submitting form:", formState);
       const isLoginValid = await checkCredentials();
       if (isLoginValid) {
-        // Handle successful login here, e.g., redirect or store auth tokens
-        login(); //To set isAuthenticated to true in Auth Context which later used to check while shoing Admin component
+        login();
         navigate({ to: "/Portfolio/restricted-admin-panel" });
       }
     }
   };
 
   return (
-    <Container
-      maxWidth="xl"
-      className={`${isDarkTheme ? styles.dark : styles.light}`}
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "87vh",
-      }}
-    >
-      <Box
+    <Container maxWidth="xl" sx={{ minHeight: "72vh", display: "grid", placeItems: "center" }}>
+      <Card
         sx={{
-          border: 1,
-          borderColor: "primary.main",
-          borderRadius: 2,
-          padding: 4,
-          boxShadow: 3,
-          minWidth: "400px",
-          maxWidth: "500px",
+          width: "100%",
+          maxWidth: 460,
+          border: "1px solid",
+          borderColor: isDarkTheme ? "rgba(148,163,184,.25)" : "rgba(99,102,241,.25)",
+          background: isDarkTheme
+            ? "linear-gradient(180deg, #10172a 0%, #0b1220 100%)"
+            : "linear-gradient(180deg, #ffffff 0%, #eef2ff 100%)",
         }}
       >
-        <Typography variant="h5" component="h1" gutterBottom align="center">
-          Login
-        </Typography>
+        <CardContent sx={{ p: 4 }}>
+          <Typography variant="h4" component="h1" align="center" sx={{ mb: 1 }}>
+            Admin Access
+          </Typography>
+          <Typography variant="body2" color="text.secondary" align="center" sx={{ mb: 3 }}>
+            Secure area for portfolio management.
+          </Typography>
 
-        <Box
-          component="form"
-          sx={{ mt: 2, display: "flex", flexDirection: "column", gap: 2 }}
-          onSubmit={handleSubmit}
-        >
-          {/* Username Field */}
-          <TextField
-            label="Username"
-            variant="outlined"
-            fullWidth
-            name="username"
-            value={formState.username}
-            onChange={handleInputChange}
-            error={!!formState.usernameError}
-            helperText={formState.usernameError}
-          />
-
-          {/* Password Field */}
-          <TextField
-            label="Password"
-            variant="outlined"
-            fullWidth
-            name="password"
-            type="password"
-            value={formState.password}
-            onChange={handleInputChange}
-            error={!!formState.passwordError}
-            helperText={formState.passwordError}
-          />
-
-          {/* Login Error Message */}
-          {loginError && (
-            <Typography color="error" variant="body2" align="center">
-              {loginError}
-            </Typography>
-          )}
-
-          {/* Submit Button */}
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            fullWidth
-            sx={{ mt: 2 }}
+          <Box
+            component="form"
+            sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+            onSubmit={handleSubmit}
           >
-            Login
-          </Button>
-        </Box>
-      </Box>
+            <TextField
+              label="Username"
+              variant="outlined"
+              fullWidth
+              name="username"
+              value={formState.username}
+              onChange={handleInputChange}
+              error={!!formState.usernameError}
+              helperText={formState.usernameError}
+            />
+            <TextField
+              label="Password"
+              variant="outlined"
+              fullWidth
+              name="password"
+              type="password"
+              value={formState.password}
+              onChange={handleInputChange}
+              error={!!formState.passwordError}
+              helperText={formState.passwordError}
+            />
+
+            {loginError && (
+              <Typography color="error" variant="body2" align="center">
+                {loginError}
+              </Typography>
+            )}
+
+            <Button type="submit" variant="contained" fullWidth sx={{ mt: 1 }}>
+              Login
+            </Button>
+          </Box>
+        </CardContent>
+      </Card>
     </Container>
   );
 };

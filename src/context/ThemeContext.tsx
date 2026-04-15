@@ -3,11 +3,10 @@ import { createContext, useContext, useState, useEffect } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { darkTheme, lightTheme } from "../styles/theme";
 
-// Define the context structure
-interface ThemeContextType {
+type ThemeContextType = {
   isDarkTheme: boolean;
   toggleTheme: () => void;
-}
+};
 
 // Create the context
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -21,26 +20,24 @@ export const useThemeContext = () => {
   return context;
 };
 
-// Create a provider component
 export const ThemeContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(() => {
+    const storedPreference = window.localStorage.getItem("portfolio-theme");
+    if (storedPreference === "light") return false;
+    if (storedPreference === "dark") return true;
+    return true;
+  });
 
   const toggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
+    setIsDarkTheme((prev) => !prev);
   };
 
-  // Set data-theme attribute on document for CSS custom properties
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', isDarkTheme ? 'dark' : 'light');
+    document.documentElement.setAttribute("data-theme", isDarkTheme ? "dark" : "light");
+    window.localStorage.setItem("portfolio-theme", isDarkTheme ? "dark" : "light");
   }, [isDarkTheme]);
-
-  //   const theme = createTheme({
-  //     palette: {
-  //       mode: isDarkTheme ? "dark" : "light",
-  //     },
-  //   });
 
   return (
     <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
