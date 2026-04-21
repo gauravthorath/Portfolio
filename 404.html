@@ -1,9 +1,19 @@
 <!doctype html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=/Portfolio/" />
-  </head>
-  <body>
-    <p>If you are not redirected, <a href="/Portfolio/">click here</a>.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0; url=https://gauravthorat-portfolio.vercel.app" />
+  <meta name="robots" content="noindex" />
+  <title>Redirecting...</title>
+  <script>
+    const redirectTo = "https://gauravthorat-portfolio.vercel.app";
+    const currentPath = window.location.pathname.replace(/^\/Portfolio/, "");
+    const currentQuery = window.location.search || "";
+    const currentHash = window.location.hash || "";
+    window.location.replace(redirectTo + currentPath + currentQuery + currentHash);
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="https://gauravthorat-portfolio.vercel.app">https://gauravthorat-portfolio.vercel.app</a></p>
+</body>
 </html>
