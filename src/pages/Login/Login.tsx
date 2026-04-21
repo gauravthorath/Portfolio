@@ -86,7 +86,7 @@ const Login: React.FC = () => {
       const isLoginValid = await checkCredentials();
       if (isLoginValid) {
         login();
-        navigate({ to: "/Portfolio/restricted-admin-panel" });
+        navigate({ to: "/restricted-admin-panel" });
       }
     }
   };

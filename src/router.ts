@@ -28,44 +28,39 @@ const rootRoute = createRootRoute({
 const routes = [
 	createRoute({
 		getParentRoute: () => rootRoute,
-		path: "/Portfolio/",
+		path: "/",
 		component: About, // landing page component
 	}),
 	createRoute({
 		getParentRoute: () => rootRoute,
-		path: "/Portfolio",
-		component: About, // landing about component
-	}),
-	createRoute({
-		getParentRoute: () => rootRoute,
-		path: "/Portfolio/about",
+		path: "/about",
 		component: About, // About page component
 	}),
 	createRoute({
 		getParentRoute: () => rootRoute,
-		path: "/Portfolio/projects",
+		path: "/projects",
 		component: Projects, // Project page component
 	}),
 	createRoute({
 		getParentRoute: () => rootRoute,
-		path: "/Portfolio/contact",
+		path: "/contact",
 		component: Contact, // Contact page component
 	}),
 	createRoute({
 		getParentRoute: () => rootRoute,
-		path: "/Portfolio/login",
+		path: "/login",
 		component: Login, // login page component
 	}),
 	createRoute({
 		getParentRoute: () => rootRoute,
-		path: "/Portfolio/restricted-admin-panel",
+		path: "/restricted-admin-panel",
 
 		component: () => ProtectedRoute({ component: Admin }), // Render SuspenseAdmin as a component instead of passing it as a reference
 	}),
 	// Add the catch-all route with the '*' path
 	createRoute({
 		getParentRoute: () => rootRoute,
-		path: "/Portfolio/*", // Catch-all route for unmatched paths
+		path: "/*", // Catch-all route for unmatched paths
 		component: About, // Render About page component (or replace with a custom NotFound page)
 	}),
 ];

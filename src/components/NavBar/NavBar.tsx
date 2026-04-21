@@ -32,9 +32,9 @@ import GauravImage from "../../assets/gaurav_avatar.webp";
 import { useAuth } from "../../context/AuthContext";
 
 const links = [
-  { label: "About", to: "/Portfolio/about" },
-  { label: "Projects", to: "/Portfolio/projects" },
-  { label: "Contact", to: "/Portfolio/contact" },
+  { label: "About", to: "/about" },
+  { label: "Projects", to: "/projects" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const NavBar: React.FC = () => {
@@ -57,9 +57,9 @@ const NavBar: React.FC = () => {
   const handleAdminAction = () => {
     if (isAuthenticated) {
       logout();
-      navigate({ to: "/Portfolio/about" });
+      navigate({ to: "/about" });
     } else {
-      navigate({ to: "/Portfolio/login" });
+      navigate({ to: "/login" });
     }
     setAnchorEl(null);
   };
@@ -93,7 +93,7 @@ const NavBar: React.FC = () => {
               )}
               <Typography
                 component={Link}
-                to="/Portfolio/about"
+                to="/about"
                 sx={{
                   color: "inherit",
                   textDecoration: "none",

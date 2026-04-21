@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 
 const NotFound: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const NotFound: React.FC = () => {
       <p>Oops! The page you're looking for doesn't exist.</p>
       <p>
         If you are not redirected automatically,{" "}
-        <a href="/Portfolio/">click here</a>.
+        <a href="/">click here</a>.
       </p>
     </div>
   );

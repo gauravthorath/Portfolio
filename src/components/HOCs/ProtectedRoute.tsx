@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import { useNavigate } from "@tanstack/react-router"; // Import useNavigate hook
 import { useAuth } from "../../context/AuthContext";
 
@@ -14,7 +14,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
   if (!isAuthenticated) {
     // If not authenticated, redirect to the login page
-    navigate({ to: "/Portfolio/login" }); // Programmatically navigate to login
+    navigate({ to: "/login" }); // Programmatically navigate to login
     return null; // Return null since redirection is happening
   }
 
