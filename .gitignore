@@ -1,0 +1,30 @@
+# Local / legacy dev artifacts (this repo is redirect-only; develop in Portfolio-source)
+node_modules/
+dist/
+dist-ssr/
+redirect-dist/
+.vercel/
+.vscode/
+.idea/
+
+# Test / tooling output
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+
+# Leftover app source from before split (use private Portfolio-source clone)
+src/
+public/
+tests/
+
+# OS / logs
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+.env.*
+!.env.example
